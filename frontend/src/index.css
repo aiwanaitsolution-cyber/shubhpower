@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+section[id], [id]:target { scroll-margin-top: 104px; }
+
+body {
+  margin: 0;
+  font-family: 'Figtree', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #FBFAF7;
+  color: #0F1F14;
+  letter-spacing: -0.01em;
+}
+
+code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+
+@layer base {
+  :root {
+    /* Brand palette derived from Shubh Power logo:
+       Green #16A34A · Solar Orange #F58220 · Electric Blue #1E4FA3 */
+    --background: 40 20% 98%;
+    --foreground: 140 30% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 140 30% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 140 30% 8%;
+    --primary: 140 30% 8%;
+    --primary-foreground: 40 20% 98%;
+    --secondary: 42 30% 94%;
+    --secondary-foreground: 140 30% 8%;
+    --muted: 42 30% 94%;
+    --muted-foreground: 140 8% 40%;
+    --accent: 140 76% 36%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 140 10% 88%;
+    --input: 140 10% 88%;
+    --ring: 140 76% 36%;
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; }
+}
+
+/* Contact form inputs */
+.ci {
+  width: 100%;
+  background: #ffffff;
+  border: 1.5px solid rgba(15,31,20,0.12);
+  border-radius: 12px;
+  padding: 13px 15px;
+  font-size: 15px;
+  color: #0F1F14;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+.ci:focus { border-color: #16A34A; box-shadow: 0 0 0 3px rgba(22,163,74,0.12); }
+.ci::placeholder { color: rgba(15,31,20,0.35); }
+
+/* On-mount fade + rise (page/hero intros) */
+@keyframes riseIn { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+.rise-in { animation: riseIn .7s cubic-bezier(.22,1,.36,1) both; }
+@media (prefers-reduced-motion: reduce) { .rise-in { animation: none; } }

@@ -1,0 +1,228 @@
+/* Shubh Power - Brand colors from logo:
+   Green:  #16A34A  ·  Solar Orange: #F58220  ·  Electric Blue: #1E4FA3
+   Warm white bg: #FBFAF7  ·  Near black: #0F1F14
+*/
+
+.App {
+  min-height: 100vh;
+  background: #FBFAF7;
+  color: #0F1F14;
+}
+
+.h-display {
+  font-family: 'Plus Jakarta Sans', 'Figtree', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.012em;
+  line-height: 0.95;
+}
+
+.h-mono {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.reveal { animation: fade-up 0.7s ease-out both; }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 45s linear infinite;
+}
+
+.brand-marquee {
+  display: flex;
+  width: max-content;
+  gap: 20px;
+  animation: marquee 34s linear infinite;
+  will-change: transform;
+}
+.brand-marquee-reverse {
+  animation-direction: reverse;
+  animation-duration: 30s;
+}
+.brand-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (max-width: 767px) {
+  .brand-marquee {
+    gap: 14px;
+    animation-duration: 24s;
+  }
+}
+
+.zoom-img { transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
+.group:hover .zoom-img { transform: scale(1.06); }
+
+.card-lift { transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+.card-lift:hover { transform: translateY(-4px); }
+
+.pill-btn {
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+.pill-btn:hover .pill-icon { transform: translateX(2px); }
+.pill-icon { transition: transform 0.3s ease; }
+
+.tex-water {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.12'/></svg>");
+  background-size: 220px 220px;
+}
+
+::selection { background: #16A34A; color: #fff; }
+
+/* Hide dynamically-injected Emergent badge */
+#emergent-badge,
+a[href*="emergent-badge"],
+a[href*="app.emergent.sh"],
+a[href*="emergent.sh"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* System-default scrollbar (no custom overrides) */
+
+/* Remove blue browser focus rings on interactive elements — use subtle green ring instead */
+button, a { outline: none; }
+button:focus-visible, a:focus-visible {
+  outline: 2px solid #16A34A;
+  outline-offset: 2px;
+  border-radius: 999px;
+}
+
+/* Scrollbar left as the operating-system default (no custom styling) */
+
+/* Contact form inputs */
+.contact-input {
+  width: 100%;
+  background: #fff;
+  border-radius: 999px;
+  padding: 12px 20px;
+  outline: none;
+  border: 1px solid rgba(15, 31, 20, 0.10);
+  color: #0F1F14;
+  font: inherit;
+}
+.contact-input:focus { border-color: #16A34A; }
+.contact-textarea {
+  border-radius: 20px;
+  resize: none;
+}
+
+.link-underline { position: relative; }
+.link-underline::after {
+  content: '';
+  position: absolute; left: 0; bottom: -3px;
+  width: 0; height: 1px; background: currentColor;
+  transition: width 0.3s ease;
+}
+.link-underline:hover::after { width: 100%; }
+
+/* CTA banner - green + orange gradient (brand) */
+.wavy-green {
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 30%, rgba(245, 130, 32, 0.55), transparent 60%),
+    radial-gradient(ellipse 70% 50% at 80% 70%, rgba(22, 163, 74, 0.7), transparent 65%),
+    linear-gradient(135deg, #0E7A38 0%, #16A34A 55%, #F58220 130%);
+  position: relative;
+}
+.wavy-green::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    repeating-linear-gradient(75deg, rgba(255,255,255,0.06) 0 2px, transparent 2px 40px),
+    repeating-linear-gradient(115deg, rgba(255,255,255,0.04) 0 2px, transparent 2px 60px);
+  pointer-events: none;
+}
+
+/* Sun rotate slow */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.spin-slow { animation: spin-slow 40s linear infinite; }
+
+@keyframes float-soft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.float-soft { animation: float-soft 6s ease-in-out infinite; }
+.float-delay { animation-delay: 1.25s; }
+
+.about-glow-card {
+  position: relative;
+  isolation: isolate;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.about-glow-card::before {
+  content: "";
+  position: absolute;
+  inset: -40% -20% auto auto;
+  width: 220px;
+  height: 220px;
+  border-radius: 999px;
+  background: rgba(125, 224, 195, 0.22);
+  filter: blur(20px);
+  z-index: -1;
+}
+.about-glow-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 70px rgba(15, 51, 40, 0.25);
+}
+
+@keyframes value-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.value-tile {
+  animation: value-rise 0.7s ease both;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.value-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(15, 31, 20, 0.10);
+}
+
+.about-promise-card {
+  min-height: 250px;
+}
+
+.team-band {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 58px;
+  padding: 16px 22px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(245, 130, 32, 0.95), rgba(22, 163, 74, 0.95));
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+  text-align: center;
+}
+.team-band-green {
+  background: linear-gradient(135deg, rgba(22, 163, 74, 0.95), rgba(37, 191, 174, 0.95));
+}
+
+@media (max-width: 640px) {
+  .h-display {
+    letter-spacing: 0;
+  }
+  .about-promise-card {
+    min-height: auto;
+  }
+  .team-band {
+    border-radius: 24px;
+    padding: 14px 16px;
+  }
+}
