@@ -1,25 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { heroImage } from "../data/mock";
 
 const Hero = () => {
   return (
     <section className="relative w-full h-[calc(100svh-88px)] min-h-[560px] sm:min-h-[620px] flex items-center justify-center overflow-hidden">
-      <img
-        src={heroImage}
-        alt="Shubh Power solar and EV charging solutions"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
       <iframe
         title="Shubh Power homepage background video"
         src="https://www.youtube.com/embed/1oBWMO3TaJg?autoplay=1&mute=1&controls=0&loop=1&playlist=1oBWMO3TaJg&playsinline=1&rel=0&modestbranding=1&start=1"
-        className="absolute left-1/2 top-1/2 h-[56.25vw] min-h-full w-[177.78vh] min-w-full -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-70"
+        className="absolute left-1/2 top-1/2 h-[56.25vw] min-h-full w-[177.78vh] min-w-full -translate-x-1/2 -translate-y-1/2 pointer-events-none"
         allow="autoplay; encrypted-media; picture-in-picture"
         loading="eager"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-white/8 via-[#DFF7F1]/8 to-black/30" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0F3328]/24 via-transparent to-[#0F3328]/12" />
+      <div className="absolute inset-0 bg-black/28" />
+      <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/42 via-black/10 to-transparent" />
 
       <div className="relative max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-10 w-full h-full py-8 sm:py-10 text-white text-center flex flex-col">
         <div className="reveal mt-8 sm:mt-10 lg:mt-14">
@@ -31,7 +25,7 @@ const Hero = () => {
         </div>
 
         <div className="reveal mt-auto mb-14 sm:mb-16 lg:mb-20 flex flex-col items-center gap-6 sm:gap-8">
-          <p className="text-white text-[15px] sm:text-base lg:text-lg max-w-2xl leading-relaxed rounded-[22px] bg-[#0F3328]/42 border border-white/18 backdrop-blur-sm px-5 py-4 shadow-2xl">
+          <p className="text-white text-[15px] sm:text-base lg:text-lg max-w-2xl leading-relaxed drop-shadow-[0_4px_18px_rgba(0,0,0,0.85)]">
             Welcome to Shubh Power Solutions Private Limited, established in 2010 with its office in Gurugram, Haryana, India.
           </p>
 
