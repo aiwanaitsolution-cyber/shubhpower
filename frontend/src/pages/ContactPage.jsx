@@ -115,16 +115,17 @@ const ContactPage = () => {
       <section className="pb-16 lg:pb-24 bg-[#EAF8F4]">
         <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
           <Reveal>
-            <div className="relative rounded-[26px] overflow-hidden aspect-[16/10] md:aspect-[21/9] bg-[#F0F2F7]">
+            <div className="relative rounded-[26px] overflow-hidden min-h-[420px] md:min-h-[480px] bg-white border border-[#0F1F14]/8 shadow-xl">
               <iframe
                 title="Shubh Power Solutions Office - Sector 43, Gurugram"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.618486915291!2d77.07065492549447!3d28.460914925758928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19faa92f3fd7%3A0x20c4acbad98cc0fb!2sShubh%20Power%20Solutions%20PVT.%20LTD.%20-%20Solar%20Power%20Plants%20And%20EV%20charger%20Station%20Installation%20Company!5e0!3m2!1sen!2sin!4v1774023067542!5m2!1sen!2sin"
+                src="https://maps.google.com/maps?q=28.460914,77.070655&z=16&output=embed"
                 className="absolute inset-0 w-full h-full"
                 style={{ border: 0 }}
-                loading="lazy"
+                loading="eager"
                 referrerPolicy="no-referrer-when-downgrade"
                 allowFullScreen
               />
+              <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#0F3328]/16 via-transparent to-transparent" />
               <div className="absolute left-5 bottom-5 right-5 md:right-auto md:max-w-sm bg-white rounded-2xl shadow-xl p-5">
                 <div className="h-mono text-[10px] tracking-wide text-[#16A34A] mb-1">LOCATION</div>
                 <div className="text-[#0F1F14] font-medium text-[15px] leading-snug">{company.address}</div>

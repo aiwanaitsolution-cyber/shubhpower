@@ -7,6 +7,9 @@ import Testimonials from "../components/Testimonials";
 import CTABanner from "../components/CTABanner";
 import { brand, stats, values, promises, leadership, operationalTeam, timeline } from "../data/mock";
 
+const aboutHeroCopy =
+  "Welcome to Shubh Power Solutions Private Limited, established in 2010 with its office in Gurugram, Haryana, India. We are a leading provider of comprehensive power solutions in Delhi and the National Capital Region - delivering affordable power, reducing carbon footprint and promoting energy efficiency across industries.";
+
 const Person = ({ m, i }) => (
   <Reveal delay={Math.min((i % 4) * 0.05, 0.2)} className="group rounded-[24px] bg-white p-3 shadow-xl border border-white/10 card-lift">
     <div className="relative rounded-[18px] overflow-hidden aspect-[4/5] bg-[#F5F3EC]">
@@ -24,10 +27,10 @@ const AboutPage = () => (
   <>
     <PageHero
       eyebrow="ABOUT US"
-      title={<>About Shubh Power</>}
-      subtitle={brand.intro}
-      image="/images/live/solar-energy-power.jpg"
-      imageAlt="Shubh Power solar power project"
+      title={<>Fifteen years of<br />engineering India's<br />clean-energy backbone.</>}
+      subtitle={aboutHeroCopy}
+      image="/images/live/10nlc_solar.jpg"
+      imageAlt="Shubh Power solar farm"
     />
 
     <section className="relative py-16 lg:py-24 bg-[#EAF8F4] overflow-hidden">
@@ -55,14 +58,15 @@ const AboutPage = () => (
             ))}
           </div>
         </Reveal>
-        <Reveal delay={0.1} className="relative min-h-[420px] sm:min-h-[500px]">
-          <div className="absolute inset-0 rounded-[34px] bg-[#0F3328] rotate-[-2deg] shadow-2xl" />
-          <div className="relative grid grid-cols-2 gap-4 p-4 sm:p-5">
-            <div className="rounded-[24px] overflow-hidden aspect-[4/5] bg-[#F5F3EC] shadow-xl float-soft">
+        <Reveal delay={0.1} className="relative">
+          <div className="rounded-[32px] bg-white/72 border border-[#0F1F14]/8 p-4 sm:p-5 shadow-2xl">
+            <div className="grid grid-cols-2 gap-4">
+            <div className="rounded-[24px] overflow-hidden aspect-[4/5] bg-[#F5F3EC] shadow-lg float-soft">
               <img src="/images/live/Depositphotos_172716044_S.jpg" alt="Shubh Power solar project" loading="lazy" className="w-full h-full object-cover" />
             </div>
-            <div className="rounded-[24px] overflow-hidden aspect-[4/5] bg-[#F5F3EC] mt-12 shadow-xl float-soft float-delay">
+            <div className="rounded-[24px] overflow-hidden aspect-[4/5] bg-[#F5F3EC] mt-8 sm:mt-12 shadow-lg float-soft float-delay">
               <img src="/images/live/shubh-ev-charger-hero.png" alt="Shubh Power EV charging station" loading="lazy" className="w-full h-full object-cover" />
+            </div>
             </div>
             <div className="absolute left-1/2 -translate-x-1/2 bottom-8 sm:bottom-10 rounded-[18px] bg-white px-5 py-4 shadow-2xl border border-[#0F1F14]/8 min-w-[240px] text-center">
               <div className="h-mono text-[10px] text-[#16A34A]">SOLAR - BESS - EV CPO</div>
@@ -121,33 +125,34 @@ const AboutPage = () => (
       </div>
     </section>
 
-    <section className="py-16 lg:py-24 bg-[#0F3328] text-white">
-      <div className="max-w-[1120px] mx-auto px-6 lg:px-10">
-        <Reveal className="mb-14 text-center">
-          <div className="flex items-center gap-2.5 mb-4">
-            <span className="hidden sm:block flex-1 h-px bg-white/16" />
-            <span className="h-mono text-[12px] tracking-[0.2em] text-[#7DE0C3]">OUR JOURNEY</span>
-            <span className="hidden sm:block flex-1 h-px bg-white/16" />
+    <section className="py-16 lg:py-24 bg-gradient-to-br from-[#EAF8F4] via-white to-[#F1FAF4] text-[#0F1F14]">
+      <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-10 grid lg:grid-cols-[0.72fr_1.28fr] gap-12 lg:gap-16 items-start">
+        <Reveal className="lg:sticky lg:top-28">
+          <div className="inline-flex items-center gap-2.5 mb-5 rounded-full bg-white border border-[#16A34A]/16 px-4 py-2 shadow-sm">
+            <span className="w-8 h-[3px] rounded-full bg-[#16A34A]" />
+            <span className="h-mono text-[12px] tracking-[0.2em] text-[#16A34A]">OUR JOURNEY</span>
           </div>
-          <h2 className="h-display text-[36px] md:text-[56px] tracking-tight text-white">
+          <h2 className="h-display text-[36px] md:text-[52px] tracking-tight text-[#0F1F14]">
             Fifteen years, milestone by milestone.
           </h2>
+          <p className="mt-5 text-[#0F1F14]/62 text-[16px] leading-relaxed max-w-sm">
+            A connected path from Gurugram incorporation to solar projects and EV CPO rollout.
+          </p>
         </Reveal>
         <div className="relative">
-          <div className="absolute left-[19px] top-4 bottom-4 w-[2px] bg-white/16 md:left-1/2" />
-          <div className="space-y-8">
+          <div className="absolute left-[17px] top-3 bottom-3 w-[3px] rounded-full bg-gradient-to-b from-[#16A34A] via-[#7DE0C3] to-[#F58220]" />
+          <div className="space-y-5">
             {timeline.map((t) => (
-              <Reveal key={t.year} className="relative pl-16 md:pl-0 md:grid md:grid-cols-2 md:gap-14">
-                <div className="absolute left-0 top-0 w-10 h-10 rounded-full bg-white border-2 border-[#7DE0C3] flex items-center justify-center md:left-1/2 md:-translate-x-1/2">
-                  <span className="w-3 h-3 rounded-full bg-[#16A34A]" />
+              <Reveal key={t.year} className="relative pl-14">
+                <div className="absolute left-0 top-3 w-9 h-9 rounded-full bg-white border-2 border-[#16A34A] shadow-md flex items-center justify-center">
+                  <span className="w-3 h-3 rounded-full bg-[#F58220]" />
                 </div>
-                <div className="hidden md:block text-right pr-2">
-                  <div className="h-display text-[46px] text-[#7DE0C3] leading-none">{t.year}</div>
-                </div>
-                <div className="rounded-[22px] bg-white/9 border border-white/14 p-6 backdrop-blur">
-                  <div className="md:hidden h-display text-[34px] text-[#7DE0C3] leading-none mb-3">{t.year}</div>
-                  <h3 className="h-display text-[22px] md:text-[26px] text-white leading-tight">{t.title}</h3>
-                  <p className="mt-3 text-white/72 text-[15px] leading-relaxed">{t.body}</p>
+                <div className="rounded-[24px] bg-white border border-[#0F1F14]/8 p-5 sm:p-6 shadow-sm hover:shadow-xl transition-shadow">
+                  <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-5">
+                    <div className="h-display text-[34px] text-[#16A34A] leading-none min-w-[94px]">{t.year}</div>
+                    <h3 className="h-display text-[22px] md:text-[26px] text-[#0F1F14] leading-tight">{t.title}</h3>
+                  </div>
+                  <p className="mt-3 text-[#0F1F14]/66 text-[15px] leading-relaxed">{t.body}</p>
                 </div>
               </Reveal>
             ))}
