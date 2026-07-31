@@ -27,7 +27,7 @@ const SolarPage = () => (
 
     <section className="py-16 lg:py-24 bg-[#EAF8F4]">
       <div className="max-w-[1320px] mx-auto px-6 lg:px-10 space-y-14 lg:space-y-16">
-        {solarSolutions.map((s, i) => {
+        {solarSolutions.filter((s) => s.id !== "pv").map((s, i) => {
           const flip = i % 2 === 1;
           return (
             <div id={solarAnchors[s.id] || s.id} key={s.id} className="grid grid-cols-1 lg:grid-cols-12 gap-7 lg:gap-10 items-center rounded-[28px] bg-white/78 border border-[#0F1F14]/8 p-5 lg:p-8 shadow-sm">
