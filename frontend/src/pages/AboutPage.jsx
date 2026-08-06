@@ -49,7 +49,7 @@ const AboutPage = () => (
             {[
               ["2010", "Established"],
               ["146+", "Customers"],
-              ["15MW", "Hissar"],
+              ["30+ MW", "Solar power project executed"],
             ].map(([n, l]) => (
               <div key={l} className="rounded-[18px] bg-white border border-[#0F1F14]/8 p-4 shadow-sm">
                 <div className="h-display text-[24px] sm:text-[30px] text-[#16A34A] leading-none">{n}</div>
@@ -116,7 +116,6 @@ const AboutPage = () => (
             <div key={s.label} className="flex flex-col items-start">
               <div className="flex items-start gap-1 leading-none">
                 <span className="h-display text-[40px] sm:text-[52px] lg:text-[64px] text-[#16A34A] leading-none tracking-tight"><CountUp value={s.value} /></span>
-                <span className="h-display text-[16px] lg:text-[22px] text-[#F58220] leading-none mt-1.5">+</span>
               </div>
               <div className="text-[#0F1F14]/55 mt-3 text-[12px] lg:text-[13px] uppercase tracking-[0.08em]">{s.label}</div>
             </div>
@@ -153,6 +152,11 @@ const AboutPage = () => (
                     <h3 className="h-display text-[22px] md:text-[26px] text-[#0F1F14] leading-tight">{t.title}</h3>
                   </div>
                   <p className="mt-3 text-[#0F1F14]/66 text-[15px] leading-relaxed">{t.body}</p>
+                  {t.highlight && (
+                    <div className="mt-4 inline-flex rounded-full bg-[#16A34A]/10 border border-[#16A34A]/20 px-4 py-2 h-mono text-[11px] tracking-[0.14em] text-[#0E7A38]">
+                      {t.highlight}
+                    </div>
+                  )}
                 </div>
               </Reveal>
             ))}
@@ -193,7 +197,7 @@ const AboutPage = () => (
         </Reveal>
 
         <div className="team-band mb-7">
-          <h3 className="h-mono text-[12px] sm:text-[13px] tracking-[0.15em] text-white">MANAGING & OPERATING PARTNERS</h3>
+          <h3 className="h-mono text-[12px] sm:text-[13px] tracking-[0.15em] text-white">THE LEADERSHIP TEAM</h3>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8 mb-16 max-w-[880px] mx-auto">
           {leadership.map((m, i) => <Person key={m.name} m={{ ...m, meta: "" }} i={i} />)}

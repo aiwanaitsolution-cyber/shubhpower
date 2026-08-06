@@ -25,9 +25,9 @@ export const heroImage = `${live}Untitled-design-9-rknh6lx7k80ll3dvtw5gszwkp4fhg
 
 export const stats = [
   { value: "2010", label: "established" },
-  { value: "146", label: "happy customer" },
-  { value: "15MW", label: "Hissar City project" },
-  { value: "3.5MW", label: "Neemrana project" },
+  { value: "146+", label: "happy customers" },
+  { value: "30+ MW", label: "executed solar projects" },
+  { value: "100+", label: "EV chargers installed" },
 ];
 
 export const promises = [
@@ -96,7 +96,7 @@ export const solarSolutions = [
     subtitle: "Portable clean power",
     description: "Portable solar generators deliver clean, efficient power anywhere, perfect for remote locations and off-grid use.",
     bg: "#FDECD3",
-    image: `${live}Jackery-Solar-Generator-550-includes-1-Explorer-550-1-SolarSaga-100W_c01e742f-b8b1-42ec-9e23-20cd8be98b69.d39fcf0710e28881d5c1cdd7acbba0e9.jpg`,
+    image: "/images/hero/solar-generator-bess.png",
     features: [
       "Solar energy ensures a reliable backup source.",
       "Solar energy systems complement your existing utility connection.",
@@ -205,9 +205,9 @@ export const advantages = [
 
 export const savingsTabs = [
   { key: "solar", label: "Solar", value: "40-50", unit: "% utility cost cut" },
-  { key: "customer", label: "Customers", value: "146", unit: "happy customer" },
-  { key: "neemrana", label: "Neemrana", value: "3.5", unit: "MW project" },
-  { key: "hissar", label: "Hissar", value: "15", unit: "MW project" },
+  { key: "customer", label: "Customers", value: "146+", unit: "happy customers" },
+  { key: "solar-executed", label: "Solar MW", value: "30+", unit: "MW executed solar projects" },
+  { key: "ev-chargers", label: "EV Chargers", value: "100+", unit: "EV chargers installed" },
 ];
 
 export const solarProjects = [
@@ -282,19 +282,20 @@ export const timeline = [
   { year: "2020", title: "Utility-scale expansion", body: "Broke ground on multiple MW-scale ground-mount plants across Rajasthan and Haryana." },
   { year: "2022", title: "15 MW Hissar", body: "Commissioned our largest solar plant to date - 15 MW in Hissar, Haryana." },
   { year: "2024", title: "EV CPO launch", body: "Launched our EV CPO vertical - 40+ charging points live across DLF, Amrapali and Puri properties." },
+  { year: "2025", title: "EV CPO scale-up", body: "In 2025, Shubh Power moved from license to execution - electrical license in March, first residential CPO charging station in June, OEM and deploying-team tie-ups in July, and first EV charging installations with Solar + BESS by August.", highlight: "100+ EV Chargers Installed" },
 ];
 
 export const leadership = [
-  { name: "Subhash Chandra", role: "Director", group: "partners", image: `${live}Copy-of-1.png` },
-  { name: "Bhavy Aggarwal", role: "Director", group: "partners", image: `${live}WhatsApp-Image-2024-06-27-at-14.55.57_5ea9c002-e1734601461367.jpg` },
-  { name: "Vinod Aggrawal", role: "Investment Advisor", group: "partners", image: `${live}profile-pic-5-e1734602162532.png` },
+  { name: "Bhavy Aggarwal", role: "Founder & CEO", group: "partners", image: `${live}WhatsApp-Image-2024-06-27-at-14.55.57_5ea9c002-e1734601461367.jpg` },
+  { name: "Subhash Chandra", role: "Co founder & COO", group: "partners", image: `${live}Copy-of-1.png` },
+  { name: "Anchal Andrews", role: "Business Strategist", group: "partners", image: "/images/hero/anchal-andrews.jpeg" },
 ];
 
 export const operationalTeam = [
-  { name: "Mahender Kumar", role: "Operation Head", meta: "Solar Power", image: `${live}WhatsApp-Image-2026-01-22-at-8.00.51-PM-1.jpeg` },
+  { name: "Mahender Kumar", role: "Head of Project Execution", meta: "", image: `${live}WhatsApp-Image-2026-01-22-at-8.00.51-PM-1.jpeg` },
   { name: "Nishant Chauhan", role: "Operation Head", meta: "EV CPO", image: `${live}image-2-e1771485080926-rjdgjbfv0tyc2sb05qqeuizzx69ok5os7mju075a6o.png` },
   { name: "Anchal Andrews", role: "Business Strategist", meta: "", image: `${live}WhatsApp-Image-2026-02-18-at-11.23.43-AM-e1771480842140.jpeg` },
-  { name: "Kaushal Mantry", role: "Community", meta: "& Strategic Expansion", image: `${live}WhatsApp-Image-2024-08-23-at-18.23.32_ae0767ef-e1734602054679.jpg` },
+  { name: "Ankit Prajapat", role: "Site Manager", meta: "", image: "/images/hero/ankit-prajapat.jpeg" },
   { name: "Harsh Aggarwal", role: "Chartered Accountant", meta: "", image: `${live}IMG_0959.JPG.jpeg` },
 ];
 

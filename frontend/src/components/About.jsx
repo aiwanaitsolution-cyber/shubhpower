@@ -69,7 +69,6 @@ const About = () => (
               <span className="h-display text-[40px] sm:text-[56px] lg:text-[72px] text-[#16A34A] leading-none tracking-tight">
                 <CountUp value={s.value} />
               </span>
-              <span className="h-display text-[16px] sm:text-[20px] lg:text-[24px] text-[#F58220] leading-none mt-1.5">+</span>
             </div>
             <div className="text-[#0F1F14]/55 mt-3 text-[12px] sm:text-[13px] lg:text-[14px] uppercase tracking-[0.08em]">{s.label}</div>
           </div>

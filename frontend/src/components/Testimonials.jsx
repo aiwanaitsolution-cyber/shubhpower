@@ -14,7 +14,7 @@ const Testimonials = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           <div className="lg:col-span-4">
             <div className="h-mono text-[#16A34A] mb-4">TESTIMONIALS</div>
-            <h2 className="h-display text-[40px] md:text-[56px] lg:text-[64px] text-[#0F1F14]">
+            <h2 className="h-display text-[34px] md:text-[48px] lg:text-[56px] text-[#0F1F14]">
               What people say?
             </h2>
             <div className="mt-8 flex items-center gap-2">
@@ -40,7 +40,7 @@ const Testimonials = () => {
           <div className="lg:col-span-8">
             <div className="tex-water rounded-[28px] p-8 lg:p-12 bg-[#E6F4E9] min-h-[320px] flex flex-col justify-between">
               <Quote className="w-10 h-10 text-[#16A34A]" />
-              <blockquote className="h-display text-[26px] md:text-[36px] lg:text-[42px] text-[#0F1F14] leading-[1.15] mt-6">
+              <blockquote className="h-display text-[23px] md:text-[30px] lg:text-[36px] text-[#0F1F14] leading-[1.16] mt-6">
                 &ldquo;{t.quote}&rdquo;
               </blockquote>
               <figcaption className="mt-10 pt-6 border-t border-[#0F1F14]/15">
