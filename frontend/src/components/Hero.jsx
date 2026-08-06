@@ -4,22 +4,22 @@ import { ArrowRight } from "lucide-react";
 
 const heroSlides = [
   {
-    src: "/images/hero/home-solar-1.png",
+    src: "/images/hero/home-hero-x.png",
     alt: "Solar panels across a clean energy landscape at sunrise",
     position: "object-[62%_50%]",
   },
   {
-    src: "/images/hero/home-solar-2.png",
+    src: "/images/hero/home-hero-y.png",
     alt: "Large solar power plant with blue panels under clear sky",
     position: "object-[58%_50%]",
   },
   {
-    src: "/images/hero/home-solar-3.png",
+    src: "/images/hero/home-hero-z.png",
     alt: "Solar energy field showing clean power infrastructure",
     position: "object-[55%_50%]",
   },
   {
-    src: "/images/hero/home-solar-4.png",
+    src: "/images/hero/home-hero-w.png",
     alt: "Modern solar panels arranged across open land",
     position: "object-[60%_50%]",
   },
