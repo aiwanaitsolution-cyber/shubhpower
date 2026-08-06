@@ -15,7 +15,18 @@ const EVPage = () => (
       eyebrow="EV CHARGING SOLUTIONS"
       title={<>EV Charging<br />Solutions</>}
       subtitle="Shubh Power Solutions delivers smart EV charging infrastructure for Fleet and Logistics, Residential Communities, Commercial Buildings, Public Infrastructure, and Retail and Hospitality."
-      image="/images/live/shutterstock_2132932095-768x511-1.jpg"
+      images={[
+        {
+          src: "/images/hero/ev-charging-1.png",
+          alt: "Shubh Power EV charging infrastructure for real sites",
+          position: "object-[58%_50%]",
+        },
+        {
+          src: "/images/hero/ev-charging-2.png",
+          alt: "EV charging banner for Shubh Power CPO solutions",
+          position: "object-[54%_50%]",
+        },
+      ]}
     />
 
     <section className="py-16 lg:py-24 bg-[#EAF8F4]">
