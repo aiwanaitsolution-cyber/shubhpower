@@ -17,12 +17,12 @@ const EVPage = () => (
       subtitle="Shubh Power Solutions delivers smart EV charging infrastructure for Fleet and Logistics, Residential Communities, Commercial Buildings, Public Infrastructure, and Retail and Hospitality."
       images={[
         {
-          src: "/images/hero/evstation/fleet_logistics.png",
+          src: "/images/hero/ev/a.png",
           alt: "Shubh Power EV charging infrastructure for real sites",
           position: "object-[58%_50%]",
         },
         {
-          src: "/images/hero/evstation/commercial_building.png",
+          src: "/images/hero/ev/b.png",
           alt: "EV charging banner for Shubh Power CPO solutions",
           position: "object-[54%_50%]",
         },
