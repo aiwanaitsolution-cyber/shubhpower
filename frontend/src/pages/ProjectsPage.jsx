@@ -23,6 +23,17 @@ const ProjectsPage = () => {
   const source = pools[category][status];
   const accent = category === "ev" ? "#F58220" : "#16A34A";
   const catLabel = category === "solar" ? "Solar" : category === "ev" ? "EV CPO" : "All";
+  const projectHeroImages = [
+    { src: "/images/hero/projects-page-1.png", alt: "Shubh Power completed projects" },
+    { src: "/images/hero/projects-page-2.png", alt: "Shubh Power solar projects" },
+    { src: "/images/hero/projects-page-3.png", alt: "Shubh Power EV charging projects" },
+  ];
+  const heroImages =
+    category === "solar"
+      ? projectHeroImages.slice(0, 2)
+      : category === "ev"
+        ? projectHeroImages.slice(2)
+        : projectHeroImages;
 
   return (
     <div className="site-preview-type projects-preview-type">
@@ -30,7 +41,8 @@ const ProjectsPage = () => {
         eyebrow="OUR PROJECTS"
         title={<>Completed Projects</>}
         subtitle="Solar Power Projects and EV CPO Projects verified from the live Shubh Power website."
-        image="/images/live/solar-energy-power.jpg"
+        images={heroImages}
+        intervalMs={2000}
       />
 
       <section className="bg-[#F5F3EC] border-y border-[#0F1F14]/8">
