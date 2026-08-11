@@ -22,7 +22,12 @@ const SolarPage = () => (
       eyebrow="SOLAR POWER SOLUTIONS"
       title={<>Solar Power<br />Solutions</>}
       subtitle="In today's fast-paced world, more housing societies, commercial blocks, manufacturing plants and factories are looking for sustainable energy solutions."
-      image="/images/live/Solar-Panels-Cost-Calculator.png"
+      images={[
+        { src: "/images/hero/solar-page-1.png", alt: "Solar power plant" },
+        { src: "/images/hero/solar-page-2.png", alt: "Solar installation" },
+        { src: "/images/hero/solar-page-3.png", alt: "Solar energy project" },
+      ]}
+      intervalMs={2000}
     />
 
     <section className="py-14 sm:py-16 lg:py-24 bg-white">

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-const PageHero = ({ eyebrow, title, subtitle, image, images, imageAlt = "Shubh Power Solutions" }) => {
+const PageHero = ({ eyebrow, title, subtitle, image, images, imageAlt = "Shubh Power Solutions", intervalMs = 3000 }) => {
   const slides = images?.length ? images : image ? [{ src: image, alt: imageAlt }] : [];
   const hasImage = slides.length > 0;
   const [activeSlide, setActiveSlide] = useState(0);
@@ -12,10 +12,10 @@ const PageHero = ({ eyebrow, title, subtitle, image, images, imageAlt = "Shubh P
 
     const timer = window.setInterval(() => {
       setActiveSlide((current) => (current + 1) % slides.length);
-    }, 3000);
+    }, intervalMs);
 
     return () => window.clearInterval(timer);
-  }, [slides.length]);
+  }, [intervalMs, slides.length]);
 
   return (
     <section className="relative w-full min-h-[520px] sm:min-h-[560px] lg:min-h-[680px] flex items-center overflow-hidden">
