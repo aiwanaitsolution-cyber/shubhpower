@@ -35,8 +35,8 @@ const Person = ({ m, i }) => (
       <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0F1F14]/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
     </div>
     <div className="p-3 pb-2">
-      <div className="h-display text-[19px] text-[#0F1F14] leading-tight">{m.name}</div>
-      <div className="text-[#0F1F14]/55 text-[13px] mt-0.5">{m.role}{m.meta ? ` - ${m.meta}` : ""}</div>
+      <div className="h-display text-[21px] text-[#0F1F14] leading-[0.96]">{m.name}</div>
+      <div className="text-[#0F1F14]/55 text-[14px] mt-1 leading-snug">{m.role}{m.meta ? ` - ${m.meta}` : ""}</div>
     </div>
   </Reveal>
 );
@@ -241,20 +241,20 @@ const AboutPage = () => (
         </Reveal>
 
         <div className="flex justify-center mb-7">
-          <div className="team-band">
-            <h3 className="h-mono text-[12px] sm:text-[13px] tracking-[0.15em] text-[#0F1F14]">THE LEADERSHIP TEAM</h3>
+          <div className="team-band team-band-leadership">
+            <h3 className="h-mono text-[12px] sm:text-[13px] tracking-[0.15em] text-white">OUR LEADERSHIP TEAM</h3>
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8 mb-16 max-w-[880px] mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-7 mb-12 max-w-[1120px] mx-auto justify-items-center">
           {leadership.map((m, i) => <Person key={m.name} m={{ ...m, meta: "" }} i={i} />)}
         </div>
 
         <div className="flex justify-center mb-7">
-          <div className="team-band team-band-green">
-            <h3 className="h-mono text-[12px] sm:text-[13px] tracking-[0.15em] text-[#0F1F14]">THE POWERHOUSE BEHIND OUR SUCCESS</h3>
+          <div className="team-band team-band-green team-band-powerhouse">
+            <h3 className="h-mono text-[10px] sm:text-[11px] tracking-[0.16em] text-white">THE POWERHOUSE BEHIND OUR SUCCESS</h3>
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-7">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-7 max-w-[1120px] mx-auto justify-items-center">
           {operationalTeam.filter((m) => m.name !== "Anchal Andrews").map((m, i) => <Person key={m.name} m={m} i={i} />)}
         </div>
       </div>
