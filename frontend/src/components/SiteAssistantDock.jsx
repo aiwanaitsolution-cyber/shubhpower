@@ -1,8 +1,16 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Bot, ChevronRight, MessageCircle, Send, X } from "lucide-react";
 import { brand, company, solarSolutions, evCategories, solarProjects, evProjects, faqs } from "../data/mock";
 
-const normalize = (value) => value.toLowerCase().replace(/\s+/g, " ").trim();
+const normalize = (value) => String(value || "").toLowerCase().replace(/\s+/g, " ").trim();
+
+const quickActions = [
+  "About Shubh Power",
+  "Solar solutions",
+  "EV charging",
+  "Completed projects",
+  "Contact details",
+];
 
 const replyFor = (input) => {
   const q = normalize(input);
@@ -10,8 +18,8 @@ const replyFor = (input) => {
 
   if (!q) {
     return {
-      title: "Try asking me about the website",
-      body: "I can answer about the company, solar solutions, EV charging, projects, blogs, and contact details.",
+      title: "Ask me anything about Shubh Power",
+      body: "I can help with solar solutions, EV charging, projects, blogs, and contact details.",
     };
   }
 
@@ -20,6 +28,7 @@ const replyFor = (input) => {
       title: "About Shubh Power",
       body: `${brand.full} is based in Gurugram and works across solar EPC, battery storage and EV charging.`,
       bullets: ["Founded in 2010", "Office: Gurugram, Haryana", "End-to-end EPC and O&M"],
+      cta: { label: "Open About page", href: "/about" },
     };
   }
 
@@ -28,7 +37,7 @@ const replyFor = (input) => {
       title: "Solar power solutions",
       body: `Our solar portfolio includes ${solarSolutions.map((s) => s.title).join(", ")}.`,
       bullets: solarSolutions.slice(0, 4).map((s) => s.title),
-      cta: { label: "Open Solar Page", href: "/solar" },
+      cta: { label: "Open Solar page", href: "/solar" },
     };
   }
 
@@ -37,7 +46,7 @@ const replyFor = (input) => {
       title: "EV charging solutions",
       body: `We support ${evCategories.map((c) => c.title).join(", ")} with site planning, installation and maintenance.`,
       bullets: evCategories.map((c) => c.title),
-      cta: { label: "Open EV Page", href: "/ev-charging" },
+      cta: { label: "Open EV page", href: "/ev-charging" },
     };
   }
 
@@ -64,7 +73,7 @@ const replyFor = (input) => {
       title: "Contact details",
       body: `${brand.full} can be reached at ${phone} by phone or ${company.whatsapp} on WhatsApp.`,
       bullets: [company.email, company.address, `GSTIN: ${company.gstin}`],
-      cta: { label: "Contact page", href: "/contact" },
+      cta: { label: "Open Contact page", href: "/contact" },
     };
   }
 
@@ -77,14 +86,14 @@ const replyFor = (input) => {
     return {
       title: faqMatch.q,
       body: faqMatch.a,
-      cta: { label: "Contact us", href: "/contact" },
+      cta: { label: "Open Contact page", href: "/contact" },
     };
   }
 
   return {
     title: "I can help with the site",
     body: "Ask me about Shubh Power, solar solutions, EV charging, projects, blogs, or contact details.",
-    cta: { label: "Contact us", href: "/contact" },
+    cta: { label: "Open Contact page", href: "/contact" },
   };
 };
 
@@ -92,7 +101,7 @@ const initialMessages = [
   {
     role: "assistant",
     title: "Hi, I am the Shubh Power assistant.",
-    body: "Ask me about our solar work, EV charging, projects, blog, or contact details. I’m a rule-based support assistant for the Shubh Power website.",
+    body: "Ask me about our solar work, EV charging, projects, blog, or contact details.",
   },
 ];
 
@@ -101,13 +110,14 @@ const SiteAssistantDock = () => {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState(initialMessages);
   const bottomRef = useRef(null);
+  const buttons = useMemo(() => quickActions, []);
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
   }, [messages, open]);
 
   const sendPrompt = (value) => {
-    const text = value.trim();
+    const text = String(value || "").trim();
     if (!text) return;
     const response = replyFor(text);
     setMessages((current) => [...current, { role: "user", body: text }, { role: "assistant", ...response }]);
@@ -115,10 +125,15 @@ const SiteAssistantDock = () => {
     setOpen(true);
   };
 
+  const onSubmit = (event) => {
+    event.preventDefault();
+    sendPrompt(input);
+  };
+
   return (
-    <div className="fixed bottom-24 right-4 sm:right-5 z-50 flex items-end gap-3">
+    <div className="fixed bottom-5 right-4 sm:right-5 z-50">
       {open ? (
-        <div className="assistant-dock w-[calc(100vw-2rem)] sm:w-[340px] max-w-[340px] overflow-hidden rounded-[24px] border border-white/15 bg-[#0F1F14]/92 text-white shadow-[0_24px_80px_rgba(0,0,0,0.32)]">
+        <div className="assistant-dock w-[calc(100vw-2rem)] sm:w-[360px] max-w-[360px] overflow-hidden rounded-[28px] border border-white/12 bg-[#10241B]/96 text-white shadow-[0_24px_80px_rgba(0,0,0,0.34)]">
           <div className="flex items-center justify-between gap-3 border-b border-white/10 px-4 py-4">
             <div className="flex items-center gap-3">
               <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#16A34A] text-white shadow-lg">
@@ -126,61 +141,90 @@ const SiteAssistantDock = () => {
               </span>
               <div>
                 <div className="h-mono text-[10px] tracking-[0.18em] text-[#7DE0C3]">SHUBH POWER</div>
-                <div className="text-[14px] font-semibold">Customer Support</div>
+                <div className="text-[15px] font-semibold">Customer Support</div>
               </div>
             </div>
-            <button type="button" onClick={() => setOpen(false)} className="rounded-full bg-white/10 p-2 text-white/80 hover:bg-white/16">
+            <button
+              type="button"
+              onClick={() => setOpen(false)}
+              aria-label="Close chat"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white/80 hover:bg-white/15"
+            >
               <X className="h-4 w-4" />
             </button>
           </div>
 
-          <div className="max-h-[48vh] space-y-3 overflow-y-auto px-4 py-4">
-            {messages.map((m, i) => (
-              <div key={`${m.role}-${i}`} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
-                <div className={`max-w-[90%] rounded-[18px] px-4 py-3 text-[14px] leading-relaxed ${m.role === "user" ? "bg-[#16A34A] text-white" : "bg-white/8 text-white/90 border border-white/10"}`}>
-                  {m.title ? <div className="font-semibold mb-1.5 text-[13px]">{m.title}</div> : null}
-                  <div>{m.body}</div>
-                  {m.bullets?.length ? (
-                    <ul className="mt-3 space-y-1.5 text-[13px] text-white/78">
-                      {m.bullets.map((item) => (
-                        <li key={item} className="flex items-start gap-2">
-                          <ChevronRight className="mt-0.5 h-3.5 w-3.5 text-[#7DE0C3]" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  ) : null}
-                  {m.cta ? (
-                    <a href={m.cta.href} className="mt-3 inline-flex items-center gap-2 rounded-full bg-white text-[#0F1F14] px-3.5 py-2 text-[12px] font-medium">
-                      {m.cta.label}
-                    </a>
-                  ) : null}
+          <div className="max-h-[48vh] overflow-y-auto px-4 py-4">
+            <div className="mb-4 flex flex-wrap gap-2">
+              {buttons.map((label) => (
+                <button
+                  key={label}
+                  type="button"
+                  onClick={() => sendPrompt(label)}
+                  className="rounded-full border border-white/12 bg-white/8 px-3.5 py-2 text-[12px] text-white/88 hover:bg-white/14"
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+
+            <div className="space-y-3">
+              {messages.map((m, i) => (
+                <div key={`${m.role}-${i}`} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
+                  <div
+                    className={`max-w-[92%] rounded-[20px] px-4 py-3 text-[14px] leading-relaxed ${
+                      m.role === "user"
+                        ? "bg-[#16A34A] text-white"
+                        : "bg-white/8 text-white/92 border border-white/10"
+                    }`}
+                  >
+                    {m.title ? <div className="mb-1.5 text-[13px] font-semibold">{m.title}</div> : null}
+                    <div className="text-[14px] leading-relaxed">{m.body}</div>
+                    {m.bullets?.length ? (
+                      <ul className="mt-3 space-y-1.5 text-[13px] text-white/80">
+                        {m.bullets.map((item) => (
+                          <li key={item} className="flex items-start gap-2">
+                            <ChevronRight className="mt-0.5 h-3.5 w-3.5 text-[#7DE0C3]" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
+                    {m.cta ? (
+                      <a href={m.cta.href} className="mt-3 inline-flex items-center rounded-full bg-white px-3.5 py-2 text-[12px] font-medium text-[#0F1F14]">
+                        {m.cta.label}
+                      </a>
+                    ) : null}
+                  </div>
                 </div>
-              </div>
-            ))}
-            <div ref={bottomRef} />
+              ))}
+              <div ref={bottomRef} />
+            </div>
           </div>
 
           <div className="border-t border-white/10 p-4">
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                sendPrompt(input);
-              }}
-              className="flex items-center gap-2"
-            >
+            <form onSubmit={onSubmit} className="flex items-center gap-2">
               <input
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Ask something..."
-                className="h-11 flex-1 rounded-full border border-white/10 bg-white/8 px-4 text-[14px] text-white outline-none placeholder:text-white/45"
+                aria-label="Chat message"
+                className="h-11 flex-1 rounded-full border border-white/12 bg-white px-4 text-[14px] text-[#0F1F14] outline-none placeholder:text-[#0F1F14]/35"
               />
-              <button type="submit" className="flex h-11 w-11 items-center justify-center rounded-full bg-[#16A34A] text-white hover:bg-[#128740]">
+              <button
+                type="submit"
+                aria-label="Send message"
+                className="flex h-11 w-11 items-center justify-center rounded-full bg-[#16A34A] text-white transition-colors hover:bg-[#128740]"
+              >
                 <Send className="h-4 w-4" />
               </button>
             </form>
-            <div className="mt-3 flex items-center justify-end">
-              <button type="button" onClick={() => setMessages(initialMessages)} className="rounded-full border border-white/12 bg-white/8 px-3 py-2 text-[12px] text-white/80 hover:bg-white/12">
+            <div className="mt-3 flex justify-end">
+              <button
+                type="button"
+                onClick={() => setMessages(initialMessages)}
+                className="rounded-full border border-white/12 bg-white/8 px-3 py-2 text-[12px] text-white/82 hover:bg-white/14"
+              >
                 Reset
               </button>
             </div>
@@ -188,16 +232,15 @@ const SiteAssistantDock = () => {
         </div>
       ) : null}
 
-      <div className="flex flex-col items-end gap-3">
-        <button
-          type="button"
-          onClick={() => setOpen((value) => !value)}
-          className="assistant-dock inline-flex items-center gap-2 rounded-full border border-white/15 bg-[#0F1F14] px-4 py-3 text-white shadow-[0_16px_42px_rgba(0,0,0,0.22)]"
-        >
-          <MessageCircle className="h-4 w-4 text-[#7DE0C3]" />
-          <span className="text-[14px] font-medium">Chat</span>
-        </button>
-      </div>
+      <button
+        type="button"
+        onClick={() => setOpen((value) => !value)}
+        aria-label="Open chat"
+        className="assistant-dock inline-flex items-center gap-2 rounded-full border border-white/12 bg-[#10241B] px-4 py-3 text-white shadow-[0_16px_42px_rgba(0,0,0,0.22)]"
+      >
+        <MessageCircle className="h-4 w-4 text-[#7DE0C3]" />
+        <span className="text-[14px] font-medium">Chat</span>
+      </button>
     </div>
   );
 };
