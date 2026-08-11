@@ -131,7 +131,7 @@ const SiteAssistantDock = () => {
   };
 
   return (
-    <div className="fixed bottom-5 right-4 sm:right-5 z-50">
+    <div className="fixed bottom-24 right-4 sm:right-5 z-50">
       {open ? (
         <div className="assistant-dock w-[calc(100vw-2rem)] sm:w-[360px] max-w-[360px] overflow-hidden rounded-[28px] border border-white/12 bg-[#10241B]/96 text-white shadow-[0_24px_80px_rgba(0,0,0,0.34)]">
           <div className="flex items-center justify-between gap-3 border-b border-white/10 px-4 py-4">
@@ -154,7 +154,7 @@ const SiteAssistantDock = () => {
             </button>
           </div>
 
-          <div className="max-h-[48vh] overflow-y-auto px-4 py-4">
+          <div className="max-h-[42vh] overflow-y-auto px-4 py-4">
             <div className="mb-4 flex flex-wrap gap-2">
               {buttons.map((label) => (
                 <button
