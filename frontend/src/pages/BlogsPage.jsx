@@ -27,9 +27,11 @@ const BlogsPage = () => {
   return (
     <div className="site-preview-type blogs-preview-type">
       {/* Masthead */}
-      <section className="pt-16 lg:pt-24 pb-10 lg:pb-12 bg-[#EAF8F4]">
+      <section className="relative overflow-hidden pt-16 lg:pt-24 pb-10 lg:pb-12 bg-[linear-gradient(135deg,#EAF8F4_0%,#FBFAF7_55%,#F1EADB_120%)]">
+        <div className="absolute -top-24 right-0 h-72 w-72 rounded-full bg-[#16A34A]/10 blur-3xl" />
+        <div className="absolute -bottom-24 left-0 h-72 w-72 rounded-full bg-[#F58220]/10 blur-3xl" />
         <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
-          <div className="rise-in rounded-[30px] bg-white/72 border border-[#0F1F14]/8 p-6 md:p-10">
+          <div className="rise-in rounded-[30px] bg-white/80 backdrop-blur-xl border border-[#0F1F14]/8 p-6 md:p-10 shadow-[0_18px_50px_rgba(15,31,20,0.08)]">
             <div className="h-mono text-[12px] tracking-[0.2em] text-[#16A34A] mb-4">THE SHUBH POWER JOURNAL</div>
             <h1 className="h-display text-[46px] md:text-[68px] lg:text-[80px] leading-[0.95] tracking-tight text-[#0F1F14]">Notes from the field.</h1>
             <p className="mt-6 text-[17px] md:text-[19px] text-[#0F1F14]/60 leading-relaxed max-w-[56ch]">

@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import WhatsAppFab from "./components/WhatsAppFab";
+import ScrollToTopFab from "./components/ScrollToTopFab";
+import SiteAssistantDock from "./components/SiteAssistantDock";
 import CookieBanner from "./components/CookieBanner";
 import Home from "./pages/Home";
 import "./App.css";
@@ -22,6 +24,8 @@ const Layout = ({ children }) => (
     <Navbar />
     <main className="pt-[88px]">{children}</main>
     <Footer />
+    <ScrollToTopFab />
+    <SiteAssistantDock />
     <WhatsAppFab />
     <CookieBanner />
   </div>

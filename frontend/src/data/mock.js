@@ -283,7 +283,28 @@ export const timeline = [
   { year: "2020", title: "Utility-scale expansion", body: "Broke ground on multiple MW-scale ground-mount plants across Rajasthan and Haryana." },
   { year: "2022", title: "15 MW Hissar", body: "Commissioned our largest solar plant to date - 15 MW in Hissar, Haryana." },
   { year: "2024", title: "EV CPO launch", body: "Launched our EV CPO vertical - 40+ charging points live across DLF, Amrapali and Puri properties." },
-  { year: "2025", title: "EV CPO scale-up", body: "In 2025, Shubh Power moved from license to execution - electrical license in March, first residential CPO charging station in June, OEM and deploying-team tie-ups in July, and first EV charging installations with Solar + BESS by August.", highlight: "100+ EV Chargers Installed" },
+  {
+    year: "2025",
+    title: "EV CPO scale-up",
+    body: "Shubh Power moved from license to execution with a fast sequence of EV milestones and early-scale deployments.",
+    highlight: "100+ EV Chargers Installed",
+    milestones: [
+      { date: "March 2025", text: "Est. with Electric License" },
+      { date: "June 2025", text: "First CPO charging station for a residential society" },
+      { date: "July 2025", text: "Tie-up with OEM & Deploying Team" },
+      { date: "August 2025", text: "First EV charging installation with Solar+BESS" },
+    ],
+  },
+  {
+    year: "2026-27",
+    title: "Next EV expansion wave",
+    body: "The next phase focuses on scale, repeatability and denser charging coverage across more sites.",
+    highlight: "300+ EV Chargers Planned",
+    milestones: [
+      { date: "August 2026", text: "Total no. of EV charger installed are 100+" },
+      { date: "FY 2026-27", text: "Total no. of EV chargers expected to install originally are 300+" },
+    ],
+  },
 ];
 
 export const leadership = [

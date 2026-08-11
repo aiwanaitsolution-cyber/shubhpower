@@ -130,6 +130,30 @@
   font-family: inherit;
 }
 
+.about-preview-type {
+  font-family: 'Figtree', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: clip;
+}
+.about-preview-type .h-display {
+  font-family: 'Plus Jakarta Sans', 'Figtree', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.012em;
+  line-height: 0.95;
+}
+.about-preview-type .h-mono {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+.about-preview-type button,
+.about-preview-type a,
+.about-preview-type input,
+.about-preview-type textarea {
+  font-family: inherit;
+}
+
 .projects-preview-type {
   font-family: 'Figtree', -apple-system, BlinkMacSystemFont, sans-serif;
   background: #fff;
@@ -311,6 +335,42 @@
 .pill-btn:hover .pill-icon { transform: translateX(2px); }
 .pill-icon { transition: transform 0.3s ease; }
 
+@keyframes project-glow {
+  0%, 100% { transform: scale(1); opacity: 0.48; }
+  50% { transform: scale(1.06); opacity: 0.72; }
+}
+
+.project-glow-card {
+  position: relative;
+  isolation: isolate;
+}
+.project-glow-card::before {
+  content: "";
+  position: absolute;
+  inset: auto 12% -10% 12%;
+  height: 26%;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(22,163,74,0.45), rgba(22,163,74,0.08) 55%, transparent 75%);
+  filter: blur(18px);
+  opacity: 0.42;
+  z-index: -1;
+  animation: project-glow 4.8s ease-in-out infinite;
+}
+.project-glass-panel {
+  background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.68));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.46);
+  box-shadow: 0 16px 40px rgba(15, 31, 20, 0.18);
+}
+.project-glass-panel-dark {
+  background: linear-gradient(135deg, rgba(15,31,20,0.78), rgba(15,31,20,0.42));
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 18px 45px rgba(15, 31, 20, 0.20);
+}
+
 .tex-water {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.12'/></svg>");
   background-size: 220px 220px;
@@ -437,18 +497,34 @@ button:focus-visible, a:focus-visible {
 
 .team-band {
   position: relative;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 58px;
-  padding: 16px 22px;
-  border-radius: 999px;
+  min-height: 0;
+  width: fit-content;
+  padding: 14px 18px;
+  border-radius: 18px;
   background: linear-gradient(135deg, rgba(245, 130, 32, 0.95), rgba(22, 163, 74, 0.95));
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
   text-align: center;
+  white-space: nowrap;
 }
 .team-band-green {
   background: linear-gradient(135deg, rgba(22, 163, 74, 0.95), rgba(37, 191, 174, 0.95));
+}
+
+@keyframes float-up {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.scroll-top-fab {
+  animation: float-up 4.8s ease-in-out infinite;
+}
+
+.assistant-dock {
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 }
 
 @media (max-width: 640px) {
@@ -459,7 +535,7 @@ button:focus-visible, a:focus-visible {
     min-height: auto;
   }
   .team-band {
-    border-radius: 24px;
-    padding: 14px 16px;
+    border-radius: 16px;
+    padding: 12px 14px;
   }
 }

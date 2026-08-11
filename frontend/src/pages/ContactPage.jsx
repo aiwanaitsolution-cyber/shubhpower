@@ -40,8 +40,7 @@ const ContactPage = () => {
         eyebrow="CONTACT US"
         title={<>Contact Us</>}
         subtitle="Need any consultations contact with us."
-        image="/images/live/shubh-ev-charger-hero.png"
-        imageAlt="Shubh Power EV charging station"
+        solidBackground
       />
 
       <section className="py-14 lg:py-20 bg-[#EAF8F4]">

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-const PageHero = ({ eyebrow, title, subtitle, image, images, imageAlt = "Shubh Power Solutions", intervalMs = 3000, showBottomFade = false }) => {
+const PageHero = ({ eyebrow, title, subtitle, image, images, imageAlt = "Shubh Power Solutions", intervalMs = 3000, showBottomFade = false, solidBackground = false }) => {
   const slides = images?.length ? images : image ? [{ src: image, alt: imageAlt }] : [];
   const hasImage = slides.length > 0;
   const [activeSlide, setActiveSlide] = useState(0);
@@ -33,18 +33,24 @@ const PageHero = ({ eyebrow, title, subtitle, image, images, imageAlt = "Shubh P
               }`}
             />
           ))}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#071B14]/76 via-[#0F3328]/44 to-[#0F3328]/10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#04120C]/84 via-[#0F3328]/60 to-[#0F3328]/28" />
           {showBottomFade && (
             <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#FBFAF7] via-[#FBFAF7]/30 to-transparent" />
           )}
         </>
+      ) : solidBackground ? (
+        <div className="absolute inset-0 overflow-hidden bg-[linear-gradient(135deg,#0F3328_0%,#174F3F_48%,#EAF8F4_128%)]">
+          <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-[#7DE0C3]/18 blur-3xl" />
+          <div className="absolute -bottom-20 -left-16 h-80 w-80 rounded-full bg-[#F58220]/16 blur-3xl" />
+          <div className="absolute inset-0 tex-water opacity-[0.14]" />
+        </div>
       ) : (
         <div className="absolute inset-0 bg-[#EAF8F4]" />
       )}
       <div className="relative max-w-[1500px] mx-auto w-full px-5 sm:px-6 lg:px-10 py-14 lg:py-20">
-        <div className={`max-w-4xl rise-in ${hasImage ? "text-white" : "text-[#0F1F14]"}`}>
+        <div className={`max-w-4xl rise-in ${hasImage || solidBackground ? "text-white" : "text-[#0F1F14]"}`}>
           {eyebrow && (
-            <div className={`h-mono mb-5 sm:mb-6 ${hasImage ? "text-[#7DE0C3]" : "text-[#16A34A]"}`}>
+            <div className={`h-mono mb-5 sm:mb-6 ${hasImage || solidBackground ? "text-[#7DE0C3]" : "text-[#16A34A]"}`}>
               {eyebrow}
             </div>
           )}
@@ -52,7 +58,7 @@ const PageHero = ({ eyebrow, title, subtitle, image, images, imageAlt = "Shubh P
             {title}
           </h1>
           {subtitle && (
-            <p className={`mt-5 sm:mt-6 text-[15px] sm:text-[17px] md:text-[19px] max-w-2xl leading-relaxed ${hasImage ? "text-white/88" : "text-[#0F1F14]/70"}`}>
+            <p className={`mt-5 sm:mt-6 text-[15px] sm:text-[17px] md:text-[19px] max-w-2xl leading-relaxed ${hasImage || solidBackground ? "text-white/88" : "text-[#0F1F14]/70"}`}>
               {subtitle}
             </p>
           )}
@@ -60,13 +66,11 @@ const PageHero = ({ eyebrow, title, subtitle, image, images, imageAlt = "Shubh P
             <Link
               to="/contact"
               className={`pill-btn inline-flex items-center gap-3 pl-2 pr-6 py-2 rounded-full text-[15px] font-medium ${
-                hasImage ? "bg-white text-[#0F1F14]" : "bg-[#0F1F14] text-white"
+                hasImage || solidBackground ? "bg-white text-[#0F1F14]" : "bg-[#0F1F14] text-white"
               }`}
             >
               <span
-                className={`w-10 h-10 rounded-full flex items-center justify-center ${
-                  hasImage ? "bg-[#0F1F14]" : "bg-[#16A34A]"
-                }`}
+                className={`w-10 h-10 rounded-full flex items-center justify-center ${hasImage || solidBackground ? "bg-[#0F1F14]" : "bg-[#16A34A]"}`}
               >
                 <ArrowRight className="pill-icon w-4 h-4 text-white" />
               </span>
@@ -77,16 +81,18 @@ const PageHero = ({ eyebrow, title, subtitle, image, images, imageAlt = "Shubh P
               className={`pill-btn inline-flex items-center gap-3 pl-6 pr-2 py-2 rounded-full text-[15px] font-medium border ${
                 hasImage
                   ? "bg-white/10 backdrop-blur border-white/40 text-white hover:bg-white/20"
-                  : "border-[#0F1F14]/20 text-[#0F1F14] hover:bg-white"
+                  : solidBackground
+                    ? "bg-white/10 backdrop-blur border-white/40 text-white hover:bg-white/20"
+                    : "border-[#0F1F14]/20 text-[#0F1F14] hover:bg-white"
               }`}
             >
               See projects
               <span
                 className={`w-10 h-10 rounded-full flex items-center justify-center ${
-                  hasImage ? "bg-white" : "bg-[#0F1F14]"
+                  hasImage || solidBackground ? "bg-white" : "bg-[#0F1F14]"
                 }`}
               >
-                <ArrowRight className={`pill-icon w-4 h-4 ${hasImage ? "text-[#0F1F14]" : "text-white"}`} />
+                <ArrowRight className={`pill-icon w-4 h-4 ${hasImage || solidBackground ? "text-[#0F1F14]" : "text-white"}`} />
               </span>
             </Link>
           </div>

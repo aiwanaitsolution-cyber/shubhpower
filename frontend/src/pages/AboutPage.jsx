@@ -1,14 +1,39 @@
 import React from "react";
-import { Eye, Target, Gem, Check } from "lucide-react";
+import { Link } from "react-router-dom";
+import { ArrowRight, Eye, Target, Gem, Check } from "lucide-react";
 import PageHero from "../components/PageHero";
 import Reveal from "../components/Reveal";
 import CountUp from "../components/CountUp";
 import Testimonials from "../components/Testimonials";
 import CTABanner from "../components/CTABanner";
-import { brand, stats, values, promises, leadership, operationalTeam, timeline } from "../data/mock";
+import { stats, values, promises, leadership, operationalTeam, timeline } from "../data/mock";
 
-const aboutHeroCopy =
-  "Welcome to Shubh Power Solutions Private Limited, established in 2010 with its office in Gurugram, Haryana, India. We are a leading provider of comprehensive power solutions in Delhi and the National Capital Region - delivering affordable power, reducing carbon footprint and promoting energy efficiency across industries.";
+const aboutHeroCopy = (
+  <>
+    Founded in Gurugram in 2010, Shubh Power Solutions has grown from early rooftop installations into a full-scope clean-energy EPC, delivering utility-scale solar plants, battery storage and EV charging networks across Delhi-NCR, Rajasthan, Punjab, Haryana and Uttar Pradesh.
+    <br />
+    <br />
+    We handle the whole journey in-house, feasibility and design, procurement of tier-1 components, construction, discom liaison and long-term O&M, so our clients deal with one accountable team for the 25-year life of the asset.
+  </>
+);
+
+const aboutHeroSlides = [
+  {
+    src: "/images/live/1mw-solar-power-plant-panorama.jpeg",
+    alt: "Shubh Power solar power plant overview",
+    position: "object-[55%_50%]",
+  },
+  {
+    src: "/images/live/about10.jpg",
+    alt: "Shubh Power solar installation on site",
+    position: "object-[58%_50%]",
+  },
+  {
+    src: "/images/live/solar-energy-power.jpg",
+    alt: "Shubh Power clean energy solar project",
+    position: "object-[60%_50%]",
+  },
+];
 
 const Person = ({ m, i }) => (
   <Reveal delay={Math.min((i % 4) * 0.05, 0.2)} className="group rounded-[24px] bg-white p-3 shadow-xl border border-white/10 card-lift">
@@ -27,10 +52,10 @@ const AboutPage = () => (
   <div className="site-preview-type about-preview-type">
     <PageHero
       eyebrow="ABOUT US"
-      title={<>Fifteen years of<br />engineering India's<br />clean-energy backbone.</>}
+      title={<>From a single rooftop to<br />megawatts across North India.</>}
       subtitle={aboutHeroCopy}
-      image="/images/live/10nlc_solar.jpg"
-      imageAlt="Shubh Power solar farm"
+      images={aboutHeroSlides}
+      intervalMs={120000}
     />
 
     <section className="relative py-16 lg:py-24 bg-[#EAF8F4] overflow-hidden">
@@ -39,12 +64,26 @@ const AboutPage = () => (
         <Reveal>
           <div className="flex items-center gap-2.5 mb-5 rounded-full bg-white/80 border border-[#16A34A]/14 w-max px-4 py-2">
             <span className="w-8 h-[3px] rounded-full bg-[#16A34A]" />
-            <span className="h-mono text-[11px] tracking-[0.18em] text-[#16A34A]">WELCOME</span>
+            <span className="h-mono text-[11px] tracking-[0.18em] text-[#16A34A]">OUR STORY</span>
           </div>
           <h2 className="h-display text-[34px] md:text-[48px] lg:text-[56px] leading-[1.02] tracking-tight text-[#0F1F14]">
-            Shubh Power Solutions Private Limited
+            From a single rooftop to megawatts across North India.
           </h2>
-          <p className="mt-6 text-[#0F1F14]/70 text-[16px] leading-relaxed">{brand.intro}</p>
+          <p className="mt-6 text-[#0F1F14]/70 text-[16px] leading-relaxed">
+            Founded in Gurugram in 2010, Shubh Power Solutions has grown from early rooftop installations into a full-scope clean-energy EPC, delivering utility-scale solar plants, battery storage and EV charging networks across Delhi-NCR, Rajasthan, Punjab, Haryana and Uttar Pradesh.
+          </p>
+          <p className="mt-4 text-[#0F1F14]/70 text-[16px] leading-relaxed">
+            We handle the whole journey in-house, feasibility and design, procurement of tier-1 components, construction, discom liaison and long-term O&M, so our clients deal with one accountable team for the 25-year life of the asset.
+          </p>
+          <Link
+            to="/projects"
+            className="pill-btn mt-8 inline-flex items-center gap-3 pl-6 pr-2 py-2 rounded-full bg-[#0F1F14] text-white text-[15px] font-medium"
+          >
+            See our projects
+            <span className="w-10 h-10 rounded-full bg-[#16A34A] flex items-center justify-center">
+              <ArrowRight className="w-4 h-4 text-white" />
+            </span>
+          </Link>
           <div className="mt-8 grid grid-cols-3 gap-3 max-w-xl">
             {[
               ["2010", "Established"],
@@ -146,12 +185,26 @@ const AboutPage = () => (
                 <div className="absolute left-0 top-3 w-9 h-9 rounded-full bg-white border-2 border-[#16A34A] shadow-md flex items-center justify-center">
                   <span className="w-3 h-3 rounded-full bg-[#F58220]" />
                 </div>
-                <div className="rounded-[24px] bg-white border border-[#0F1F14]/8 p-5 sm:p-6 shadow-sm hover:shadow-xl transition-shadow">
-                  <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-5">
-                    <div className="h-display text-[34px] text-[#16A34A] leading-none min-w-[94px]">{t.year}</div>
-                    <h3 className="h-display text-[22px] md:text-[26px] text-[#0F1F14] leading-tight">{t.title}</h3>
+                <div className="rounded-[26px] bg-white/92 backdrop-blur-xl border border-[#0F1F14]/8 p-5 sm:p-6 shadow-[0_18px_50px_rgba(15,31,20,0.08)] hover:shadow-[0_24px_65px_rgba(15,31,20,0.12)] transition-shadow">
+                  <div className="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-5">
+                    <div className="min-w-[110px]">
+                      <div className="inline-flex rounded-full bg-[#16A34A]/10 border border-[#16A34A]/16 px-4 py-2 h-mono text-[11px] tracking-[0.15em] text-[#0E7A38]">{t.year}</div>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="h-display text-[22px] md:text-[26px] text-[#0F1F14] leading-tight">{t.title}</h3>
+                      <p className="mt-3 text-[#0F1F14]/66 text-[15px] leading-relaxed">{t.body}</p>
+                    </div>
                   </div>
-                  <p className="mt-3 text-[#0F1F14]/66 text-[15px] leading-relaxed">{t.body}</p>
+                  {t.milestones?.length ? (
+                    <div className="mt-5 grid sm:grid-cols-2 gap-3">
+                      {t.milestones.map((m) => (
+                        <div key={m.date} className="rounded-[18px] bg-[#F7FBF8] border border-[#0F1F14]/8 p-4">
+                          <div className="h-mono text-[10px] tracking-[0.16em] text-[#16A34A]">{m.date}</div>
+                          <div className="mt-2 text-[#0F1F14] text-[14px] leading-relaxed">{m.text}</div>
+                        </div>
+                      ))}
+                    </div>
+                  ) : null}
                   {t.highlight && (
                     <div className="mt-4 inline-flex rounded-full bg-[#16A34A]/10 border border-[#16A34A]/20 px-4 py-2 h-mono text-[11px] tracking-[0.14em] text-[#0E7A38]">
                       {t.highlight}
@@ -186,7 +239,7 @@ const AboutPage = () => (
       </div>
     </section>
 
-    <section id="team" className="py-16 lg:py-24 bg-[#0F3328] text-white overflow-hidden">
+    <section id="team" className="py-16 lg:py-24 bg-[radial-gradient(circle_at_top,#E6F4E9_0%,#D8F0E0_25%,#A9E4C4_60%,#0F3328_120%)] text-white overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-10">
         <Reveal className="mb-12 max-w-3xl mx-auto text-center">
           <div className="inline-flex items-center gap-2.5 mb-4 px-4 py-2 rounded-full bg-white/10 border border-white/14">
@@ -196,15 +249,19 @@ const AboutPage = () => (
           <h2 className="h-display text-[36px] md:text-[56px] tracking-tight text-white">Meet Our Core Team</h2>
         </Reveal>
 
-        <div className="team-band mb-7">
-          <h3 className="h-mono text-[12px] sm:text-[13px] tracking-[0.15em] text-white">THE LEADERSHIP TEAM</h3>
+        <div className="flex justify-center mb-7">
+          <div className="team-band">
+            <h3 className="h-mono text-[12px] sm:text-[13px] tracking-[0.15em] text-white">THE LEADERSHIP TEAM</h3>
+          </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8 mb-16 max-w-[880px] mx-auto">
           {leadership.map((m, i) => <Person key={m.name} m={{ ...m, meta: "" }} i={i} />)}
         </div>
 
-        <div className="team-band team-band-green mb-7">
-          <h3 className="h-mono text-[12px] sm:text-[13px] tracking-[0.15em] text-white">THE POWERHOUSE BEHIND OUR SUCCESS</h3>
+        <div className="flex justify-center mb-7">
+          <div className="team-band team-band-green">
+            <h3 className="h-mono text-[12px] sm:text-[13px] tracking-[0.15em] text-white">THE POWERHOUSE BEHIND OUR SUCCESS</h3>
+          </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-7">
           {operationalTeam.map((m, i) => <Person key={m.name} m={m} i={i} />)}
