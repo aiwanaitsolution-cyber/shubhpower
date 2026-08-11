@@ -25,14 +25,14 @@ const SolarPage = () => (
       image="/images/live/Solar-Panels-Cost-Calculator.png"
     />
 
-    <section className="py-16 lg:py-24 bg-[#EAF8F4]">
-      <div className="max-w-[1320px] mx-auto px-6 lg:px-10 space-y-14 lg:space-y-16">
+    <section className="py-14 sm:py-16 lg:py-24 bg-white">
+      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-10 space-y-10 sm:space-y-12 lg:space-y-16">
         {solarSolutions.filter((s) => s.id !== "pv").map((s, i) => {
           const flip = i % 2 === 1;
           return (
-            <div id={solarAnchors[s.id] || s.id} key={s.id} className="grid grid-cols-1 lg:grid-cols-12 gap-7 lg:gap-10 items-center rounded-[28px] bg-white/78 border border-[#0F1F14]/8 p-5 lg:p-8 shadow-sm">
+            <div id={solarAnchors[s.id] || s.id} key={s.id} className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-7 lg:gap-10 items-center rounded-[24px] sm:rounded-[28px] bg-white border border-[#0F1F14]/8 p-4 sm:p-5 lg:p-8 shadow-[0_18px_50px_rgba(15,31,20,0.07)]">
               <div className={`lg:col-span-5 ${flip ? "lg:order-2" : ""}`}>
-                <div className="tex-water rounded-[22px] overflow-hidden aspect-square relative shadow-md" style={{ backgroundColor: s.bg }}>
+                <div className="tex-water rounded-[18px] sm:rounded-[22px] overflow-hidden aspect-[4/3] sm:aspect-square relative shadow-md max-h-[420px] lg:max-h-none" style={{ backgroundColor: s.bg }}>
                   <img src={s.image} alt={s.title} className="absolute inset-0 w-full h-full object-cover" />
                 </div>
               </div>
