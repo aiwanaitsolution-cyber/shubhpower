@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-const PageHero = ({ eyebrow, title, subtitle, image, images, imageAlt = "Shubh Power Solutions", intervalMs = 3000, showBottomFade = true }) => {
+const PageHero = ({ eyebrow, title, subtitle, image, images, imageAlt = "Shubh Power Solutions", intervalMs = 3000, showBottomFade = false }) => {
   const slides = images?.length ? images : image ? [{ src: image, alt: imageAlt }] : [];
   const hasImage = slides.length > 0;
   const [activeSlide, setActiveSlide] = useState(0);
