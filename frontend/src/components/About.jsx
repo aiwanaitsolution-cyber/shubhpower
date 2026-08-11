@@ -11,6 +11,20 @@ const capabilities = [
   "Subsidies and net metering assistance",
 ];
 
+const StatValue = ({ value }) => {
+  const str = String(value);
+  const [main, unit] = str.includes(" ") ? str.split(/\s+/, 2) : [str, ""];
+
+  return (
+    <div className="leading-none">
+      <span className="block text-[38px] sm:text-[52px] lg:text-[64px] font-semibold tracking-[-0.03em] text-[#16A34A]">
+        <CountUp value={main} />
+      </span>
+      {unit ? <span className="block mt-1 text-[18px] sm:text-[22px] font-semibold tracking-[-0.02em] text-[#16A34A]">{unit}</span> : null}
+    </div>
+  );
+};
+
 const About = () => (
   <section id="about" className="py-24 lg:py-32 bg-white">
     <div className="max-w-[1500px] mx-auto px-6 lg:px-10">
@@ -66,11 +80,7 @@ const About = () => (
       <div className="mt-20 lg:mt-28 rounded-[28px] bg-[#F1EADB] px-8 sm:px-10 lg:px-16 py-12 lg:py-16 grid grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-8">
         {stats.map((s) => (
           <div key={s.label} className="flex flex-col items-start">
-            <div className="flex items-start gap-1 leading-none">
-              <span className="h-display text-[40px] sm:text-[56px] lg:text-[72px] text-[#16A34A] leading-none tracking-tight">
-                <CountUp value={s.value} />
-              </span>
-            </div>
+            <StatValue value={s.value} />
             <div className="text-[#0F1F14]/55 mt-3 text-[12px] sm:text-[13px] lg:text-[14px] uppercase tracking-[0.08em]">{s.label}</div>
           </div>
         ))}

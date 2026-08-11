@@ -16,7 +16,7 @@ const BrandRow = ({ title, brands, reverse }) => {
   const loop = [...brands, ...brands];
   return (
     <div>
-      <div className="h-mono font-bold text-[#0F1F14]/82 mb-6 text-center tracking-[0.14em] text-[13px] sm:text-[15px]">{title}</div>
+      <div className="h-mono font-bold text-[#0F1F14]/82 mb-6 text-center tracking-[0.16em] text-[16px] sm:text-[18px] lg:text-[20px]">{title}</div>
       <div className="relative overflow-hidden">
         <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#F5F3EC] to-transparent z-10" />
         <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#F5F3EC] to-transparent z-10" />
@@ -34,7 +34,7 @@ const Brands = () => (
   <section className="py-20 lg:py-28 bg-[#F5F3EC]">
     <div className="max-w-[1680px] mx-auto px-6 lg:px-10">
       <div className="max-w-4xl mx-auto text-center">
-        <div className="h-mono text-[#16A34A] text-[14px] sm:text-[16px] font-bold tracking-[0.18em]">
+        <div className="h-mono text-[#16A34A] text-[16px] sm:text-[18px] lg:text-[20px] font-bold tracking-[0.18em]">
           TRUSTED PARTNERS
         </div>
       </div>

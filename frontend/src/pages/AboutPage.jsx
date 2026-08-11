@@ -14,6 +14,20 @@ const aboutHeroCopy = (
   </>
 );
 
+const StatValue = ({ value }) => {
+  const str = String(value);
+  const [main, unit] = str.includes(" ") ? str.split(/\s+/, 2) : [str, ""];
+
+  return (
+    <div className="leading-none">
+      <span className="block text-[34px] sm:text-[48px] lg:text-[58px] font-semibold tracking-[-0.03em] text-[#16A34A]">
+        <CountUp value={main} />
+      </span>
+      {unit ? <span className="block mt-1 text-[16px] sm:text-[20px] font-semibold tracking-[-0.02em] text-[#16A34A]">{unit}</span> : null}
+    </div>
+  );
+};
+
 const Person = ({ m, i }) => (
   <Reveal delay={Math.min((i % 4) * 0.05, 0.2)} className="group rounded-[24px] bg-white p-3 shadow-xl border border-white/10 card-lift">
     <div className="relative rounded-[18px] overflow-hidden aspect-[4/5] bg-[#F5F3EC]">
@@ -132,9 +146,7 @@ const AboutPage = () => (
         <Reveal className="rounded-[28px] bg-[#F1EADB] px-8 sm:px-10 lg:px-16 py-12 lg:py-14 grid grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-8">
           {stats.map((s) => (
             <div key={s.label} className="flex flex-col items-start">
-              <div className="flex items-start gap-1 leading-none">
-                <span className="h-display text-[40px] sm:text-[52px] lg:text-[64px] text-[#16A34A] leading-none tracking-tight"><CountUp value={s.value} /></span>
-              </div>
+              <StatValue value={s.value} />
               <div className="text-[#0F1F14]/55 mt-3 text-[12px] lg:text-[13px] uppercase tracking-[0.08em]">{s.label}</div>
             </div>
           ))}
@@ -243,7 +255,7 @@ const AboutPage = () => (
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-7">
-          {operationalTeam.map((m, i) => <Person key={m.name} m={m} i={i} />)}
+          {operationalTeam.filter((m) => m.name !== "Anchal Andrews").map((m, i) => <Person key={m.name} m={m} i={i} />)}
         </div>
       </div>
     </section>

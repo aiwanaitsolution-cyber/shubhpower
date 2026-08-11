@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Bot, ChevronRight, MessageCircle, PhoneCall, Send, X } from "lucide-react";
+import { Bot, ChevronRight, MessageCircle, Send, X } from "lucide-react";
 import { brand, company, solarSolutions, evCategories, solarProjects, evProjects, faqs } from "../data/mock";
 
 const normalize = (value) => value.toLowerCase().replace(/\s+/g, " ").trim();
@@ -77,14 +77,14 @@ const replyFor = (input) => {
     return {
       title: faqMatch.q,
       body: faqMatch.a,
-      cta: { label: "Call us", href: `tel:${phone}` },
+      cta: { label: "Contact us", href: "/contact" },
     };
   }
 
   return {
     title: "I can help with the site",
     body: "Ask me about Shubh Power, solar solutions, EV charging, projects, blogs, or contact details.",
-    cta: { label: "Call us", href: `tel:${phone}` },
+    cta: { label: "Contact us", href: "/contact" },
   };
 };
 
@@ -92,7 +92,7 @@ const initialMessages = [
   {
     role: "assistant",
     title: "Hi, I am the Shubh Power assistant.",
-    body: "Ask me about our solar work, EV charging, projects, blog, or contact details.",
+    body: "Ask me about our solar work, EV charging, projects, blog, or contact details. I’m a rule-based support assistant for the Shubh Power website.",
   },
 ];
 
@@ -101,7 +101,6 @@ const SiteAssistantDock = () => {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState(initialMessages);
   const bottomRef = useRef(null);
-  const phoneLink = `tel:${company.phone}`;
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
@@ -119,7 +118,7 @@ const SiteAssistantDock = () => {
   return (
     <div className="fixed bottom-24 right-4 sm:right-5 z-50 flex items-end gap-3">
       {open ? (
-        <div className="assistant-dock w-[calc(100vw-2rem)] sm:w-[320px] max-w-[320px] overflow-hidden rounded-[24px] border border-white/15 bg-[#0F1F14]/92 text-white shadow-[0_24px_80px_rgba(0,0,0,0.32)]">
+        <div className="assistant-dock w-[calc(100vw-2rem)] sm:w-[340px] max-w-[340px] overflow-hidden rounded-[24px] border border-white/15 bg-[#0F1F14]/92 text-white shadow-[0_24px_80px_rgba(0,0,0,0.32)]">
           <div className="flex items-center justify-between gap-3 border-b border-white/10 px-4 py-4">
             <div className="flex items-center gap-3">
               <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#16A34A] text-white shadow-lg">
@@ -127,7 +126,7 @@ const SiteAssistantDock = () => {
               </span>
               <div>
                 <div className="h-mono text-[10px] tracking-[0.18em] text-[#7DE0C3]">SHUBH POWER</div>
-                <div className="text-[14px] font-semibold">Assistant</div>
+                <div className="text-[14px] font-semibold">Customer Support</div>
               </div>
             </div>
             <button type="button" onClick={() => setOpen(false)} className="rounded-full bg-white/10 p-2 text-white/80 hover:bg-white/16">
@@ -180,11 +179,7 @@ const SiteAssistantDock = () => {
                 <Send className="h-4 w-4" />
               </button>
             </form>
-            <div className="mt-3 flex items-center gap-2">
-              <a href={phoneLink} className="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-white text-[#0F1F14] px-4 py-2.5 text-[13px] font-medium">
-                <PhoneCall className="h-4 w-4 text-[#16A34A]" />
-                Call now
-              </a>
+            <div className="mt-3 flex items-center justify-end">
               <button type="button" onClick={() => setMessages(initialMessages)} className="rounded-full border border-white/12 bg-white/8 px-3 py-2 text-[12px] text-white/80 hover:bg-white/12">
                 Reset
               </button>
@@ -194,13 +189,6 @@ const SiteAssistantDock = () => {
       ) : null}
 
       <div className="flex flex-col items-end gap-3">
-        <a
-          href={phoneLink}
-          className="inline-flex items-center gap-2 rounded-full bg-white/92 px-3 py-2 text-[13px] font-medium text-[#0F1F14] shadow-[0_14px_35px_rgba(15,31,20,0.18)] backdrop-blur-xl"
-        >
-          <PhoneCall className="h-4 w-4 text-[#16A34A]" />
-          Call
-        </a>
         <button
           type="button"
           onClick={() => setOpen((value) => !value)}
