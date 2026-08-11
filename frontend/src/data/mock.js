@@ -1,4 +1,5 @@
 const live = "/images/live/";
+const solarNew = "/images/hero/New%20folder/";
 
 export const navLinks = [
   { label: "Home", to: "/" },
@@ -51,7 +52,7 @@ export const solarSolutions = [
     subtitle: "Solar Engineering, Procurement and Construction - EPC",
     description: "We provide complete EPC services for efficient, cost-effective solar power project development and installation.",
     bg: "#F0E7D8",
-    image: `${live}Top-EPC-Companies-in-2021-Sterling-and-Wilson-Siemens-Gamesa-and-Tata-Power-1.png`,
+    image: `${solarNew}EPC%20Solar%20Solutions.png`,
     features: [
       "Our core expertise is Solar Engineering, Procurement and Construction - EPC.",
       "At Shubh Power Solutions Pvt. Ltd., we believe that solar energy is not just a technology - it is an upgrade.",
@@ -66,7 +67,7 @@ export const solarSolutions = [
     subtitle: "Reliable renewable energy",
     description: "Harness the sun's power with efficient solar plants for reliable, renewable energy in all settings.",
     bg: "#E6F4E9",
-    image: `${live}solar-energy-power.jpg`,
+    image: `${solarNew}Solar%20Power%20Plant.png`,
     features: [
       "Solar power is clean, green, and renewable.",
       "Solar energy helps combat climate change by significantly reducing greenhouse gas emissions.",
@@ -81,7 +82,7 @@ export const solarSolutions = [
     subtitle: "High-performance solar panels",
     description: "High-performance solar panels designed to maximize energy output and reduce your electricity bills sustainably.",
     bg: "#E1EBF9",
-    image: `${live}Solar-Panels-Cost-Calculator.png`,
+    image: `${solarNew}Solar%20Panels.png`,
     features: [
       "Solar PV modules are strategically installed on building rooftops to maximize exposure to sunlight throughout the day.",
       "When sunlight hits the PV modules, it is converted into Direct Current electricity.",
@@ -96,7 +97,7 @@ export const solarSolutions = [
     subtitle: "Portable clean power",
     description: "Portable solar generators deliver clean, efficient power anywhere, perfect for remote locations and off-grid use.",
     bg: "#FDECD3",
-    image: "/images/hero/solar-generator-bess.png",
+    image: `${solarNew}Solar%20Generators.png`,
     features: [
       "Solar energy ensures a reliable backup source.",
       "Solar energy systems complement your existing utility connection.",
@@ -111,7 +112,7 @@ export const solarSolutions = [
     subtitle: "Battery energy storage systems",
     description: "Store excess solar energy with advanced BESS, ensuring reliable backup power and optimized energy use.",
     bg: "#E6F4E9",
-    image: `${live}solar-plus-storage.jpg`,
+    image: `${solarNew}BESS.png`,
     features: [
       "Advanced storage helps optimize energy use.",
       "Backup power supports uninterrupted supply.",
@@ -126,7 +127,7 @@ export const solarSolutions = [
     subtitle: "Sunlight to electricity",
     description: "Efficient Solar PV Systems convert sunlight into electricity, reducing costs and environmental impact sustainably.",
     bg: "#F0E7D8",
-    image: `${live}china-20kw-on-grid-tied-solar-power-system-with-solar-panel-inverter-cable-bracket.jpg`,
+    image: `${solarNew}Solar%20PV%20Systems.png`,
     features: [
       "Solar photovoltaic technology is a reliable and efficient solution for commercial and industrial energy needs.",
       "Generated electricity is used to power the facility.",
