@@ -6,7 +6,7 @@ const Process = () => (
     <div className="max-w-[1500px] mx-auto px-6 lg:px-10">
       <div className="text-center max-w-3xl mx-auto">
         <div className="h-mono text-[#16A34A] mb-4">HOW WE WORK</div>
-        <h2 className="h-display text-[40px] md:text-[56px] lg:text-[64px] text-[#0A0F1C]">
+        <h2 className="h-display text-[40px] md:text-[56px] lg:text-[68px] text-[#0A0F1C]">
           Four steps. Zero surprises.
         </h2>
       </div>
@@ -25,8 +25,8 @@ const Process = () => (
               </span>
             </div>
             <div>
-              <h3 className="h-display text-[28px] text-[#0A0F1C]">{s.title}</h3>
-              <p className="text-[#0A0F1C]/60 mt-2 text-[14px]">{s.body}</p>
+              <h3 className="h-display text-[24px] md:text-[26px] text-[#0A0F1C]">{s.title}</h3>
+              <p className="text-[#0A0F1C]/60 mt-2 text-[15px]">{s.body}</p>
             </div>
           </div>
         ))}

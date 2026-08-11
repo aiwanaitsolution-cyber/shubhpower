@@ -9,7 +9,7 @@ const FAQ = () => {
       <div className="max-w-[1500px] mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-5">
           <div className="h-mono text-[#16A34A] mb-4">FAQ</div>
-          <h2 className="h-display text-[40px] md:text-[56px] lg:text-[64px] text-[#0A0F1C]">
+          <h2 className="h-display text-[40px] md:text-[56px] lg:text-[68px] text-[#0A0F1C]">
             Answers to the questions we hear most.
           </h2>
           <p className="mt-6 text-[#0A0F1C]/60 max-w-md">
@@ -25,7 +25,7 @@ const FAQ = () => {
                   onClick={() => setOpen(open === i ? -1 : i)}
                   className="w-full flex items-center justify-between py-6 text-left gap-4"
                 >
-                  <span className="text-[18px] md:text-[20px] font-medium text-[#0A0F1C]">
+                  <span className="text-[19px] md:text-[22px] font-medium text-[#0A0F1C]">
                     {f.q}
                   </span>
                   <span
@@ -41,7 +41,7 @@ const FAQ = () => {
                     open === i ? "max-h-52 pb-6" : "max-h-0"
                   }`}
                 >
-                  <p className="text-[#0A0F1C]/60 text-[15px] max-w-xl">{f.a}</p>
+                  <p className="text-[#0A0F1C]/60 text-[16px] max-w-xl">{f.a}</p>
                 </div>
               </li>
             ))}

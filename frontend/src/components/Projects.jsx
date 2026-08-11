@@ -81,7 +81,7 @@ const Projects = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0F1F14]/78 via-[#0F1F14]/12 to-transparent" />
                 <div className="absolute top-4 left-4 right-4 flex items-start justify-between">
-                  <span className="h-mono bg-white/95 backdrop-blur px-3 py-1.5 rounded-full text-[#0F1F14] font-bold">
+                  <span className="h-mono bg-white/95 backdrop-blur px-3 py-1.5 rounded-full text-[#0F1F14] text-[11px] font-bold">
                     {p.tag}
                   </span>
                   <span className="w-9 h-9 rounded-full bg-white/95 backdrop-blur flex items-center justify-center group-hover:text-white transition-colors" style={{ "--hover-bg": accent }}>
@@ -89,9 +89,9 @@ const Projects = () => {
                   </span>
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
-                  <div className="h-mono text-white/85 text-[11px] font-bold tracking-[0.14em]">{p.location}</div>
-                  <h3 className="h-display text-[22px] lg:text-[25px] mt-1 leading-tight">{p.title}</h3>
-                  <div className="mt-1 text-white/78 text-[13px] font-semibold">{p.capacity}</div>
+                  <div className="h-mono text-white/85 text-[12px] font-bold tracking-[0.14em]">{p.location}</div>
+                  <h3 className="h-display text-[22px] lg:text-[24px] mt-1 leading-tight">{p.title}</h3>
+                  <div className="mt-1 text-white/78 text-[12px] font-semibold">{p.capacity}</div>
                 </div>
               </div>
             </Link>

@@ -24,8 +24,8 @@ const CTABanner = ({
                 <Zap className="w-4 h-4 text-white" strokeWidth={2} />
               </span>
             </div>
-            <h2 className="h-display text-white text-[40px] md:text-[60px] lg:text-[76px] leading-[0.98]">{title}</h2>
-            <p className="mt-6 text-white/70 max-w-lg text-[16px]">{subtitle}</p>
+            <h2 className="h-display text-white text-[40px] md:text-[56px] lg:text-[68px] leading-[0.98]">{title}</h2>
+            <p className="mt-6 text-white/70 max-w-lg text-[15px] md:text-[16px]">{subtitle}</p>
           </div>
 
           <div className="lg:col-span-4 flex lg:justify-end">

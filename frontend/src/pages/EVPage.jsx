@@ -42,10 +42,10 @@ const EVPage = () => (
               </div>
               <div className="lg:col-span-7">
                 <div className="h-mono text-[#16A34A] mb-3 font-bold">{c.tag}</div>
-                <h2 className="h-display text-[34px] md:text-[46px] lg:text-[56px] leading-[0.98] text-[#0A0F1C]">
+                <h2 className="h-display text-[40px] md:text-[56px] lg:text-[68px] leading-[0.98] text-[#0A0F1C]">
                   {c.title}
                 </h2>
-                <p className="text-[#0A0F1C]/60 mt-2 text-[15px] font-medium">{c.subtitle}</p>
+                <p className="text-[#0A0F1C]/60 mt-2 text-[15px] md:text-[16px] font-medium">{c.subtitle}</p>
                 <p className="mt-5 text-[#0A0F1C]/70 text-[16px] max-w-2xl leading-relaxed">{c.description}</p>
                 <ul className="mt-6 grid sm:grid-cols-2 gap-x-6 gap-y-3">
                   {c.features.map((f) => (
@@ -53,7 +53,7 @@ const EVPage = () => (
                       <span className="mt-0.5 w-5 h-5 rounded-full bg-[#16A34A] flex items-center justify-center flex-shrink-0">
                         <Check className="w-3 h-3 text-white" />
                       </span>
-                      <span className="text-[#0A0F1C]/82 text-[14px] leading-snug">{f}</span>
+                      <span className="text-[#0A0F1C]/82 text-[15px] leading-snug">{f}</span>
                     </li>
                   ))}
                 </ul>

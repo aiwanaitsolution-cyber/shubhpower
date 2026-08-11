@@ -48,6 +48,30 @@
   font-family: inherit;
 }
 
+.home-preview-type {
+  font-family: 'Figtree', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: clip;
+}
+.home-preview-type .h-display {
+  font-family: 'Plus Jakarta Sans', 'Figtree', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.012em;
+  line-height: 0.95;
+}
+.home-preview-type .h-mono {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+.home-preview-type button,
+.home-preview-type a,
+.home-preview-type input,
+.home-preview-type textarea {
+  font-family: inherit;
+}
+
 .blogs-preview-type {
   font-family: 'Figtree', -apple-system, BlinkMacSystemFont, sans-serif;
   overflow-x: clip;
@@ -96,6 +120,45 @@
   font-family: inherit;
 }
 
+.projects-preview-type {
+  font-family: 'Figtree', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #fff;
+  overflow-x: clip;
+}
+.projects-preview-type .h-display {
+  font-family: 'Plus Jakarta Sans', 'Figtree', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.012em;
+  line-height: 0.95;
+}
+.projects-preview-type .h-mono {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+.projects-preview-type > section:first-child h1 {
+  font-size: 40px;
+  line-height: 0.95;
+  letter-spacing: -0.012em;
+}
+.projects-preview-type > section:first-child p {
+  font-size: 15px;
+}
+@media (min-width: 768px) {
+  .projects-preview-type > section:first-child h1 {
+    font-size: 56px;
+  }
+  .projects-preview-type > section:first-child p {
+    font-size: 17px;
+  }
+}
+@media (min-width: 1024px) {
+  .projects-preview-type > section:first-child h1 {
+    font-size: 68px;
+  }
+}
 
 .ev-preview-type {
   font-family: 'Figtree', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -115,30 +178,50 @@
   letter-spacing: 0.11em;
   text-transform: uppercase;
 }
+.ev-preview-type > section:first-child h1 {
+  font-size: 40px;
+  line-height: 1.01;
+  letter-spacing: -0.012em;
+}
+.ev-preview-type > section:first-child p {
+  font-size: 15px;
+}
+@media (min-width: 768px) {
+  .ev-preview-type > section:first-child h1 {
+    font-size: 56px;
+  }
+  .ev-preview-type > section:first-child p {
+    font-size: 17px;
+  }
+}
+@media (min-width: 1024px) {
+  .ev-preview-type > section:first-child h1 {
+    font-size: 68px;
+  }
+}
 
 .solar-preview-type {
-  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  letter-spacing: -0.01em;
+  font-family: 'Figtree', -apple-system, BlinkMacSystemFont, sans-serif;
   background: #fff;
   overflow-x: clip;
 }
 .solar-preview-type .h-display {
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 500;
-  letter-spacing: -0.035em;
+  font-family: 'Plus Jakarta Sans', 'Figtree', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.012em;
   line-height: 0.95;
 }
 .solar-preview-type .h-mono {
-  font-family: 'DM Mono', ui-monospace, monospace;
-  font-weight: 500;
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
   font-size: 12px;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.11em;
   text-transform: uppercase;
 }
 .solar-preview-type > section:first-child h1 {
   font-size: 40px;
-  line-height: 0.95;
-  letter-spacing: -0.035em;
+  line-height: 1.01;
+  letter-spacing: -0.012em;
 }
 .solar-preview-type > section:first-child p {
   font-size: 15px;

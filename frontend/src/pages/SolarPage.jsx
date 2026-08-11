@@ -43,17 +43,17 @@ const SolarPage = () => (
               </div>
               <div className="lg:col-span-7">
                 <div className="h-mono text-[#16A34A] mb-3 font-bold">{s.tag}</div>
-                <h2 className="h-display text-[44px] md:text-[64px] lg:text-[80px] leading-[0.95] text-[#0A0F1C]">
+                <h2 className="h-display text-[40px] md:text-[56px] lg:text-[68px] leading-[0.98] text-[#0A0F1C]">
                   {s.title}
                 </h2>
-                <p className="mt-5 text-[#0A0F1C]/70 text-[17px] max-w-2xl leading-relaxed">{s.description}</p>
+                <p className="mt-5 text-[#0A0F1C]/70 text-[16px] max-w-2xl leading-relaxed">{s.description}</p>
                 <ul className="mt-6 grid sm:grid-cols-2 gap-x-6 gap-y-3">
                   {s.features.map((f) => (
                     <li key={f} className="flex items-start gap-3">
                       <span className="mt-0.5 w-5 h-5 rounded-full bg-[#16A34A] flex items-center justify-center flex-shrink-0">
                         <Check className="w-3 h-3 text-white" />
                       </span>
-                      <span className="text-[#0A0F1C]/82 text-[16px] leading-snug">{f}</span>
+                      <span className="text-[#0A0F1C]/82 text-[15px] leading-snug">{f}</span>
                     </li>
                   ))}
                 </ul>
