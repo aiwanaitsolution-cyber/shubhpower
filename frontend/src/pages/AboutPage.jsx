@@ -6,7 +6,7 @@ import Reveal from "../components/Reveal";
 import CountUp from "../components/CountUp";
 import Testimonials from "../components/Testimonials";
 import CTABanner from "../components/CTABanner";
-import { stats, values, promises, leadership, operationalTeam, timeline } from "../data/mock";
+import { brand, stats, values, promises, leadership, operationalTeam, timeline } from "../data/mock";
 
 const aboutHeroCopy = (
   <>
