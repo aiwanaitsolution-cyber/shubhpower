@@ -28,6 +28,7 @@ const SolarPage = () => (
         { src: "/images/hero/solar-page-3.png", alt: "Solar energy project" },
       ]}
       intervalMs={2000}
+      showBottomFade={false}
     />
 
     <section className="py-14 sm:py-16 lg:py-24 bg-white">

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-const PageHero = ({ eyebrow, title, subtitle, image, images, imageAlt = "Shubh Power Solutions", intervalMs = 3000 }) => {
+const PageHero = ({ eyebrow, title, subtitle, image, images, imageAlt = "Shubh Power Solutions", intervalMs = 3000, showBottomFade = true }) => {
   const slides = images?.length ? images : image ? [{ src: image, alt: imageAlt }] : [];
   const hasImage = slides.length > 0;
   const [activeSlide, setActiveSlide] = useState(0);
@@ -34,7 +34,9 @@ const PageHero = ({ eyebrow, title, subtitle, image, images, imageAlt = "Shubh P
             />
           ))}
           <div className="absolute inset-0 bg-gradient-to-r from-[#071B14]/76 via-[#0F3328]/44 to-[#0F3328]/10" />
-          <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#FBFAF7] via-[#FBFAF7]/30 to-transparent" />
+          {showBottomFade && (
+            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#FBFAF7] via-[#FBFAF7]/30 to-transparent" />
+          )}
         </>
       ) : (
         <div className="absolute inset-0 bg-[#EAF8F4]" />
