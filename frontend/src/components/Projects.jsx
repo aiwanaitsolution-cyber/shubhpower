@@ -73,25 +73,28 @@ const Projects = () => {
               key={`${tab}-${p.title}-${active}-${i}`}
               className="group card-lift block project-glow-card"
             >
-              <div className="relative aspect-[4/3] rounded-[20px] overflow-hidden bg-[#F5F3EC] shadow-lg">
+              <div className="relative min-h-[500px] sm:min-h-[520px] rounded-[24px] overflow-hidden bg-[#F5F3EC] shadow-lg">
                 <img
                   src={p.image}
                   alt={p.title}
                   className="absolute inset-0 w-full h-full object-cover zoom-img"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#04120C]/88 via-[#0F1F14]/28 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#04120C]/84 via-[#0F1F14]/22 to-transparent" />
                 <div className="absolute top-4 left-4 right-4 flex items-start justify-between">
                   <span className="h-mono bg-white/95 backdrop-blur px-3 py-1.5 rounded-full text-[#0F1F14] text-[11px] font-bold">
                     {p.tag}
                   </span>
-                  <span className="w-9 h-9 rounded-full bg-white/95 backdrop-blur flex items-center justify-center group-hover:text-white transition-colors" style={{ "--hover-bg": accent }}>
-                    <ArrowUpRight className="w-4 h-4" />
+                  <span
+                    className="w-9 h-9 rounded-full bg-white/95 backdrop-blur flex items-center justify-center text-[#0F1F14] transition-all duration-300 group-hover:bg-[var(--hover-bg)] group-hover:text-white group-hover:rotate-45"
+                    style={{ "--hover-bg": accent }}
+                  >
+                    <ArrowUpRight className="w-4 h-4 transition-transform duration-300" />
                   </span>
                 </div>
-                <div className="absolute left-3 right-3 bottom-3 project-glass-panel rounded-[18px] p-4 text-[#0F1F14]">
+                <div className="absolute left-3 right-3 bottom-3 project-glass-panel rounded-[22px] p-5 sm:p-6 text-[#0F1F14]">
                   <div className="h-mono text-[#16A34A] text-[11px] font-bold tracking-[0.14em]">{p.location}</div>
-                  <h3 className="h-display text-[20px] lg:text-[23px] mt-1 leading-tight">{p.title}</h3>
-                  <div className="mt-1 text-[#0F1F14]/72 text-[12px] font-semibold">{p.capacity}</div>
+                  <h3 className="h-display text-[21px] lg:text-[24px] mt-1 leading-tight">{p.title}</h3>
+                  <div className="mt-1 text-[#0F1F14]/72 text-[13px] font-semibold">{p.capacity}</div>
                 </div>
               </div>
             </Link>

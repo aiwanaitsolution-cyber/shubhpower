@@ -14,7 +14,7 @@ const Testimonials = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           <div className="lg:col-span-4">
             <div className="h-mono text-[#16A34A] mb-4">TESTIMONIALS</div>
-            <h2 className="h-display text-[34px] md:text-[48px] lg:text-[56px] text-[#0F1F14]">
+            <h2 className="h-display text-[30px] md:text-[42px] lg:text-[50px] text-[#0F1F14]">
               What people say?
             </h2>
             <div className="mt-8 flex items-center gap-2">
@@ -38,14 +38,14 @@ const Testimonials = () => {
             </div>
           </div>
           <div className="lg:col-span-8">
-            <div className="tex-water rounded-[28px] p-8 lg:p-12 bg-[#E6F4E9] min-h-[320px] flex flex-col justify-between">
-              <Quote className="w-10 h-10 text-[#16A34A]" />
-              <blockquote className="h-display text-[23px] md:text-[30px] lg:text-[36px] text-[#0F1F14] leading-[1.16] mt-6">
+            <div className="tex-water rounded-[28px] p-8 lg:p-12 bg-[#E6F4E9] min-h-[300px] flex flex-col justify-between">
+              <Quote className="w-9 h-9 text-[#16A34A]" />
+              <blockquote className="h-display text-[19px] md:text-[24px] lg:text-[28px] font-semibold text-[#0F1F14] leading-[1.28] mt-6">
                 &ldquo;{t.quote}&rdquo;
               </blockquote>
               <figcaption className="mt-10 pt-6 border-t border-[#0F1F14]/15">
-                <div className="font-semibold text-[#0F1F14] text-[17px]">{t.name}</div>
-                <div className="h-mono text-[#0F1F14]/60 mt-1">{t.role}</div>
+                <div className="font-medium text-[#0F1F14] text-[15px]">{t.name}</div>
+                <div className="h-mono text-[#0F1F14]/55 mt-1 text-[11px]">{t.role}</div>
               </figcaption>
             </div>
           </div>

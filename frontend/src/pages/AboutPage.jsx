@@ -14,24 +14,6 @@ const aboutHeroCopy = (
   </>
 );
 
-const aboutHeroSlides = [
-  {
-    src: "/images/live/1mw-solar-power-plant-panorama.jpeg",
-    alt: "Shubh Power solar power plant overview",
-    position: "object-[55%_50%]",
-  },
-  {
-    src: "/images/live/about10.jpg",
-    alt: "Shubh Power solar installation on site",
-    position: "object-[58%_50%]",
-  },
-  {
-    src: "/images/live/solar-energy-power.jpg",
-    alt: "Shubh Power clean energy solar project",
-    position: "object-[60%_50%]",
-  },
-];
-
 const Person = ({ m, i }) => (
   <Reveal delay={Math.min((i % 4) * 0.05, 0.2)} className="group rounded-[24px] bg-white p-3 shadow-xl border border-white/10 card-lift">
     <div className="relative rounded-[18px] overflow-hidden aspect-[4/5] bg-[#F5F3EC]">
@@ -51,8 +33,8 @@ const AboutPage = () => (
       eyebrow="ABOUT COMPANY"
       title={<>Fifteen years of<br />engineering India's<br />clean-energy backbone.</>}
       subtitle={aboutHeroCopy}
-      images={aboutHeroSlides}
-      intervalMs={120000}
+      image="/images/hero/about.png"
+      imageAlt="Shubh Power about us hero"
     />
 
     <section className="relative py-16 lg:py-24 bg-white overflow-hidden">

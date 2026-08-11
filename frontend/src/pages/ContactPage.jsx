@@ -38,12 +38,12 @@ const ContactPage = () => {
     <div className="site-preview-type contact-preview-type">
       <PageHero
         eyebrow="CONTACT US"
-        title={<>Contact Us</>}
-        subtitle="Need any consultations contact with us."
+        title={<>Let's power<br />your future.</>}
+        subtitle="Tell us about your site — rooftop, land parcel, factory, society or parking lot. A real engineer, not a call-centre, gets back to you within one working day."
         solidBackground
       />
 
-      <section className="py-14 lg:py-20 bg-[#EAF8F4]">
+      <section className="py-14 lg:py-20 bg-white">
         <div className="max-w-[1200px] mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-8 lg:gap-14">
           <Reveal className="flex flex-col gap-6">
             <div>
@@ -51,7 +51,7 @@ const ContactPage = () => {
                 <span className="w-8 h-[3px] rounded-full bg-[#16A34A]" />
                 <span className="h-mono text-[11px] tracking-[0.15em] text-[#16A34A]">OUR CONTACT DETAIL</span>
               </div>
-              <div className="rounded-[22px] border border-[#0F1F14]/10 overflow-hidden divide-y divide-[#0F1F14]/8 bg-white">
+              <div className="rounded-[22px] border border-[#0F1F14]/10 overflow-hidden divide-y divide-[#0F1F14]/8 bg-white/90 backdrop-blur-xl shadow-[0_14px_40px_rgba(15,31,20,0.05)]">
                 {methods.map((m, i) => (
                   <a key={i} href={m.href} target={m.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="group flex items-center gap-4 p-5 hover:bg-[#F9F7F2] transition-colors">
                     <span className="w-11 h-11 rounded-full flex items-center justify-center shrink-0 text-white" style={{ background: m.accent || "#16A34A" }}>
@@ -67,28 +67,28 @@ const ContactPage = () => {
               </div>
             </div>
 
-            <div className="rounded-[22px] bg-[#0F1F14] text-white p-7">
+            <div className="rounded-[22px] bg-white/90 backdrop-blur-xl border border-[#0F1F14]/8 text-[#0F1F14] p-7 shadow-[0_14px_40px_rgba(15,31,20,0.05)]">
               <div className="flex items-start gap-3 mb-5">
                 <span className="w-9 h-9 rounded-full bg-[#16A34A] flex items-center justify-center shrink-0"><Clock className="w-4 h-4" /></span>
                 <div>
                   <div className="font-semibold text-[15px]">Hot Line</div>
-                  <div className="text-white/65 text-[14px]">85272 76868</div>
+                  <div className="text-[#0F1F14]/60 text-[14px]">85272 76868</div>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <span className="w-9 h-9 rounded-full bg-[#16A34A] flex items-center justify-center shrink-0"><ShieldCheck className="w-4 h-4" /></span>
                 <div>
                   <div className="font-semibold text-[15px]">GSTIN: {company.gstin}</div>
-                  <div className="text-white/65 text-[14px]">{company.address}</div>
+                  <div className="text-[#0F1F14]/60 text-[14px]">{company.address}</div>
                 </div>
               </div>
             </div>
           </Reveal>
 
           <Reveal delay={0.1}>
-            <form onSubmit={onSubmit} className="rounded-[26px] bg-[#F9F7F2] border border-[#0F1F14]/8 p-7 md:p-10">
+            <form onSubmit={onSubmit} className="rounded-[26px] bg-white/90 backdrop-blur-xl border border-[#0F1F14]/8 p-7 md:p-10 shadow-[0_14px_40px_rgba(15,31,20,0.05)]">
               <h2 className="h-display text-[28px] md:text-[38px] text-[#0F1F14] tracking-tight">Contact Us For Our Services</h2>
-              <p className="text-[#0F1F14]/55 mt-2 text-[15px]">Need any consultations contact with us.</p>
+              <p className="text-[#0F1F14]/55 mt-2 text-[15px]">Let's power your future.</p>
 
               <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-5">
                 <Field label="Your Name"><input required value={form.name} onChange={set("name")} className="ci" placeholder="Your name here" /></Field>
@@ -111,10 +111,10 @@ const ContactPage = () => {
         </div>
       </section>
 
-      <section className="pb-16 lg:pb-24 bg-[#EAF8F4]">
+      <section className="pb-16 lg:pb-24 bg-white">
         <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
           <Reveal>
-            <div className="relative rounded-[26px] overflow-hidden min-h-[420px] md:min-h-[480px] bg-white border border-[#0F1F14]/8 shadow-xl">
+            <div className="relative rounded-[26px] overflow-hidden min-h-[420px] md:min-h-[480px] bg-white border border-[#0F1F14]/8 shadow-[0_18px_60px_rgba(15,31,20,0.08)]">
               <iframe
                 title="Shubh Power Solutions Office - Sector 43, Gurugram"
                 src="https://maps.google.com/maps?q=28.460914,77.070655&z=16&output=embed"
@@ -124,8 +124,8 @@ const ContactPage = () => {
                 referrerPolicy="no-referrer-when-downgrade"
                 allowFullScreen
               />
-              <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#0F3328]/16 via-transparent to-transparent" />
-              <div className="absolute left-5 bottom-5 right-5 md:right-auto md:max-w-sm bg-white rounded-2xl shadow-xl p-5">
+              <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#0F3328]/10 via-transparent to-transparent" />
+              <div className="absolute left-5 bottom-5 right-5 md:right-auto md:max-w-sm bg-white/92 backdrop-blur-xl border border-[#0F1F14]/8 rounded-2xl shadow-xl p-5">
                 <div className="h-mono text-[10px] tracking-wide text-[#16A34A] mb-1">LOCATION</div>
                 <div className="text-[#0F1F14] font-medium text-[15px] leading-snug">{company.address}</div>
                 <a href="https://maps.google.com/?q=B-681,+Shushant+Lok+Phase+1,+Sector+43,+Gurugram,+122001" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 mt-3 text-[#16A34A] text-[14px] font-medium">
@@ -137,7 +137,9 @@ const ContactPage = () => {
         </div>
       </section>
 
-      <Reveal><FAQ /></Reveal>
+      <section className="py-4 bg-white">
+        <Reveal><FAQ /></Reveal>
+      </section>
     </div>
   );
 };
