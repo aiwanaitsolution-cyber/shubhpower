@@ -44,6 +44,15 @@ const About = () => (
               <ArrowRight className="w-4 h-4 text-white" />
             </span>
           </Link>
+
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl">
+            <div className="relative rounded-[24px] overflow-hidden aspect-[4/3] bg-[#F5F3EC] shadow-lg">
+              <img src="/images/hero/solarpr/1.png" alt="Solar power installation" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            <div className="relative rounded-[24px] overflow-hidden aspect-[4/3] bg-[#F5F3EC] shadow-lg">
+              <img src="/images/hero/solarpr/2.png" alt="Battery charging station" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
+            </div>
+          </div>
         </div>
 
         <div className="relative">
