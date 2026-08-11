@@ -58,7 +58,7 @@ const About = () => (
         <div className="relative">
           <div className="grid grid-cols-2 gap-4">
             <div className="relative rounded-[24px] overflow-hidden aspect-[4/5] bg-[#F5F3EC]">
-              <img src="/images/live/Untitled-design-1.png" alt="Shubh Power solar installation" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
+              <img src="/images/hero/solarpr/1.png" alt="Shubh Power solar installation" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
             </div>
             <div className="relative rounded-[24px] overflow-hidden aspect-[4/5] bg-[#F5F3EC] mt-12">
               <img src="/images/hero/evstation/commercial_building.png" alt="Shubh Power EV charging station" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
