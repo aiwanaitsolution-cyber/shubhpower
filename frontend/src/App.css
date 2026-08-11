@@ -24,6 +24,25 @@
   font-size: 12px;
 }
 
+.ev-preview-type {
+  font-family: 'Figtree', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #fff;
+  overflow-x: clip;
+}
+.ev-preview-type .h-display {
+  font-family: 'Plus Jakarta Sans', 'Figtree', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.012em;
+  line-height: 0.95;
+}
+.ev-preview-type .h-mono {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
 .solar-preview-type {
   font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   letter-spacing: -0.01em;

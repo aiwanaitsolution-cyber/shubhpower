@@ -10,7 +10,7 @@ import FAQ from "../components/FAQ";
 import { evCategories } from "../data/mock";
 
 const EVPage = () => (
-  <>
+  <div className="ev-preview-type">
     <PageHero
       eyebrow="EV CHARGING SOLUTIONS"
       title={<>EV Charging<br />Solutions</>}
@@ -29,7 +29,7 @@ const EVPage = () => (
       ]}
     />
 
-    <section className="py-16 lg:py-24 bg-[#EAF8F4]">
+    <section className="py-16 lg:py-24 bg-white">
       <div className="max-w-[1320px] mx-auto px-6 lg:px-10 space-y-14 lg:space-y-16">
         {evCategories.map((c, i) => {
           const flip = i % 2 === 1;
@@ -74,7 +74,7 @@ const EVPage = () => (
     <Reveal><Brands /></Reveal>
     <Reveal><FAQ /></Reveal>
     <Reveal><CTABanner title="View EV CPO Completed Projects" ctaLabel="Book a site visit" /></Reveal>
-  </>
+  </div>
 );
 
 export default EVPage;
