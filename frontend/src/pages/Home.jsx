@@ -13,7 +13,7 @@ import Promises from "../components/Promises";
 import CTABanner from "../components/CTABanner";
 
 const Home = () => (
-  <>
+  <div className="site-preview-type home-preview-type">
     <Hero />
     <Reveal><About /></Reveal>
     <Reveal><SolarSolutions /></Reveal>
@@ -25,7 +25,7 @@ const Home = () => (
     <Reveal><Testimonials /></Reveal>
     <Reveal><Brands /></Reveal>
     <Reveal><CTABanner /></Reveal>
-  </>
+  </div>
 );
 
 export default Home;

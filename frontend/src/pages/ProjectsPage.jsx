@@ -25,7 +25,7 @@ const ProjectsPage = () => {
   const catLabel = category === "solar" ? "Solar" : category === "ev" ? "EV CPO" : "All";
 
   return (
-    <>
+    <div className="site-preview-type projects-preview-type">
       <PageHero
         eyebrow="OUR PROJECTS"
         title={<>Completed Projects</>}
@@ -90,7 +90,7 @@ const ProjectsPage = () => {
       </section>
 
       <Reveal><CTABanner title="Yours next?" subtitle="View the completed Solar Power Projects and EV CPO Projects listed by Shubh Power Solutions." ctaLabel="Start your project" /></Reveal>
-    </>
+    </div>
   );
 };
 

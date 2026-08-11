@@ -150,7 +150,7 @@ const BlogPostPage = () => {
   const others = blogs.filter((b) => b.slug !== slug).sort((a, b) => b.sort - a.sort).slice(0, 4);
 
   return (
-    <>
+    <div className="site-preview-type blog-post-preview-type">
       <ReadingProgress />
 
       <div className="max-w-[1240px] mx-auto px-6 lg:px-10 pt-8 lg:pt-12 pb-16 lg:pb-24">
@@ -241,7 +241,7 @@ const BlogPostPage = () => {
       </div>
 
       <CTABanner title="Get insights straight to your inbox." ctaLabel="Talk to us" />
-    </>
+    </div>
   );
 };
 

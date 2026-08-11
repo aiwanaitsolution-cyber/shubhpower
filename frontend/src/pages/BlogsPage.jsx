@@ -25,7 +25,7 @@ const BlogsPage = () => {
   const countFor = (c) => (c === "All" ? sorted.length : sorted.filter((b) => b.category === c).length);
 
   return (
-    <>
+    <div className="site-preview-type blogs-preview-type">
       {/* Masthead */}
       <section className="pt-16 lg:pt-24 pb-10 lg:pb-12 bg-[#EAF8F4]">
         <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
@@ -121,7 +121,7 @@ const BlogsPage = () => {
       </section>
 
       <CTABanner title="Get insights straight to your inbox." ctaLabel="Talk to us" />
-    </>
+    </div>
   );
 };
 

@@ -24,7 +24,7 @@ const Person = ({ m, i }) => (
 );
 
 const AboutPage = () => (
-  <>
+  <div className="site-preview-type about-preview-type">
     <PageHero
       eyebrow="ABOUT US"
       title={<>Fifteen years of<br />engineering India's<br />clean-energy backbone.</>}
@@ -214,7 +214,7 @@ const AboutPage = () => (
 
     <Reveal><Testimonials /></Reveal>
     <Reveal><CTABanner title="Save the Environment & Save your Money!" ctaLabel="Contact Us" /></Reveal>
-  </>
+  </div>
 );
 
 export default AboutPage;

@@ -35,7 +35,7 @@ const ContactPage = () => {
   ];
 
   return (
-    <>
+    <div className="site-preview-type contact-preview-type">
       <PageHero
         eyebrow="CONTACT US"
         title={<>Contact Us</>}
@@ -139,7 +139,7 @@ const ContactPage = () => {
       </section>
 
       <Reveal><FAQ /></Reveal>
-    </>
+    </div>
   );
 };
 
