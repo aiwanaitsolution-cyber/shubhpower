@@ -144,7 +144,7 @@ export const evCategories = [
     subtitle: "Logistics companies, car rental providers, ride-sharing platforms, and delivery businesses",
     description: "At Shubh Power Solutions Pvt. Ltd., we enable logistics companies, car rental providers, ride-sharing platforms, and delivery businesses to efficiently manage their EV fleets.",
     bg: "#F0E7D8",
-    image: `${live}shutterstock_2132932095-768x511-1-2.jpg`,
+    image: "/images/hero/evstation/fleet_logistics.png",
     features: ["Depot Charging Infrastructure", "Remote Monitoring & Smart Diagnostics", "Cost-Optimized Charging Plans", "Customized Fleet Charging Solutions"],
   },
   {
@@ -154,7 +154,7 @@ export const evCategories = [
     subtitle: "Individual homes, apartment complexes, gated communities, and housing societies",
     description: "Shubh Power Solutions Pvt. Ltd. provides smart and convenient EV charging solutions designed for individual homes, apartment complexes, gated communities, and housing societies.",
     bg: "#E6F4E9",
-    image: `${live}Untitled-design-3-1.png`,
+    image: "/images/hero/evstation/residential_communities.png",
     features: ["Dedicated Charging Stations", "Quick & Hassle-Free Installation", "Community Charging Solutions", "Load Management Systems"],
   },
   {
@@ -164,7 +164,7 @@ export const evCategories = [
     subtitle: "Businesses, retail outlets, shopping malls, office complexes, and hospitality establishments",
     description: "We provide reliable EV charging infrastructure for businesses, retail outlets, shopping malls, office complexes, and hospitality establishments.",
     bg: "#E1EBF9",
-    image: `${live}the-vensej-mall-gurgaon-haryana-construction-by-thikedaar-dot-com-1-1.jpg`,
+    image: "/images/hero/evstation/commercial_building.png",
     features: ["Customer-Facing Charging Stations", "Workplace Charging Programs", "Energy Optimization & Smart Monitoring", "Customized Charging Infrastructure"],
   },
   {
@@ -174,7 +174,7 @@ export const evCategories = [
     subtitle: "Cities, public spaces, streets, parking areas, and highways",
     description: "Shubh Power Solutions Pvt. Ltd. collaborates with municipalities and public authorities to develop accessible and reliable EV charging networks across cities and public spaces.",
     bg: "#E6F4E9",
-    image: `${live}post-img-01-780x500-1.jpg`,
+    image: "/images/hero/evstation/public_infrastructure.png",
     features: ["High-Speed Public Charging Stations", "Public Transit Charging Integration", "EV Charging Network Expansion", "Support for Grants & Incentive Programs"],
   },
   {
@@ -184,7 +184,7 @@ export const evCategories = [
     subtitle: "Retail outlets, shopping malls, hotels, restaurants, and hospitality businesses",
     description: "We help retail outlets, shopping malls, hotels, restaurants, and hospitality businesses enhance customer experience by integrating reliable EV charging infrastructure.",
     bg: "#FDECD3",
-    image: `${live}caption-1.jpg`,
+    image: "/images/hero/evstation/retail_hospitality.png",
     features: ["Customer Convenience Charging Stations", "Smart Payment & User-Friendly Access", "Increased Customer Engagement", "Flexible & Scalable Installations"],
   },
 ];

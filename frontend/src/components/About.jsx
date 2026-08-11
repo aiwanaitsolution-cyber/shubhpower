@@ -61,7 +61,7 @@ const About = () => (
               <img src="/images/live/Untitled-design-1.png" alt="Shubh Power solar installation" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
             </div>
             <div className="relative rounded-[24px] overflow-hidden aspect-[4/5] bg-[#F5F3EC] mt-12">
-              <img src="/images/live/shubh-ev-charger-hero.png" alt="Shubh Power EV charging station" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
+              <img src="/images/hero/evstation/commercial_building.png" alt="Shubh Power EV charging station" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
             </div>
           </div>
           <div className="absolute -bottom-6 left-6 right-6 md:left-auto md:right-8 md:w-[260px] rounded-[18px] bg-[#0F3328] text-white p-5 shadow-2xl border border-white/20">
