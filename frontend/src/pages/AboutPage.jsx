@@ -10,10 +10,7 @@ import { brand, stats, values, promises, leadership, operationalTeam, timeline }
 
 const aboutHeroCopy = (
   <>
-    Founded in Gurugram in 2010, Shubh Power Solutions has grown from early rooftop installations into a full-scope clean-energy EPC, delivering utility-scale solar plants, battery storage and EV charging networks across Delhi-NCR, Rajasthan, Punjab, Haryana and Uttar Pradesh.
-    <br />
-    <br />
-    We handle the whole journey in-house, feasibility and design, procurement of tier-1 components, construction, discom liaison and long-term O&M, so our clients deal with one accountable team for the 25-year life of the asset.
+    Welcome to Shubh Power Solutions Private Limited, established in 2010 with its office in Gurugram, Haryana, India. We are a leading provider of comprehensive power solutions in Delhi and the National Capital Region - delivering affordable power, reducing carbon footprint and promoting energy efficiency across industries.
   </>
 );
 
@@ -51,15 +48,15 @@ const Person = ({ m, i }) => (
 const AboutPage = () => (
   <div className="site-preview-type about-preview-type">
     <PageHero
-      eyebrow="ABOUT US"
-      title={<>From a single rooftop to<br />megawatts across North India.</>}
+      eyebrow="ABOUT COMPANY"
+      title={<>Fifteen years of<br />engineering India's<br />clean-energy backbone.</>}
       subtitle={aboutHeroCopy}
       images={aboutHeroSlides}
       intervalMs={120000}
     />
 
-    <section className="relative py-16 lg:py-24 bg-[#EAF8F4] overflow-hidden">
-      <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#FBFAF7] to-transparent" />
+    <section className="relative py-16 lg:py-24 bg-white overflow-hidden">
+      <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#F9FBFA] to-transparent" />
       <div className="relative max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <Reveal>
           <div className="flex items-center gap-2.5 mb-5 rounded-full bg-white/80 border border-[#16A34A]/14 w-max px-4 py-2">
@@ -98,7 +95,7 @@ const AboutPage = () => (
           </div>
         </Reveal>
         <Reveal delay={0.1} className="relative">
-          <div className="rounded-[32px] bg-white/72 border border-[#0F1F14]/8 p-4 sm:p-5 shadow-2xl">
+          <div className="rounded-[32px] bg-white/88 backdrop-blur-xl border border-[#0F1F14]/8 p-4 sm:p-5 shadow-[0_18px_60px_rgba(15,31,20,0.08)]">
             <div className="grid grid-cols-2 gap-4">
             <div className="rounded-[24px] overflow-hidden aspect-[4/5] bg-[#F5F3EC] shadow-lg float-soft">
               <img src="/images/hero/solarpr/1.png" alt="Shubh Power solar project" loading="lazy" className="w-full h-full object-cover" />
@@ -116,21 +113,21 @@ const AboutPage = () => (
       </div>
     </section>
 
-    <section className="py-16 lg:py-24 bg-white">
+    <section className="py-16 lg:py-24 bg-[linear-gradient(180deg,#ffffff_0%,#fbfdfb_100%)]">
       <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-10">
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
           {[
             { icon: Eye, label: "OUR VISION", body: brand.vision },
             { icon: Target, label: "OUR MISSION", body: brand.mission },
           ].map((v) => (
-            <Reveal key={v.label} className="about-glow-card rounded-[26px] bg-[#0F3328] border border-[#7DE0C3]/20 p-7 sm:p-8 lg:p-10 text-white overflow-hidden">
+            <Reveal key={v.label} className="about-glow-card rounded-[26px] bg-[linear-gradient(180deg,#0F3328_0%,#184c3b_100%)] border border-[#7DE0C3]/20 p-7 sm:p-8 lg:p-10 text-white overflow-hidden">
               <span className="w-12 h-12 rounded-full bg-[#16A34A] flex items-center justify-center mb-6 shadow-lg"><v.icon className="w-5 h-5 text-white" /></span>
               <div className="h-mono text-[11px] tracking-[0.15em] text-[#7DE0C3] mb-3">{v.label}</div>
               <p className="text-white/82 text-[18px] sm:text-[20px] leading-relaxed">{v.body}</p>
             </Reveal>
           ))}
         </div>
-        <Reveal className="mt-6 lg:mt-8 rounded-[28px] bg-[#F5F3EC] p-6 sm:p-8 lg:p-10 border border-[#0F1F14]/8">
+        <Reveal className="mt-6 lg:mt-8 rounded-[28px] bg-white p-6 sm:p-8 lg:p-10 border border-[#0F1F14]/8 shadow-[0_14px_45px_rgba(15,31,20,0.05)]">
           <div className="flex items-center gap-3 mb-6">
             <span className="w-10 h-10 rounded-full bg-[#F58220] flex items-center justify-center"><Gem className="w-4 h-4 text-white" /></span>
             <div className="h-mono text-[11px] tracking-[0.15em] text-[#F58220]">OUR VALUES</div>
@@ -163,7 +160,7 @@ const AboutPage = () => (
       </div>
     </section>
 
-    <section className="py-16 lg:py-24 bg-gradient-to-br from-[#EAF8F4] via-white to-[#F1FAF4] text-[#0F1F14]">
+    <section className="py-16 lg:py-24 bg-[linear-gradient(180deg,#ffffff_0%,#f8fbf9_100%)] text-[#0F1F14]">
       <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-10 grid lg:grid-cols-[0.72fr_1.28fr] gap-12 lg:gap-16 items-start">
         <Reveal className="lg:sticky lg:top-28">
           <div className="inline-flex items-center gap-2.5 mb-5 rounded-full bg-white border border-[#16A34A]/16 px-4 py-2 shadow-sm">
@@ -218,7 +215,7 @@ const AboutPage = () => (
       </div>
     </section>
 
-    <section className="py-16 lg:py-24 bg-[#EAF8F4]">
+    <section className="py-16 lg:py-24 bg-white">
       <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-10">
         <Reveal className="mb-12 max-w-2xl">
           <div className="flex items-center gap-2.5 mb-4">
@@ -239,19 +236,19 @@ const AboutPage = () => (
       </div>
     </section>
 
-    <section id="team" className="py-16 lg:py-24 bg-[radial-gradient(circle_at_top,#E6F4E9_0%,#D8F0E0_25%,#A9E4C4_60%,#0F3328_120%)] text-white overflow-hidden">
+    <section id="team" className="py-16 lg:py-24 bg-[linear-gradient(180deg,#f7fbf8_0%,#edf8f1_45%,#e5f5ea_100%)] text-[#0F1F14] overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-10">
         <Reveal className="mb-12 max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2.5 mb-4 px-4 py-2 rounded-full bg-white/10 border border-white/14">
+          <div className="inline-flex items-center gap-2.5 mb-4 px-4 py-2 rounded-full bg-white/80 border border-[#0F1F14]/8 shadow-sm">
             <span className="w-2 h-2 rounded-full bg-[#7DE0C3]" />
-            <span className="h-mono text-[11px] tracking-[0.18em] text-[#7DE0C3]">OUR TEAM</span>
+            <span className="h-mono text-[11px] tracking-[0.18em] text-[#16A34A]">OUR TEAM</span>
           </div>
-          <h2 className="h-display text-[36px] md:text-[56px] tracking-tight text-white">Meet Our Core Team</h2>
+          <h2 className="h-display text-[36px] md:text-[56px] tracking-tight text-[#0F1F14]">Meet Our Core Team</h2>
         </Reveal>
 
         <div className="flex justify-center mb-7">
           <div className="team-band">
-            <h3 className="h-mono text-[12px] sm:text-[13px] tracking-[0.15em] text-white">THE LEADERSHIP TEAM</h3>
+            <h3 className="h-mono text-[12px] sm:text-[13px] tracking-[0.15em] text-[#0F1F14]">THE LEADERSHIP TEAM</h3>
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8 mb-16 max-w-[880px] mx-auto">
@@ -260,7 +257,7 @@ const AboutPage = () => (
 
         <div className="flex justify-center mb-7">
           <div className="team-band team-band-green">
-            <h3 className="h-mono text-[12px] sm:text-[13px] tracking-[0.15em] text-white">THE POWERHOUSE BEHIND OUR SUCCESS</h3>
+            <h3 className="h-mono text-[12px] sm:text-[13px] tracking-[0.15em] text-[#0F1F14]">THE POWERHOUSE BEHIND OUR SUCCESS</h3>
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-7">

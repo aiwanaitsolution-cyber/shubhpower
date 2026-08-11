@@ -88,10 +88,10 @@ const Projects = () => {
                     <ArrowUpRight className="w-4 h-4" />
                   </span>
                 </div>
-                <div className="absolute left-3 right-3 bottom-3 project-glass-panel-dark rounded-[18px] p-4 text-white">
-                  <div className="h-mono text-white/80 text-[11px] font-bold tracking-[0.14em]">{p.location}</div>
+                <div className="absolute left-3 right-3 bottom-3 project-glass-panel rounded-[18px] p-4 text-[#0F1F14]">
+                  <div className="h-mono text-[#16A34A] text-[11px] font-bold tracking-[0.14em]">{p.location}</div>
                   <h3 className="h-display text-[20px] lg:text-[23px] mt-1 leading-tight">{p.title}</h3>
-                  <div className="mt-1 text-white/78 text-[12px] font-semibold">{p.capacity}</div>
+                  <div className="mt-1 text-[#0F1F14]/72 text-[12px] font-semibold">{p.capacity}</div>
                 </div>
               </div>
             </Link>
