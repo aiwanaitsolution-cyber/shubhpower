@@ -62,7 +62,7 @@ const AboutPage = () => (
           <div className="rounded-[32px] bg-white/72 border border-[#0F1F14]/8 p-4 sm:p-5 shadow-2xl">
             <div className="grid grid-cols-2 gap-4">
             <div className="rounded-[24px] overflow-hidden aspect-[4/5] bg-[#F5F3EC] shadow-lg float-soft">
-              <img src="/images/live/Depositphotos_172716044_S.jpg" alt="Shubh Power solar project" loading="lazy" className="w-full h-full object-cover" />
+              <img src="/images/hero/solarpr/1.png" alt="Shubh Power solar project" loading="lazy" className="w-full h-full object-cover" />
             </div>
             <div className="rounded-[24px] overflow-hidden aspect-[4/5] bg-[#F5F3EC] mt-8 sm:mt-12 shadow-lg float-soft float-delay">
               <img src="/images/hero/solarpr/2.png" alt="Shubh Power EV charging station" loading="lazy" className="w-full h-full object-cover" />
