@@ -8,13 +8,13 @@ const CTABanner = ({
   ctaLabel = "Contact Us",
   ctaTo = "/contact",
 }) => (
-  <section className="py-16 lg:py-24 bg-white">
+  <section className="py-12 lg:py-16 bg-white">
     <div className="max-w-[1500px] mx-auto px-6 lg:px-10">
       <div className="relative rounded-[32px] bg-[#0F1F14] overflow-hidden">
         <div className="absolute -top-32 -right-24 w-96 h-96 rounded-full bg-[#16A34A]/25 blur-3xl" />
         <div className="absolute -bottom-32 -left-24 w-96 h-96 rounded-full bg-[#F58220]/20 blur-3xl" />
 
-        <div className="relative grid grid-cols-1 lg:grid-cols-12 items-center gap-8 px-8 lg:px-14 py-14 lg:py-20">
+        <div className="relative grid grid-cols-1 lg:grid-cols-12 items-center gap-8 px-8 lg:px-14 py-12 lg:py-16">
           <div className="lg:col-span-8">
             <div className="flex items-center gap-3 mb-6">
               <span className="w-10 h-10 rounded-full bg-[#16A34A] flex items-center justify-center">
