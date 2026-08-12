@@ -45,10 +45,10 @@ const EVCharging = () => {
             <ChevronRight className="w-6 h-6" />
           </button>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-8 px-10 sm:px-14 lg:px-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 items-stretch gap-5 lg:gap-8 px-10 sm:px-14 lg:px-16">
             {cards.map((c, index) => (
               <Link key={`${c.id}-${active}-${index}`} to={`/ev-charging#${c.id}`} className="group block">
-                <div className={`relative overflow-hidden rounded-[28px] shadow-[0_22px_60px_rgba(15,31,20,0.12)] border border-black/5 bg-black/5 transition-transform duration-500 min-h-[470px] ${index === 2 ? "md:-translate-y-3" : ""}`}>
+                <div className="relative overflow-hidden rounded-[28px] shadow-[0_22px_60px_rgba(15,31,20,0.12)] border border-black/5 bg-black/5 transition-transform duration-500 min-h-[500px] h-full">
                   <img src={c.image} alt={c.title} className="absolute inset-0 w-full h-full object-cover zoom-img" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/18 to-black/70" />
                   <div className="absolute top-4 left-4 right-4 flex items-start justify-between gap-3">

@@ -29,12 +29,12 @@ const StatValue = ({ value }) => {
 };
 
 const Person = ({ m, i }) => (
-  <Reveal delay={Math.min((i % 4) * 0.05, 0.2)} className="group rounded-[24px] bg-white p-3 shadow-xl border border-white/10 card-lift">
+  <Reveal delay={Math.min((i % 4) * 0.05, 0.2)} className="group flex h-full w-full max-w-[280px] flex-col rounded-[24px] bg-white p-3 shadow-xl border border-white/10 card-lift">
     <div className="relative rounded-[18px] overflow-hidden aspect-[4/5] bg-[#F5F3EC]">
       <img src={m.image} alt={m.name} loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
       <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0F1F14]/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
     </div>
-    <div className="p-3 pb-2">
+    <div className="flex flex-1 flex-col justify-end p-3 pb-2">
       <div className="h-display text-[21px] text-[#0F1F14] leading-[0.96]">{m.name}</div>
       <div className="text-[#0F1F14]/55 text-[14px] mt-1 leading-snug">{m.role}{m.meta ? ` - ${m.meta}` : ""}</div>
     </div>
@@ -245,7 +245,7 @@ const AboutPage = () => (
             <h3 className="h-mono text-[12px] sm:text-[13px] tracking-[0.15em] text-white">OUR LEADERSHIP TEAM</h3>
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-7 mb-12 max-w-[1120px] mx-auto justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-12 max-w-[1280px] mx-auto justify-items-center items-stretch">
           {leadership.map((m, i) => <Person key={m.name} m={{ ...m, meta: "" }} i={i} />)}
         </div>
 
@@ -254,7 +254,7 @@ const AboutPage = () => (
             <h3 className="h-mono text-[10px] sm:text-[11px] tracking-[0.16em] text-white">THE POWERHOUSE BEHIND OUR SUCCESS</h3>
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-7 max-w-[1120px] mx-auto justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-[1280px] mx-auto justify-items-center items-stretch">
           {operationalTeam.filter((m) => m.name !== "Anchal Andrews").map((m, i) => <Person key={m.name} m={m} i={i} />)}
         </div>
       </div>
