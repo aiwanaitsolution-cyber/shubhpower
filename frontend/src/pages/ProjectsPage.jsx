@@ -102,7 +102,17 @@ const ProjectsPage = () => {
         </div>
       </section>
 
-      <Reveal><CTABanner title="Yours next?" subtitle="View the completed Solar Power Projects and EV CPO Projects listed by Shubh Power Solutions." ctaLabel="Start your project" /></Reveal>
+      <section className="py-8 lg:py-10 bg-white">
+        <div className="max-w-[920px] mx-auto px-6 lg:px-10 text-center">
+          <div className="inline-flex items-center gap-4 h-mono text-[#16A34A] text-[11px] sm:text-[12px] tracking-[0.2em]">
+            <span className="h-px w-12 bg-[#16A34A]/40" />
+            YOUR NEXT
+            <span className="h-px w-12 bg-[#16A34A]/40" />
+          </div>
+        </div>
+      </section>
+
+      <Reveal><CTABanner title="Your next project starts here" subtitle="View the completed Solar Power Projects and EV CPO Projects listed by Shubh Power Solutions." ctaLabel="Start your project" /></Reveal>
     </div>
   );
 };

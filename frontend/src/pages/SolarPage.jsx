@@ -30,8 +30,8 @@ const SolarPage = () => (
       intervalMs={2000}
     />
 
-    <section className="py-14 sm:py-16 lg:py-24 bg-white">
-      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-10 space-y-10 sm:space-y-12 lg:space-y-16">
+    <section className="py-12 sm:py-14 lg:py-16 bg-white">
+      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-10 space-y-8 sm:space-y-10 lg:space-y-12">
         {solarSolutions.filter((s) => s.id !== "pv").map((s, i) => {
           const flip = i % 2 === 1;
           return (

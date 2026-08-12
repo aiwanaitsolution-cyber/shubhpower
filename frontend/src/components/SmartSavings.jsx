@@ -10,13 +10,13 @@ const SmartSavings = () => {
   const active = savingsTabs.find((s) => s.key === tab);
 
   return (
-    <section className="py-16 lg:py-24 bg-white">
+    <section className="py-12 lg:py-16 bg-white">
       <div className="max-w-[1500px] mx-auto px-6 lg:px-10">
         <div className="max-w-3xl mx-auto">
           <SectionTitle eyebrow="SMART SAVINGS" one="Why Go Solar" two="With Shubh Power?" />
         </div>
 
-        <div className="mt-10 lg:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+        <div className="mt-8 lg:mt-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
           <div className="lg:col-span-5">
             <div className="rounded-[24px] overflow-hidden aspect-[4/5] lg:aspect-auto lg:h-full min-h-[440px] relative">
               <img src="/images/live/Smart-savings-with-shubh-power-solutions-pvt-ltd-1.png" alt="Smart savings with Shubh Power Solutions Pvt Ltd" className="absolute inset-0 w-full h-full object-cover" />
@@ -48,7 +48,7 @@ const SmartSavings = () => {
           </div>
         </div>
 
-        <div className="mt-16 lg:mt-20">
+        <div className="mt-12 lg:mt-16">
           <div className="rounded-[32px] bg-gradient-to-br from-[#0E7A38] via-[#16A34A] to-[#12923F] p-8 lg:p-14 overflow-hidden relative">
             <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-white/5 blur-2xl" />
             <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">

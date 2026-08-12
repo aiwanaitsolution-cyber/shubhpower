@@ -5,7 +5,7 @@ import { faqs } from "../data/mock";
 const FAQ = () => {
   const [open, setOpen] = useState(0);
   return (
-    <section className="py-16 lg:py-24 bg-white">
+    <section className="py-12 lg:py-16 bg-white">
       <div className="max-w-[1500px] mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-5">
           <div className="h-mono text-[#16A34A] mb-4">FAQ</div>
