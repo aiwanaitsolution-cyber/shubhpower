@@ -17,7 +17,7 @@ const CTABanner = ({
         <div className="absolute -bottom-32 -left-24 w-96 h-96 rounded-full bg-[#F58220]/20 blur-3xl" />
 
         <div className="relative grid grid-cols-1 lg:grid-cols-12 items-center gap-8 px-8 lg:px-14 py-12 lg:py-16">
-          <div className="lg:col-span-8">
+          <div className="lg:col-span-9">
             <div className="flex items-center gap-3 mb-6">
               <span className="w-10 h-10 rounded-full bg-[#16A34A] flex items-center justify-center">
                 <Sun className="w-4 h-4 text-white" strokeWidth={2} />
@@ -26,14 +26,14 @@ const CTABanner = ({
                 <Zap className="w-4 h-4 text-white" strokeWidth={2} />
               </span>
             </div>
-            <h2 className={`text-white text-[40px] md:text-[56px] lg:text-[68px] leading-[0.98] ${titleClassName}`}>
+            <h2 className={`text-white text-[36px] md:text-[50px] lg:text-[64px] leading-[0.96] max-w-[12ch] text-balance ${titleClassName}`}>
               {title}
             </h2>
             {showTitleUnderline ? <div className="mt-4 h-[2px] w-24 rounded-full bg-white/30" /> : null}
             <p className="mt-6 text-white/70 max-w-lg text-[15px] md:text-[16px]">{subtitle}</p>
           </div>
 
-          <div className="lg:col-span-4 flex lg:justify-end">
+          <div className="lg:col-span-3 flex lg:justify-end">
             <Link to={ctaTo} className="pill-btn inline-flex items-center gap-3 pl-2 pr-6 py-2 rounded-full bg-white text-[#0F1F14] text-[15px] font-medium">
               <span className="w-11 h-11 rounded-full bg-[#16A34A] flex items-center justify-center">
                 <ArrowRight className="pill-icon w-4 h-4 text-white" />
