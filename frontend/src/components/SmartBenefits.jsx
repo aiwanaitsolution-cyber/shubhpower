@@ -12,9 +12,6 @@ const SmartBenefits = () => (
         <h2 className="h-display text-[40px] md:text-[56px] lg:text-[64px] text-[#0F1F14]">
           The smartest solution for renewable energy.
         </h2>
-        <p className="mt-5 text-[#0F1F14]/60">
-          146+ happy customers. We&apos;re ready to balance power costs on‑ground.
-        </p>
       </div>
       <div className="mt-14 lg:mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {smartBenefits.map((b, i) => {

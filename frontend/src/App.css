@@ -21,7 +21,19 @@
   font-weight: 700;
   letter-spacing: 0.11em;
   text-transform: uppercase;
+  font-size: 13px;
+}
+
+.text-\[11px\] {
+  font-size: 13px;
+}
+
+.text-\[10px\] {
   font-size: 12px;
+}
+
+.text-\[9px\] {
+  font-size: 11px;
 }
 
 h1,
@@ -48,7 +60,7 @@ h6 {
 .site-preview-type .h-mono {
   font-family: 'Figtree', sans-serif;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.11em;
   text-transform: uppercase;
 }
@@ -72,7 +84,7 @@ h6 {
 .home-preview-type .h-mono {
   font-family: 'Figtree', sans-serif;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.11em;
   text-transform: uppercase;
 }
@@ -106,7 +118,7 @@ h6 {
 .blogs-preview-type .h-mono {
   font-family: 'Figtree', sans-serif;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.11em;
   text-transform: uppercase;
 }
@@ -130,7 +142,7 @@ h6 {
 .blog-post-preview-type .h-mono {
   font-family: 'Figtree', sans-serif;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.11em;
   text-transform: uppercase;
 }
@@ -154,7 +166,7 @@ h6 {
 .about-preview-type .h-mono {
   font-family: 'Figtree', sans-serif;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.11em;
   text-transform: uppercase;
 }
@@ -179,7 +191,7 @@ h6 {
 .projects-preview-type .h-mono {
   font-family: 'Figtree', sans-serif;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.11em;
   text-transform: uppercase;
 }
@@ -219,7 +231,7 @@ h6 {
 .ev-preview-type .h-mono {
   font-family: 'Figtree', sans-serif;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.11em;
   text-transform: uppercase;
 }
@@ -259,7 +271,7 @@ h6 {
 .solar-preview-type .h-mono {
   font-family: 'Figtree', sans-serif;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.11em;
   text-transform: uppercase;
 }
