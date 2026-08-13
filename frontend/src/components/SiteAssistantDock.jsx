@@ -133,35 +133,35 @@ const SiteAssistantDock = () => {
   return (
     <div className="fixed bottom-24 right-4 sm:right-5 z-50">
       {open ? (
-        <div className="assistant-dock w-[calc(100vw-2rem)] sm:w-[360px] max-w-[360px] overflow-hidden rounded-[28px] border border-white/14 bg-[#071710]/98 text-white shadow-[0_24px_80px_rgba(0,0,0,0.42)] backdrop-blur-md">
-          <div className="flex items-center justify-between gap-3 border-b border-white/10 px-4 py-4">
+        <div className="assistant-dock w-[calc(100vw-2rem)] sm:w-[360px] max-w-[360px] overflow-hidden rounded-[28px] border border-black/8 bg-white/96 text-[#0F1F14] shadow-[0_24px_80px_rgba(0,0,0,0.22)] backdrop-blur-xl">
+          <div className="flex items-center justify-between gap-3 border-b border-black/8 px-4 py-4 bg-[linear-gradient(180deg,rgba(245,130,32,0.10)_0%,rgba(22,163,74,0.05)_100%)]">
             <div className="flex items-center gap-3">
               <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#F58220] text-white shadow-lg ring-4 ring-[#F58220]/18">
                 <Bot className="h-5 w-5" />
               </span>
               <div>
-                <div className="h-mono text-[12px] tracking-[0.18em] text-[#7DE0C3]">SHUBH POWER</div>
-                <div className="text-[16px] font-semibold text-white">Customer Support</div>
+                <div className="h-mono text-[12px] tracking-[0.18em] text-[#16A34A]">SHUBH POWER</div>
+                <div className="text-[16px] font-semibold text-[#0F1F14]">Customer Support</div>
               </div>
             </div>
             <button
               type="button"
               onClick={() => setOpen(false)}
               aria-label="Close chat"
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white/80 hover:bg-white/15"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#F5F3EC] text-[#0F1F14]/70 hover:bg-[#ece7dc]"
             >
               <X className="h-4 w-4" />
             </button>
           </div>
 
-          <div className="max-h-[42vh] overflow-y-auto px-4 py-4">
+          <div className="max-h-[42vh] overflow-y-auto px-4 py-4 bg-white">
             <div className="mb-4 flex flex-wrap gap-2">
               {buttons.map((label) => (
                 <button
                   key={label}
                   type="button"
                   onClick={() => sendPrompt(label)}
-                  className="rounded-full border border-white/16 bg-white/12 px-3.5 py-2 text-[13px] text-white hover:bg-white/20"
+                  className="rounded-full border border-[#0F1F14]/10 bg-[#F5F3EC] px-3.5 py-2 text-[13px] text-[#0F1F14] hover:bg-[#ece7dc]"
                 >
                   {label}
                 </button>
@@ -175,13 +175,13 @@ const SiteAssistantDock = () => {
                     className={`max-w-[92%] rounded-[20px] px-4 py-3 text-[15px] leading-relaxed ${
                       m.role === "user"
                         ? "bg-[#F58220] text-white"
-                        : "bg-white/14 text-white border border-white/18"
+                        : "bg-[#F8FAF8] text-[#0F1F14] border border-[#0F1F14]/10"
                     }`}
                   >
                     {m.title ? <div className="mb-1.5 text-[14px] font-semibold">{m.title}</div> : null}
                     <div className="text-[15px] leading-relaxed">{m.body}</div>
                     {m.bullets?.length ? (
-                      <ul className="mt-3 space-y-1.5 text-[14px] text-white/88">
+                      <ul className="mt-3 space-y-1.5 text-[14px] text-[#0F1F14]/78">
                         {m.bullets.map((item) => (
                           <li key={item} className="flex items-start gap-2">
                             <ChevronRight className="mt-0.5 h-3.5 w-3.5 text-[#F58220]" />
@@ -191,7 +191,7 @@ const SiteAssistantDock = () => {
                       </ul>
                     ) : null}
                     {m.cta ? (
-                        <a href={m.cta.href} className="mt-3 inline-flex items-center rounded-full bg-[#F58220] px-3.5 py-2 text-[13px] font-medium text-white">
+                        <a href={m.cta.href} className="mt-3 inline-flex items-center rounded-full bg-[#16A34A] px-3.5 py-2 text-[13px] font-medium text-white">
                         {m.cta.label}
                       </a>
                     ) : null}
@@ -209,7 +209,7 @@ const SiteAssistantDock = () => {
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Ask something..."
                 aria-label="Chat message"
-                className="h-11 flex-1 rounded-full border border-white/12 bg-white/96 px-4 text-[15px] text-[#0F1F14] outline-none placeholder:text-[#0F1F14]/40"
+                className="h-11 flex-1 rounded-full border border-black/10 bg-white px-4 text-[15px] text-[#0F1F14] outline-none placeholder:text-[#0F1F14]/40"
               />
               <button
                 type="submit"
@@ -223,7 +223,7 @@ const SiteAssistantDock = () => {
               <button
                 type="button"
                 onClick={() => setMessages(initialMessages)}
-                className="rounded-full border border-white/16 bg-white/12 px-3 py-2 text-[13px] text-white hover:bg-white/20"
+                className="rounded-full border border-black/10 bg-[#F5F3EC] px-3 py-2 text-[13px] text-[#0F1F14] hover:bg-[#ece7dc]"
               >
                 Reset
               </button>
@@ -236,12 +236,11 @@ const SiteAssistantDock = () => {
         type="button"
         onClick={() => setOpen((value) => !value)}
         aria-label="Open chat"
-        className="assistant-dock inline-flex items-center gap-2 rounded-full border border-[#F58220]/28 bg-[#071710] px-4 py-3 text-white shadow-[0_16px_42px_rgba(0,0,0,0.22)]"
+        className="assistant-dock inline-flex h-16 w-16 items-center justify-center rounded-full border border-[#F58220]/28 bg-[#071710] text-white shadow-[0_16px_42px_rgba(0,0,0,0.22)]"
       >
-        <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#F58220]/35 bg-[#F58220] shadow-[0_0_0_4px_rgba(245,130,32,0.12)]">
+        <span className="flex h-12 w-12 items-center justify-center rounded-full border border-[#F58220]/35 bg-[#F58220] shadow-[0_0_0_4px_rgba(245,130,32,0.12)]">
           <MessageCircle className="h-4 w-4 text-white" />
         </span>
-        <span className="text-[15px] font-medium text-[#F58220]">Chat</span>
       </button>
     </div>
   );
