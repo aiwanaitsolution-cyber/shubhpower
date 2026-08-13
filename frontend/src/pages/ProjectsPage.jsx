@@ -24,13 +24,13 @@ const ProjectsPage = () => {
   const accent = category === "ev" ? "#F58220" : "#16A34A";
   const catLabel = category === "solar" ? "Solar" : category === "ev" ? "EV CPO" : "All";
   const projectHeroImages = [
-    { src: "/images/hero/projects-page-1.png", alt: "Shubh Power completed projects" },
-    { src: "/images/hero/projects-page-2.png", alt: "Shubh Power solar projects" },
-    { src: "/images/hero/projects-page-3.png", alt: "Shubh Power EV charging projects" },
+    { src: "/images/hero/projects/1.png", alt: "Shubh Power completed projects" },
+    { src: "/images/hero/projects/2.png", alt: "Shubh Power solar projects" },
+    { src: "/images/hero/projects/3.png", alt: "Shubh Power EV charging projects" },
   ];
   const heroImages =
     category === "solar"
-      ? projectHeroImages.slice(0, 1)
+      ? [projectHeroImages[1]]
       : category === "ev"
         ? projectHeroImages.slice(2)
         : projectHeroImages;
