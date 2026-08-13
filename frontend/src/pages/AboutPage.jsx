@@ -10,7 +10,7 @@ import { brand, stats, values, promises, leadership, operationalTeam, timeline }
 
 const aboutHeroCopy = (
   <>
-    Welcome to Shubh Power Solutions Private Limited, established in 2010 with its office in Gurugram, Haryana, India. We are a leading provider of comprehensive power solutions in Delhi and the National Capital Region - delivering affordable power, reducing carbon footprint and promoting energy efficiency across industries.
+    Shubh Power Solutions Pvt Ltd is incorporated with a clear vision - engineer India's transition to clean energy. Shubh Power Solutions started with Solar Energy Solutions and gradually progressed to include Turnkey Solutions in EV Charging Infrastructure.
   </>
 );
 
@@ -45,7 +45,7 @@ const AboutPage = () => (
   <div className="site-preview-type about-preview-type">
     <PageHero
       eyebrow="ABOUT COMPANY"
-      title={<>Fifteen years of<br />engineering India's<br />clean-energy backbone.</>}
+      title={<>Over Decades of<br />engineering India's<br />clean-energy backbone.</>}
       subtitle={aboutHeroCopy}
       image="/images/hero/about.png"
       imageAlt="Shubh Power about us hero"
@@ -63,7 +63,7 @@ const AboutPage = () => (
             From a single rooftop to megawatts across North India.
           </h2>
           <p className="mt-6 text-[#0F1F14]/70 text-[16px] leading-relaxed">
-            Founded in Gurugram in 2010, Shubh Power Solutions has grown from early rooftop installations into a full-scope clean-energy EPC, delivering utility-scale solar plants, battery storage and EV charging networks across Delhi-NCR, Rajasthan, Punjab, Haryana and Uttar Pradesh.
+            Shubh Power Solutions has grown from early rooftop installations into a full-scope clean-energy EPC, delivering utility-scale solar plants, battery storage and EV charging networks across Delhi-NCR, Rajasthan, Punjab, Haryana and Uttar Pradesh.
           </p>
           <p className="mt-4 text-[#0F1F14]/70 text-[16px] leading-relaxed">
             We handle the whole journey in-house, feasibility and design, procurement of tier-1 components, construction, discom liaison and long-term O&M, so our clients deal with one accountable team for the 25-year life of the asset.
@@ -79,7 +79,7 @@ const AboutPage = () => (
           </Link>
           <div className="mt-8 grid grid-cols-3 gap-3 max-w-xl">
             {[
-              ["2010", "Established"],
+              ["2010", "Solar business established"],
               ["146+", "Customers"],
               ["30+ MW", "Solar power project executed"],
             ].map(([n, l]) => (
@@ -123,15 +123,15 @@ const AboutPage = () => (
             </Reveal>
           ))}
         </div>
-        <Reveal className="mt-6 lg:mt-8 rounded-[28px] bg-white p-6 sm:p-8 lg:p-10 border border-[#0F1F14]/8 shadow-[0_14px_45px_rgba(15,31,20,0.05)]">
+        <Reveal className="mt-6 lg:mt-8 rounded-[28px] bg-[linear-gradient(180deg,#eaf8f0_0%,#def2e7_100%)] p-6 sm:p-8 lg:p-10 border border-[#16A34A]/12 shadow-[0_14px_45px_rgba(15,31,20,0.05)]">
           <div className="flex items-center gap-3 mb-6">
-            <span className="w-10 h-10 rounded-full bg-[#F58220] flex items-center justify-center"><Gem className="w-4 h-4 text-white" /></span>
-            <div className="h-mono text-[11px] tracking-[0.15em] text-[#F58220]">OUR VALUES</div>
+            <span className="w-10 h-10 rounded-full bg-[#DFF2E5] flex items-center justify-center border border-[#16A34A]/12"><Gem className="w-4 h-4 text-[#16A34A]" /></span>
+            <div className="h-mono text-[11px] tracking-[0.15em] text-[#16A34A]">OUR VALUES</div>
           </div>
           <p className="text-[#0F1F14]/75 text-[18px] leading-relaxed mb-8">{brand.values}</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {values.map((v, i) => (
-              <div key={v.title} className="value-tile rounded-[20px] bg-white border border-[#0F1F14]/8 p-5" style={{ animationDelay: `${i * 0.08}s` }}>
+              <div key={v.title} className="value-tile rounded-[20px] bg-[#F4FBF6] border border-[#16A34A]/10 p-5" style={{ animationDelay: `${i * 0.08}s` }}>
                 <div className="h-display text-[20px] text-[#0F1F14] mb-2">{v.title}</div>
                 <p className="text-[#0F1F14]/60 text-[14px] leading-relaxed">{v.body}</p>
               </div>
@@ -162,7 +162,7 @@ const AboutPage = () => (
             <span className="h-mono text-[12px] tracking-[0.2em] text-[#16A34A]">OUR JOURNEY</span>
           </div>
           <h2 className="h-display text-[36px] md:text-[52px] tracking-tight text-[#0F1F14]">
-            Fifteen years, milestone by milestone.
+            Over Decades, milestone by milestone.
           </h2>
           <p className="mt-5 text-[#0F1F14]/62 text-[16px] leading-relaxed max-w-sm">
             A connected path from Gurugram incorporation to solar projects and EV CPO rollout.

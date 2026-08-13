@@ -66,7 +66,7 @@ const Hero = () => {
 
         <div className="reveal mt-auto mb-14 sm:mb-16 lg:mb-20 flex flex-col items-center gap-6 sm:gap-8">
           <p className="text-white text-[15px] sm:text-base lg:text-lg max-w-2xl leading-relaxed drop-shadow-[0_4px_18px_rgba(0,0,0,0.85)]">
-            Welcome to Shubh Power Solutions Private Limited, established in 2010 with its office in Gurugram, Haryana, India.
+            Shubh Power Solutions Pvt Ltd is incorporated with a clear vision - engineer India's transition to clean energy. Shubh Power Solutions started with Solar Energy Solutions and gradually progressed to include Turnkey Solutions in EV Charging Infrastructure.
           </p>
 
           <div className="flex flex-wrap items-center gap-3 justify-center">

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { ArrowRight, Plus, Minus, Zap, TrendingDown, Leaf } from "lucide-react";
 import { Link } from "react-router-dom";
-import SectionTitle from "./SectionTitle";
 import { advantages, savingsTabs } from "../data/mock";
 
 const SmartSavings = () => {
@@ -12,8 +11,12 @@ const SmartSavings = () => {
   return (
     <section className="py-10 lg:py-14 bg-white">
       <div className="max-w-[1500px] mx-auto px-6 lg:px-10">
-        <div className="max-w-3xl mx-auto">
-          <SectionTitle eyebrow="SMART SAVINGS" one="Why Go Solar" two="With Shubh Power?" />
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="h-mono mb-4 text-[#F58220]">SMART SAVINGS</div>
+          <h2 className="h-display text-[#0F1F14] text-[38px] sm:text-[52px] lg:text-[66px] leading-[0.98] tracking-tight">
+            <span className="block whitespace-nowrap">Why Go Solar</span>
+            <span className="block text-[34px] sm:text-[48px] lg:text-[60px]">With Shubh Power?</span>
+          </h2>
         </div>
 
         <div className="mt-6 lg:mt-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">

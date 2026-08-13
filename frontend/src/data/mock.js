@@ -18,14 +18,14 @@ export const brand = {
   vision: "To lead the global shift toward clean energy through innovative technologies.",
   mission: "To contribute in achieving zero carbon footprint by providing affordable and sustainable power solutions making the energy landscape resilient.",
   values: "Integrity, Customer-Focus and Excellence are our cornerstones of business. We bring reliable and premium quality solutions with a commitment to efficiency and effectiveness.",
-  intro: "Welcome to Shubh Power Solutions Private Limited established in 2010 with its office in Gurugram, Haryana, India. We are a leading provider of comprehensive power solutions in Delhi and the National Capital Region. We aim to meet the diverse energy needs of our clients across various industries. Our team of experts leverages cutting-edge technology to deliver high-performance solutions that ensure affordable power supply, reduce carbon footprint, and promote energy efficiency.",
+  intro: "Shubh Power Solutions Pvt Ltd is incorporated with a clear vision - engineer India's transition to clean energy. Shubh Power Solutions started with Solar Energy Solutions and gradually progressed to include Turnkey Solutions in EV Charging Infrastructure.",
   logo: "/logo.png",
 };
 
 export const heroImage = `${live}Untitled-design-9-rknh6lx7k80ll3dvtw5gszwkp4fhgv6li3c86qt6ko.png`;
 
 export const stats = [
-  { value: "2010", label: "established" },
+  { value: "2010", label: "solar business established" },
   { value: "146+", label: "happy customers" },
   { value: "30+ MW", label: "executed solar projects" },
   { value: "100+", label: "EV chargers installed" },
@@ -277,7 +277,7 @@ export const values = [
 ];
 
 export const timeline = [
-  { year: "2010", title: "Founded in Gurugram", body: "Shubh Power Solutions Pvt Ltd is incorporated with a clear vision - engineer India's transition to clean energy." },
+  { year: "2010", title: "Founded with solar vision", body: "Shubh Power Solutions Pvt Ltd is incorporated with a clear vision - engineer India's transition to clean energy." },
   { year: "2014", title: "First 500 kW rooftop", body: "Delivered our first large-scale commercial rooftop for a cooperative society in Delhi-NCR." },
   { year: "2017", title: "1 MW milestone", body: "Commissioned our first megawatt-scale institutional plant in Bathinda, Punjab." },
   { year: "2020", title: "Utility-scale expansion", body: "Broke ground on multiple MW-scale ground-mount plants across Rajasthan and Haryana." },

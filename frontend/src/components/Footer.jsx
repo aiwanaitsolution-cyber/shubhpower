@@ -10,7 +10,7 @@ const Footer = () => (
         <div className="lg:col-span-5">
           <img src="/logo.png" alt="Shubh Power" className="h-16 w-auto object-contain mb-5" />
           <p className="text-[#0F1F14]/68 text-[15px] max-w-sm leading-relaxed">
-            Welcome to Shubh Power Solutions Private Limited established in 2010 with its office in Gurugram, Haryana, India.
+            Shubh Power Solutions Pvt Ltd is incorporated with a clear vision - engineer India's transition to clean energy.
           </p>
           <ul className="mt-7 space-y-3.5">
             <li>
