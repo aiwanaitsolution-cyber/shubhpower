@@ -70,7 +70,7 @@ const About = () => (
               <img src="/images/hero/solarpr/2.png" alt="Shubh Power EV charging station" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
             </div>
           </div>
-          <div className="absolute left-3 right-3 sm:left-5 sm:right-5 bottom-4 sm:bottom-5 rounded-[20px] bg-[#0F3328] text-white px-6 py-5 shadow-2xl border border-white/20">
+          <div className="absolute inset-x-0 bottom-0 rounded-[20px] bg-[#0F3328] text-white px-6 py-5 shadow-2xl border border-white/20">
             <div className="h-mono text-[11px] tracking-[0.16em] text-[#7DE0C3]">LIVE SOLUTIONS</div>
             <div className="h-display mt-2 text-[22px] leading-tight">Solar - BESS - EV Charging</div>
           </div>
