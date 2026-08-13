@@ -29,7 +29,7 @@ const StatValue = ({ value }) => {
 };
 
 const Person = ({ m, i }) => (
-  <Reveal delay={Math.min((i % 4) * 0.05, 0.2)} className="group flex h-full w-full max-w-[280px] flex-col rounded-[24px] bg-white p-3 shadow-xl border border-white/10 card-lift">
+  <Reveal delay={Math.min((i % 4) * 0.05, 0.2)} className="group flex h-full w-full max-w-[320px] flex-col rounded-[24px] bg-white p-3 shadow-xl border border-white/10 card-lift">
     <div className="relative rounded-[18px] overflow-hidden aspect-[4/5] bg-[#F5F3EC]">
       <img src={m.image} alt={m.name} loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
       <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0F1F14]/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -245,7 +245,7 @@ const AboutPage = () => (
             <h3 className="h-mono text-[12px] sm:text-[13px] tracking-[0.15em] text-white">OUR LEADERSHIP TEAM</h3>
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-12 max-w-[1280px] mx-auto justify-items-center items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12 max-w-[1080px] mx-auto justify-items-center items-stretch">
           {leadership.map((m, i) => <Person key={m.name} m={{ ...m, meta: "" }} i={i} />)}
         </div>
 
