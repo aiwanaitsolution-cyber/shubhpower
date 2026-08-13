@@ -212,21 +212,21 @@ export const savingsTabs = [
 ];
 
 export const solarProjects = [
-  { title: "Hissar City, Haryana", location: "Hissar City, Haryana", tag: "Solar Power", capacity: "15 MW Project", year: "", image: `${live}10nlc_solar.jpg` },
-  { title: "Neemrana, Rajasthan", location: "Neemrana, Rajasthan", tag: "Solar Power", capacity: "3.5 MW Project", year: "", image: `${live}Depositphotos_172716044_S.jpg` },
-  { title: "Khuri, Sikar, Rajasthan", location: "Khuri, Sikar, Rajasthan", tag: "Solar Power", capacity: "2.5 MW Project", year: "", image: `${live}1mw-solar-power-plant-panorama.jpeg` },
-  { title: "Bathinda (PB)", location: "Bathinda (PB)", tag: "Solar Power", capacity: "1 MW, Institutional", year: "", image: `${live}1MW-Institutional-Bathinda-PB.jpg` },
-  { title: "Bikaner, Rajasthan", location: "Bikaner, Rajasthan", tag: "Solar Power", capacity: "500KW Project", year: "", image: `${live}solar-pv-net-metering-roof-top-project-rajasthan-india-1-e1726400177363.jpg` },
-  { title: "Ganganagar, Rajasthan", location: "Ganganagar, Rajasthan", tag: "Solar Power", capacity: "120KW Project", year: "", image: `${live}IND-Rooftop-Solar-1.jpg` },
-  { title: "Jaipur, Rajasthan", location: "Jaipur, Rajasthan", tag: "Solar Power", capacity: "100KW Project", year: "", image: `${live}WhatsApp-Image-2024-07-02-at-18.45.44_14e0dbce-1.jpg` },
-  { title: "Badli, Delhi", location: "Badli, Delhi", tag: "Solar Power", capacity: "100KW Project", year: "", image: `${live}IMG-20250901-WA0025.jpg` },
+  { title: "Hissar City, Haryana", location: "Hissar City, Haryana", tag: "UTILITY", capacity: "15 MW Project", year: "2022", image: `${live}10nlc_solar.jpg` },
+  { title: "Neemrana, Rajasthan", location: "Neemrana, Rajasthan", tag: "GROUND-MOUNT", capacity: "3.5 MW Project", year: "2023", image: `${live}Depositphotos_172716044_S.jpg` },
+  { title: "Khuri, Sikar, Rajasthan", location: "Khuri, Sikar, Rajasthan", tag: "GROUND-MOUNT", capacity: "2.5 MW Project", year: "2022", image: `${live}1mw-solar-power-plant-panorama.jpeg` },
+  { title: "Bathinda (PB)", location: "Bathinda (PB)", tag: "ROOFTOP", capacity: "1 MW, Institutional", year: "2023", image: `${live}1MW-Institutional-Bathinda-PB.jpg` },
+  { title: "Bikaner, Rajasthan", location: "Bikaner, Rajasthan", tag: "UTILITY", capacity: "500KW Project", year: "2021", image: `${live}solar-pv-net-metering-roof-top-project-rajasthan-india-1-e1726400177363.jpg` },
+  { title: "Ganganagar, Rajasthan", location: "Ganganagar, Rajasthan", tag: "ROOFTOP", capacity: "120KW Project", year: "2022", image: `${live}IND-Rooftop-Solar-1.jpg` },
+  { title: "Jaipur, Rajasthan", location: "Jaipur, Rajasthan", tag: "ROOFTOP", capacity: "100KW Project", year: "2023", image: `${live}WhatsApp-Image-2024-07-02-at-18.45.44_14e0dbce-1.jpg` },
+  { title: "Badli, Delhi", location: "Badli, Delhi", tag: "ROOFTOP", capacity: "100KW Project", year: "2021", image: `${live}IMG-20250901-WA0025.jpg` },
 ];
 
 export const evProjects = [
-  { title: "Amrapali Zodiac", location: "Noida", tag: "EV CPO", capacity: "EV CPO completed project", year: "", image: `${live}WhatsApp-Image-2026-03-11-at-12.13.22-PM.jpeg` },
-  { title: "DLF", location: "Gurugram", tag: "EV CPO", capacity: "EV CPO completed project", year: "", image: `${live}Untitled-design-2.png` },
-  { title: "Gulab Garh Palace", location: "Rajasthan", tag: "EV CPO", capacity: "EV CPO completed project", year: "", image: `${live}WhatsApp-Image-2025-12-02-at-3.28.56-PM-1.jpg` },
-  { title: "Manvar Hotel", location: "Rajasthan", tag: "EV CPO", capacity: "EV CPO completed project", year: "", image: `${live}WhatsApp-Image-2025-12-02-at-3.29.22-PM.jpg` },
+  { title: "Amrapali Zodiac", location: "Noida", tag: "RESIDENTIAL CPO", capacity: "EV CPO completed project", year: "2024", image: `${live}WhatsApp-Image-2026-03-11-at-12.13.22-PM.jpeg` },
+  { title: "DLF", location: "Gurugram", tag: "COMMERCIAL CPO", capacity: "EV CPO completed project", year: "2024", image: `${live}Untitled-design-2.png` },
+  { title: "Gulab Garh Palace", location: "Rajasthan", tag: "HOSPITALITY CPO", capacity: "EV CPO completed project", year: "2023", image: `${live}WhatsApp-Image-2025-12-02-at-3.28.56-PM-1.jpg` },
+  { title: "Manvar Hotel", location: "Rajasthan", tag: "HOSPITALITY CPO", capacity: "EV CPO completed project", year: "2022", image: `${live}WhatsApp-Image-2025-12-02-at-3.29.22-PM.jpg` },
 ];
 
 export const solarBrands = [

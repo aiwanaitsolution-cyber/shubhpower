@@ -77,7 +77,7 @@ const ProjectsPage = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
               {source.map((p, i) => (
                 <Link key={p.title + i} to="/contact" className="group card-lift block project-glow-card">
-                  <div className="relative rounded-[20px] overflow-hidden aspect-[4/3] bg-[#F5F3EC]">
+                  <div className="relative rounded-[20px] overflow-hidden aspect-[16/13] bg-[#F5F3EC]">
                     <img src={p.image} alt={`${p.title} ${p.capacity}`} className="absolute inset-0 w-full h-full object-cover zoom-img" />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#04120C]/88 via-[#0F1F14]/24 to-transparent" />
                     <span className={`absolute top-3 left-3 h-mono text-[11px] px-2.5 py-1 rounded-full ${status === "ongoing" ? "bg-[#F58220] text-white" : "bg-white/95 text-[#0F1F14]"}`}>
@@ -89,7 +89,7 @@ const ProjectsPage = () => {
                     <div className="absolute left-3 right-3 bottom-3 project-glass-panel-dark rounded-[18px] p-4 text-white">
                       <div className="flex items-baseline justify-between gap-3">
                         <h3 className="h-display text-[19px] md:text-[22px] text-white leading-tight">{p.title}</h3>
-                        {p.year ? <span className="text-[11px] text-white/65 shrink-0">{p.year}</span> : null}
+                        {p.year ? <span className="text-[12px] text-white/75 shrink-0">{p.year}</span> : null}
                       </div>
                       <div className="text-white/72 mt-1 text-[12px]">{p.location}</div>
                       <div className="text-[#7DE0C3] mt-1 text-[12px] font-medium">{p.capacity}</div>
@@ -104,10 +104,12 @@ const ProjectsPage = () => {
 
       <section className="py-8 lg:py-10 bg-white">
         <div className="max-w-[920px] mx-auto px-6 lg:px-10 text-center">
-          <div className="inline-flex items-center gap-4 h-mono text-[#16A34A] text-[11px] sm:text-[12px] tracking-[0.2em]">
-            <span className="h-px w-12 bg-[#16A34A]/40" />
-            YOUR NEXT
-            <span className="h-px w-12 bg-[#16A34A]/40" />
+          <div className="inline-flex items-center gap-4">
+            <span className="h-px w-14 sm:w-16 bg-[#16A34A]/35" />
+            <span className="h-display text-[18px] sm:text-[22px] lg:text-[26px] text-[#16A34A] leading-none tracking-[-0.02em]">
+              Your Next
+            </span>
+            <span className="h-px w-14 sm:w-16 bg-[#16A34A]/35" />
           </div>
         </div>
       </section>

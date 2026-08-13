@@ -2,19 +2,19 @@ import React from "react";
 import { processSteps } from "../data/mock";
 
 const Process = () => (
-  <section className="py-12 lg:py-16 bg-white">
+  <section className="py-10 lg:py-14 bg-white">
     <div className="max-w-[1500px] mx-auto px-6 lg:px-10">
       <div className="text-center max-w-3xl mx-auto">
         <div className="h-mono text-[#16A34A] mb-4">HOW WE WORK</div>
-        <h2 className="h-display text-[40px] md:text-[56px] lg:text-[68px] text-[#0A0F1C]">
+        <h2 className="h-display text-[32px] md:text-[42px] lg:text-[52px] font-semibold tracking-[-0.02em] text-[#0A0F1C]">
           Four steps. Zero surprises.
         </h2>
       </div>
-      <div className="mt-8 lg:mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div className="mt-6 lg:mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
         {processSteps.map((s, i) => (
           <div
             key={s.n}
-            className="card-lift group rounded-[24px] bg-[#F7F7F9] p-8 min-h-[280px] flex flex-col justify-between border border-[#0A0F1C]/5"
+            className="card-lift group rounded-[24px] bg-[#F7F7F9] p-7 min-h-[280px] flex flex-col justify-between border border-[#0A0F1C]/5"
           >
             <div className="flex items-center justify-between">
               <span className="h-mono text-[#16A34A]">{s.n}</span>

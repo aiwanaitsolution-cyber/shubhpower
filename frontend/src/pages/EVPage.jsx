@@ -29,7 +29,7 @@ const EVPage = () => (
       ]}
     />
 
-    <section className="py-12 lg:py-16 bg-white">
+    <section className="py-10 lg:py-14 bg-white">
       <div className="max-w-[1320px] mx-auto px-6 lg:px-10 space-y-10 lg:space-y-12">
         {evCategories.map((c, i) => {
           const flip = i % 2 === 1;
@@ -70,30 +70,16 @@ const EVPage = () => (
       </div>
     </section>
 
-    <section className="py-10 lg:py-12 bg-white">
-      <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
-        <div className="rounded-[28px] border border-[#0F1F14]/8 bg-[linear-gradient(180deg,#ffffff_0%,#f5fbf7_100%)] px-6 py-8 sm:px-8 sm:py-9 text-center shadow-[0_12px_35px_rgba(15,31,20,0.05)]">
-          <div className="h-mono text-[#16A34A] mb-3">BOTTOM VIEW</div>
-          <h2 className="h-display text-[28px] sm:text-[36px] lg:text-[44px] text-[#0A0F1C] leading-[1.02]">
-            EV Completed Projects
-          </h2>
-          <p className="mt-4 text-[#0A0F1C]/65 text-[15px] max-w-2xl mx-auto leading-relaxed">
-            Book a site visit to see the live EV charging installations and completed CPO projects from Shubh Power.
-          </p>
-          <Link to="/projects?category=ev" className="pill-btn mt-6 inline-flex items-center gap-3 pl-6 pr-2 py-2 rounded-full bg-[#0A0F1C] text-white text-[15px] font-medium">
-            Book a site visit
-            <span className="w-10 h-10 rounded-full bg-[#16A34A] flex items-center justify-center">
-              <ArrowRight className="pill-icon w-4 h-4 text-white" />
-            </span>
-          </Link>
-        </div>
-      </div>
-    </section>
-
     <Reveal><Process /></Reveal>
     <Reveal><Brands /></Reveal>
     <Reveal><FAQ /></Reveal>
-    <Reveal><CTABanner title="View EV CPO Completed Projects" ctaLabel="Book a site visit" /></Reveal>
+    <Reveal>
+      <CTABanner
+        title="EV Completed Projects"
+        subtitle="View EV CPO Completed Projects. Solar, storage and EV charging designed for Shubh Power clients since 2010."
+        ctaLabel="Book a site visit"
+      />
+    </Reveal>
   </div>
 );
 
