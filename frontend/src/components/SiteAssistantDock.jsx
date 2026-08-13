@@ -140,8 +140,8 @@ const SiteAssistantDock = () => {
                 <Bot className="h-5 w-5" />
               </span>
               <div>
-                <div className="h-mono text-[10px] tracking-[0.18em] text-[#7DE0C3]">SHUBH POWER</div>
-                <div className="text-[15px] font-semibold">Customer Support</div>
+                <div className="h-mono text-[12px] tracking-[0.18em] text-[#7DE0C3]">SHUBH POWER</div>
+                <div className="text-[16px] font-semibold">Customer Support</div>
               </div>
             </div>
             <button
@@ -161,7 +161,7 @@ const SiteAssistantDock = () => {
                   key={label}
                   type="button"
                   onClick={() => sendPrompt(label)}
-                  className="rounded-full border border-white/12 bg-white/8 px-3.5 py-2 text-[12px] text-white/88 hover:bg-white/14"
+                className="rounded-full border border-white/12 bg-white/8 px-3.5 py-2 text-[13px] text-white/88 hover:bg-white/14"
                 >
                   {label}
                 </button>
@@ -172,16 +172,16 @@ const SiteAssistantDock = () => {
               {messages.map((m, i) => (
                 <div key={`${m.role}-${i}`} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
                   <div
-                    className={`max-w-[92%] rounded-[20px] px-4 py-3 text-[14px] leading-relaxed ${
+                    className={`max-w-[92%] rounded-[20px] px-4 py-3 text-[15px] leading-relaxed ${
                       m.role === "user"
                         ? "bg-[#16A34A] text-white"
                         : "bg-white/8 text-white/92 border border-white/10"
                     }`}
                   >
-                    {m.title ? <div className="mb-1.5 text-[13px] font-semibold">{m.title}</div> : null}
-                    <div className="text-[14px] leading-relaxed">{m.body}</div>
+                    {m.title ? <div className="mb-1.5 text-[14px] font-semibold">{m.title}</div> : null}
+                    <div className="text-[15px] leading-relaxed">{m.body}</div>
                     {m.bullets?.length ? (
-                      <ul className="mt-3 space-y-1.5 text-[13px] text-white/80">
+                      <ul className="mt-3 space-y-1.5 text-[14px] text-white/80">
                         {m.bullets.map((item) => (
                           <li key={item} className="flex items-start gap-2">
                             <ChevronRight className="mt-0.5 h-3.5 w-3.5 text-[#7DE0C3]" />
@@ -191,7 +191,7 @@ const SiteAssistantDock = () => {
                       </ul>
                     ) : null}
                     {m.cta ? (
-                      <a href={m.cta.href} className="mt-3 inline-flex items-center rounded-full bg-white px-3.5 py-2 text-[12px] font-medium text-[#0F1F14]">
+                        <a href={m.cta.href} className="mt-3 inline-flex items-center rounded-full bg-white px-3.5 py-2 text-[13px] font-medium text-[#0F1F14]">
                         {m.cta.label}
                       </a>
                     ) : null}
@@ -209,7 +209,7 @@ const SiteAssistantDock = () => {
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Ask something..."
                 aria-label="Chat message"
-                className="h-11 flex-1 rounded-full border border-white/12 bg-white px-4 text-[14px] text-[#0F1F14] outline-none placeholder:text-[#0F1F14]/35"
+                className="h-11 flex-1 rounded-full border border-white/12 bg-white px-4 text-[15px] text-[#0F1F14] outline-none placeholder:text-[#0F1F14]/35"
               />
               <button
                 type="submit"
@@ -223,7 +223,7 @@ const SiteAssistantDock = () => {
               <button
                 type="button"
                 onClick={() => setMessages(initialMessages)}
-                className="rounded-full border border-white/12 bg-white/8 px-3 py-2 text-[12px] text-white/82 hover:bg-white/14"
+                className="rounded-full border border-white/12 bg-white/8 px-3 py-2 text-[13px] text-white/82 hover:bg-white/14"
               >
                 Reset
               </button>
@@ -239,7 +239,7 @@ const SiteAssistantDock = () => {
         className="assistant-dock inline-flex items-center gap-2 rounded-full border border-white/12 bg-[#10241B] px-4 py-3 text-white shadow-[0_16px_42px_rgba(0,0,0,0.22)]"
       >
         <MessageCircle className="h-4 w-4 text-[#7DE0C3]" />
-        <span className="text-[14px] font-medium">Chat</span>
+        <span className="text-[15px] font-medium">Chat</span>
       </button>
     </div>
   );

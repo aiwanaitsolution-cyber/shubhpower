@@ -49,7 +49,7 @@ const ContactPage = () => {
             <div>
               <div className="flex items-center gap-2.5 mb-4">
                 <span className="w-8 h-[3px] rounded-full bg-[#16A34A]" />
-                <span className="h-mono text-[11px] tracking-[0.15em] text-[#16A34A]">OUR CONTACT DETAIL</span>
+                <span className="h-mono text-[13px] tracking-[0.15em] text-[#16A34A]">OUR CONTACT DETAIL</span>
               </div>
               <div className="rounded-[22px] border border-[#0F1F14]/10 overflow-hidden divide-y divide-[#0F1F14]/8 bg-white/90 backdrop-blur-xl shadow-[0_14px_40px_rgba(15,31,20,0.05)]">
                 {methods.map((m, i) => (
@@ -58,7 +58,7 @@ const ContactPage = () => {
                       <m.icon className="w-[18px] h-[18px]" />
                     </span>
                     <div className="min-w-0">
-                      <div className="h-mono text-[10px] tracking-wide text-[#0F1F14]/45">{m.label.toUpperCase()}</div>
+                      <div className="h-mono text-[12px] tracking-wide text-[#0F1F14]/45">{m.label.toUpperCase()}</div>
                       <div className="text-[#0F1F14] text-[15px] font-medium mt-0.5">{m.value}</div>
                     </div>
                     <ArrowUpRight className="w-4 h-4 text-[#0F1F14]/25 ml-auto group-hover:text-[#16A34A] group-hover:translate-x-0.5 transition-all" />
@@ -126,7 +126,7 @@ const ContactPage = () => {
               />
               <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#0F3328]/10 via-transparent to-transparent" />
               <div className="absolute left-5 bottom-5 right-5 md:right-auto md:max-w-sm bg-white/92 backdrop-blur-xl border border-[#0F1F14]/8 rounded-2xl shadow-xl p-5">
-                <div className="h-mono text-[10px] tracking-wide text-[#16A34A] mb-1">LOCATION</div>
+                <div className="h-mono text-[12px] tracking-wide text-[#16A34A] mb-1">LOCATION</div>
                 <div className="text-[#0F1F14] font-medium text-[15px] leading-snug">{company.address}</div>
                 <a href="https://maps.google.com/?q=B-681,+Shushant+Lok+Phase+1,+Sector+43,+Gurugram,+122001" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 mt-3 text-[#16A34A] text-[14px] font-medium">
                   Get directions <ArrowUpRight className="w-4 h-4" />
@@ -146,7 +146,7 @@ const ContactPage = () => {
 
 const Field = ({ label, full, children }) => (
   <div className={full ? "md:col-span-2" : ""}>
-    <label className="h-mono text-[11px] tracking-wide text-[#0F1F14]/50">{label}</label>
+    <label className="h-mono text-[13px] tracking-wide text-[#0F1F14]/50">{label}</label>
     <div className="mt-2">{children}</div>
   </div>
 );

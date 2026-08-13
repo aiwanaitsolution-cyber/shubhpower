@@ -40,7 +40,7 @@ const Footer = () => (
         </div>
 
         <div className="lg:col-span-2 lg:col-start-7">
-          <div className="h-mono text-[11px] tracking-wide text-[#16A34A] mb-4">QUICK LINKS</div>
+          <div className="h-mono text-[13px] tracking-wide text-[#16A34A] mb-4">QUICK LINKS</div>
           <ul className="space-y-2.5">
             {navLinks.map((l) => (
               <li key={l.to}><Link to={l.to} className="text-[#0F1F14]/70 hover:text-[#16A34A] text-[14px]">{l.label}</Link></li>
@@ -49,7 +49,7 @@ const Footer = () => (
         </div>
 
         <div className="lg:col-span-2">
-          <div className="h-mono text-[11px] tracking-wide text-[#16A34A] mb-4">SOLUTIONS</div>
+          <div className="h-mono text-[13px] tracking-wide text-[#16A34A] mb-4">SOLUTIONS</div>
           <ul className="space-y-2.5 text-[14px]">
             <li><Link to="/solar" className="text-[#0F1F14]/70 hover:text-[#16A34A]">Solar Power Solutions</Link></li>
             <li><Link to="/solar" className="text-[#0F1F14]/70 hover:text-[#16A34A]">Our Core Expertise</Link></li>
@@ -59,7 +59,7 @@ const Footer = () => (
         </div>
 
         <div className="lg:col-span-3">
-          <div className="h-mono text-[11px] tracking-wide text-[#16A34A] mb-4">GET IN TOUCH</div>
+          <div className="h-mono text-[13px] tracking-wide text-[#16A34A] mb-4">GET IN TOUCH</div>
           <p className="text-[#0F1F14]/70 text-[14px] leading-relaxed mb-4">Need any consultations contact with us.</p>
           <Link to="/contact" className="inline-flex items-center gap-2.5 pl-5 pr-2 py-2 rounded-full bg-[#16A34A] text-white text-[14px] font-semibold hover:bg-[#128740] transition-colors">
             Contact Us
