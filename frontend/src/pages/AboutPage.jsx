@@ -261,7 +261,7 @@ const AboutPage = () => (
     </section>
 
     <Reveal><Testimonials /></Reveal>
-    <Reveal><CTABanner title="Save the Environment & Save your Money!" ctaLabel="Contact Us" /></Reveal>
+    <Reveal><CTABanner title="Save the Environment, Save your Money!" ctaLabel="Contact Us" /></Reveal>
   </div>
 );
 

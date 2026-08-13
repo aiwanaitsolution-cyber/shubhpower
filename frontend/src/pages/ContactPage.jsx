@@ -72,7 +72,7 @@ const ContactPage = () => {
                 <span className="w-9 h-9 rounded-full bg-[#16A34A] flex items-center justify-center shrink-0"><Clock className="w-4 h-4" /></span>
                 <div>
                   <div className="font-semibold text-[15px]">Hot Line</div>
-                  <div className="text-[#0F1F14]/60 text-[14px]">85272 76868</div>
+                  <div className="text-[#0F1F14]/60 text-[14px]">7836992555</div>
                 </div>
               </div>
               <div className="flex items-start gap-3">

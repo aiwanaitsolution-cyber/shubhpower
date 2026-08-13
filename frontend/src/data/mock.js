@@ -257,8 +257,8 @@ export const company = {
   short: "SPS",
   since: 2010,
   email: "info@shubhpower.com",
-  phone: "8527007680",
-  whatsapp: "8527276868",
+  phone: "7836992555",
+  whatsapp: "7836992555",
   address: "B-681, Shushant Lok Phase 1, Sector 43, Gurugram, 122001",
   gstin: "06ABPCS4833A1ZE",
 };
@@ -334,5 +334,5 @@ export const faqs = [
   { q: "Does solar disconnect me from my utility provider?", a: "Switching to solar does not mean disconnecting from your current utility provider. The solar system complements your existing connection." },
   { q: "How does solar reduce costs?", a: "The solar system generates a significant portion of the facility's energy needs, reducing electricity drawn from the grid." },
   { q: "What EV sectors does Shubh Power serve?", a: "Fleet and Logistics, Residential Communities, Commercial Buildings, Public Infrastructure, and Retail and Hospitality." },
-  { q: "How can I contact Shubh Power?", a: "Use phone number 8527007680 or email info@shubhpower.com." },
+  { q: "How can I contact Shubh Power?", a: "Use phone number 7836992555 or email info@shubhpower.com." },
 ];

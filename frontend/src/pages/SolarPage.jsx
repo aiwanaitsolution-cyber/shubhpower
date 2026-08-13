@@ -73,7 +73,7 @@ const SolarPage = () => (
     <Reveal><SmartSavings /></Reveal>
     <Reveal><Brands /></Reveal>
     <Reveal><FAQ /></Reveal>
-    <Reveal><CTABanner title="Save the Environment & Save your Money!" ctaLabel="Get a free site audit" /></Reveal>
+    <Reveal><CTABanner title="Save the Environment, Save your Money!" ctaLabel="Get a free site audit" /></Reveal>
   </div>
 );
 

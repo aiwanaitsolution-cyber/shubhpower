@@ -58,7 +58,7 @@ const SmartSavings = () => {
               <div className="lg:col-span-7">
                 <div className="h-mono text-white/80 mb-4">REDUCE YOUR COSTS</div>
                 <h3 className="h-display text-white text-[36px] md:text-[52px] lg:text-[60px] leading-[0.98]">
-                  Save the Environment & Save your Money!
+                  Save the Environment, Save your Money!
                 </h3>
                 <p className="mt-5 text-white/80 max-w-md text-[15px]">
                   Switching to solar complements your existing utility connection and helps businesses reduce monthly energy expenses.

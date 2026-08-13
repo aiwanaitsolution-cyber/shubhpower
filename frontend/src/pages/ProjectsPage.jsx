@@ -63,8 +63,20 @@ const ProjectsPage = () => {
             ))}
           </div>
           <div className="text-[13px] text-[#0F1F14]/60">
-            <span className="text-[#0F1F14] font-medium">{source.length}</span>{" "}
-            {status} {catLabel === "All" ? "" : catLabel + " "}project{source.length === 1 ? "" : "s"}
+            {category === "solar" && status === "completed" ? (
+              <>
+                <span className="text-[#0F1F14] font-medium">30+ MW</span> executed solar projects
+              </>
+            ) : category === "ev" && status === "completed" ? (
+              <>
+                <span className="text-[#0F1F14] font-medium">100+</span> EV charging station installed
+              </>
+            ) : (
+              <>
+                <span className="text-[#0F1F14] font-medium">{source.length}</span>{" "}
+                {status} {catLabel === "All" ? "" : catLabel + " "}project{source.length === 1 ? "" : "s"}
+              </>
+            )}
           </div>
         </div>
       </section>
