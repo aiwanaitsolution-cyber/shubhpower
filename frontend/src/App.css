@@ -16,6 +16,13 @@
   line-height: 0.95;
 }
 
+.hero-display {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+}
+
 .h-mono {
   font-family: 'Figtree', sans-serif;
   font-weight: 700;
@@ -537,6 +544,9 @@ button:focus-visible, a:focus-visible {
 @media (max-width: 640px) {
   .h-display {
     letter-spacing: 0;
+  }
+  .hero-display {
+    letter-spacing: -0.01em;
   }
   .about-promise-card {
     min-height: auto;
