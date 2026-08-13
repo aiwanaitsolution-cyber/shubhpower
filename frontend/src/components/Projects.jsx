@@ -19,7 +19,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-20 lg:py-28 bg-white overflow-hidden">
+    <section id="projects" className="py-16 lg:py-24 bg-white overflow-hidden">
       <div className="max-w-[1500px] mx-auto px-6 lg:px-10">
         <div className="max-w-3xl mx-auto">
           <SectionTitle eyebrow="OUR WORK" one="Completed" two="Projects" />
@@ -43,7 +43,7 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="relative mt-12 lg:mt-16">
+        <div className="relative mt-10 lg:mt-12">
           <button
             type="button"
             onClick={() => move(-1)}
@@ -67,42 +67,42 @@ const Projects = () => {
           </button>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-7 px-0 md:px-8">
-          {visible.map((p, i) => (
-            <Link
-              to="/projects"
-              key={`${tab}-${p.title}-${active}-${i}`}
-              className="group card-lift block project-glow-card"
-            >
-              <div className="relative min-h-[500px] sm:min-h-[520px] rounded-[24px] overflow-hidden bg-[#F5F3EC] shadow-lg">
-                <img
-                  src={p.image}
-                  alt={p.title}
-                  className="absolute inset-0 w-full h-full object-cover zoom-img"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#04120C]/84 via-[#0F1F14]/22 to-transparent" />
-                <div className="absolute top-4 left-4 right-4 flex items-start justify-between">
-                  <span className="h-mono bg-white/95 backdrop-blur px-3 py-1.5 rounded-full text-[#0F1F14] text-[11px] font-bold">
-                    {p.tag}
-                  </span>
-                  <span
-                    className="w-9 h-9 rounded-full bg-white/95 backdrop-blur flex items-center justify-center text-[#0F1F14] transition-all duration-300 group-hover:bg-[var(--hover-bg)] group-hover:text-white group-hover:rotate-45"
-                    style={{ "--hover-bg": accent }}
-                  >
-                    <ArrowUpRight className="w-4 h-4 transition-transform duration-300" />
-                  </span>
+            {visible.map((p, i) => (
+              <Link
+                to="/projects"
+                key={`${tab}-${p.title}-${active}-${i}`}
+                className="group card-lift block project-glow-card"
+              >
+                <div className="relative min-h-[460px] sm:min-h-[500px] rounded-[24px] overflow-hidden bg-[#F5F3EC] shadow-lg">
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    className="absolute inset-0 w-full h-full object-cover zoom-img"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#04120C]/84 via-[#0F1F14]/22 to-transparent" />
+                  <div className="absolute top-4 left-4 right-4 flex items-start justify-between">
+                    <span className="h-mono bg-white/95 backdrop-blur px-3 py-1.5 rounded-full text-[#0F1F14] text-[11px] font-bold">
+                      {p.tag}
+                    </span>
+                    <span
+                      className="w-9 h-9 rounded-full bg-white/95 backdrop-blur flex items-center justify-center text-[#0F1F14] transition-all duration-300 group-hover:bg-[var(--hover-bg)] group-hover:text-white group-hover:rotate-45"
+                      style={{ "--hover-bg": accent }}
+                    >
+                      <ArrowUpRight className="w-4 h-4 transition-transform duration-300" />
+                    </span>
+                  </div>
+                  <div className="absolute left-3 right-3 bottom-3 project-glass-panel rounded-[22px] p-5 sm:p-6 text-[#0F1F14]">
+                    <div className="h-mono text-[#16A34A] text-[11px] font-bold tracking-[0.14em]">{p.location}</div>
+                    <h3 className="h-display text-[21px] lg:text-[24px] mt-1 leading-tight">{p.title}</h3>
+                    <div className="mt-1 text-[#0F1F14]/72 text-[13px] font-semibold">{p.capacity}</div>
+                  </div>
                 </div>
-                <div className="absolute left-3 right-3 bottom-3 project-glass-panel rounded-[22px] p-5 sm:p-6 text-[#0F1F14]">
-                  <div className="h-mono text-[#16A34A] text-[11px] font-bold tracking-[0.14em]">{p.location}</div>
-                  <h3 className="h-display text-[21px] lg:text-[24px] mt-1 leading-tight">{p.title}</h3>
-                  <div className="mt-1 text-[#0F1F14]/72 text-[13px] font-semibold">{p.capacity}</div>
-                </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            ))}
           </div>
         </div>
 
-        <div className="mt-7 flex justify-center gap-2">
+        <div className="mt-6 flex justify-center gap-2">
           {items.map((p, i) => (
             <button
               key={`${tab}-dot-${p.title}`}
@@ -115,7 +115,7 @@ const Projects = () => {
           ))}
         </div>
 
-        <div className="mt-12 flex justify-center">
+        <div className="mt-10 flex justify-center">
           <Link
             to="/projects"
             className="pill-btn inline-flex items-center gap-3 pl-6 pr-2 py-2 rounded-full border border-[#0F1F14]/20 text-[#0F1F14] text-[15px] hover:bg-[#F5F3EC]"

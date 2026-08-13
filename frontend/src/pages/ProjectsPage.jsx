@@ -69,15 +69,15 @@ const ProjectsPage = () => {
         </div>
       </section>
 
-      <section className="py-16 lg:py-20 bg-white">
+      <section className="py-12 lg:py-16 bg-white">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           {source.length === 0 ? (
-            <div className="rounded-[32px] bg-[linear-gradient(180deg,#f7fbf8_0%,#edf8f1_100%)] border border-[#16A34A]/10 px-6 sm:px-10 lg:px-14 py-14 lg:py-16 text-center shadow-[0_16px_45px_rgba(15,31,20,0.05)]">
+            <div className="rounded-[32px] bg-[linear-gradient(180deg,#f7fbf8_0%,#edf8f1_100%)] border border-[#16A34A]/10 px-6 sm:px-10 lg:px-14 py-12 lg:py-14 text-center shadow-[0_16px_45px_rgba(15,31,20,0.05)]">
               <div className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 border border-[#16A34A]/12">
                 <span className="w-2.5 h-2.5 rounded-full bg-[#16A34A]" />
                 <span className="h-mono text-[11px] tracking-[0.18em] text-[#16A34A]">ONGOING PROJECTS</span>
               </div>
-              <h2 className="mt-5 h-display text-[30px] sm:text-[38px] lg:text-[46px] text-[#0F1F14] leading-[1.02]">
+              <h2 className="mt-5 h-display text-[28px] sm:text-[36px] lg:text-[42px] text-[#0F1F14] leading-[1.02]">
                 More verified work is being prepared for listing.
               </h2>
               <p className="mt-4 mx-auto max-w-2xl text-[#0F1F14]/64 text-[15px] sm:text-[16px] leading-relaxed">
@@ -124,13 +124,13 @@ const ProjectsPage = () => {
         </div>
       </section>
 
-      <section className="py-8 lg:py-10 bg-white">
+      <section className="py-6 lg:py-8 bg-white">
         <div className="max-w-[920px] mx-auto px-6 lg:px-10 text-center">
           <div className="inline-flex flex-col items-center">
-            <span className="h-display text-[22px] sm:text-[26px] lg:text-[30px] text-[#16A34A] leading-none tracking-[-0.02em]">
+            <span className="h-display text-[24px] sm:text-[28px] lg:text-[34px] text-[#16A34A] leading-none tracking-[-0.02em]">
               Your Next
             </span>
-            <span className="mt-3 h-[2px] w-20 rounded-full bg-[#16A34A]/35" />
+            <span className="mt-2 h-[2px] w-20 rounded-full bg-[#16A34A]/35" />
           </div>
         </div>
       </section>
