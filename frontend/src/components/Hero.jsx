@@ -57,7 +57,7 @@ const Hero = () => {
 
       <div className="relative max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-10 w-full h-full py-8 sm:py-10 text-white text-center flex flex-col">
         <div className="reveal mt-8 sm:mt-10 lg:mt-14">
-          <h1 className="hero-display text-white text-[34px] sm:text-[48px] md:text-[62px] lg:text-[74px] xl:text-[82px] drop-shadow-[0_8px_28px_rgba(0,0,0,0.35)]">
+          <h1 className="h-display text-white text-[34px] sm:text-[48px] md:text-[62px] lg:text-[74px] xl:text-[82px] drop-shadow-[0_8px_28px_rgba(0,0,0,0.35)]">
             Shubh Power Solutions
             <br />
             For a Brighter Future

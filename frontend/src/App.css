@@ -10,13 +10,6 @@
 }
 
 .h-display {
-  font-family: 'Plus Jakarta Sans', 'Figtree', sans-serif;
-  font-weight: 800;
-  letter-spacing: -0.012em;
-  line-height: 0.95;
-}
-
-.hero-display {
   font-family: 'DM Sans', sans-serif;
   font-weight: 500;
   letter-spacing: -0.02em;
@@ -31,14 +24,25 @@
   font-size: 12px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
 .site-preview-type {
   font-family: 'Figtree', -apple-system, BlinkMacSystemFont, sans-serif;
   overflow-x: clip;
 }
 .site-preview-type .h-display {
-  font-family: 'Plus Jakarta Sans', 'Figtree', sans-serif;
-  font-weight: 800;
-  letter-spacing: -0.012em;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
   line-height: 0.95;
 }
 .site-preview-type .h-mono {
@@ -60,9 +64,9 @@
   overflow-x: clip;
 }
 .home-preview-type .h-display {
-  font-family: 'Plus Jakarta Sans', 'Figtree', sans-serif;
-  font-weight: 800;
-  letter-spacing: -0.012em;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
   line-height: 0.95;
 }
 .home-preview-type .h-mono {
@@ -94,9 +98,9 @@
   overflow-x: clip;
 }
 .blogs-preview-type .h-display {
-  font-family: 'Plus Jakarta Sans', 'Figtree', sans-serif;
-  font-weight: 800;
-  letter-spacing: -0.012em;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
   line-height: 0.95;
 }
 .blogs-preview-type .h-mono {
@@ -118,9 +122,9 @@
   overflow-x: clip;
 }
 .blog-post-preview-type .h-display {
-  font-family: 'Plus Jakarta Sans', 'Figtree', sans-serif;
-  font-weight: 800;
-  letter-spacing: -0.012em;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
   line-height: 0.95;
 }
 .blog-post-preview-type .h-mono {
@@ -142,9 +146,9 @@
   overflow-x: clip;
 }
 .about-preview-type .h-display {
-  font-family: 'Plus Jakarta Sans', 'Figtree', sans-serif;
-  font-weight: 800;
-  letter-spacing: -0.012em;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
   line-height: 0.95;
 }
 .about-preview-type .h-mono {
@@ -167,9 +171,9 @@
   overflow-x: clip;
 }
 .projects-preview-type .h-display {
-  font-family: 'Plus Jakarta Sans', 'Figtree', sans-serif;
-  font-weight: 800;
-  letter-spacing: -0.012em;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
   line-height: 0.95;
 }
 .projects-preview-type .h-mono {
@@ -182,7 +186,7 @@
 .projects-preview-type > section:first-child h1 {
   font-size: 40px;
   line-height: 0.95;
-  letter-spacing: -0.012em;
+  letter-spacing: -0.02em;
 }
 .projects-preview-type > section:first-child p {
   font-size: 15px;
@@ -207,9 +211,9 @@
   overflow-x: clip;
 }
 .ev-preview-type .h-display {
-  font-family: 'Plus Jakarta Sans', 'Figtree', sans-serif;
-  font-weight: 800;
-  letter-spacing: -0.012em;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
   line-height: 0.95;
 }
 .ev-preview-type .h-mono {
@@ -221,8 +225,8 @@
 }
 .ev-preview-type > section:first-child h1 {
   font-size: 40px;
-  line-height: 1.01;
-  letter-spacing: -0.012em;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
 }
 .ev-preview-type > section:first-child p {
   font-size: 15px;
@@ -247,9 +251,9 @@
   overflow-x: clip;
 }
 .solar-preview-type .h-display {
-  font-family: 'Plus Jakarta Sans', 'Figtree', sans-serif;
-  font-weight: 800;
-  letter-spacing: -0.012em;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
   line-height: 0.95;
 }
 .solar-preview-type .h-mono {
@@ -261,8 +265,8 @@
 }
 .solar-preview-type > section:first-child h1 {
   font-size: 40px;
-  line-height: 1.01;
-  letter-spacing: -0.012em;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
 }
 .solar-preview-type > section:first-child p {
   font-size: 15px;
@@ -543,9 +547,6 @@ button:focus-visible, a:focus-visible {
 
 @media (max-width: 640px) {
   .h-display {
-    letter-spacing: 0;
-  }
-  .hero-display {
     letter-spacing: -0.01em;
   }
   .about-promise-card {

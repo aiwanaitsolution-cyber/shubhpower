@@ -54,7 +54,7 @@ const PageHero = ({ eyebrow, title, subtitle, image, images, imageAlt = "Shubh P
               {eyebrow}
             </div>
           )}
-          <h1 className="hero-display text-[34px] sm:text-[48px] md:text-[62px] lg:text-[74px] xl:text-[82px] tracking-tight max-w-[11ch] sm:max-w-none">
+          <h1 className="h-display text-[34px] sm:text-[48px] md:text-[62px] lg:text-[74px] xl:text-[82px] tracking-tight max-w-[11ch] sm:max-w-none">
             {title}
           </h1>
           {subtitle && (
