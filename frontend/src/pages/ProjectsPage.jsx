@@ -104,12 +104,11 @@ const ProjectsPage = () => {
 
       <section className="py-8 lg:py-10 bg-white">
         <div className="max-w-[920px] mx-auto px-6 lg:px-10 text-center">
-          <div className="inline-flex items-center gap-4">
-            <span className="h-px w-14 sm:w-16 bg-[#16A34A]/35" />
+          <div className="inline-flex flex-col items-center">
             <span className="h-display text-[18px] sm:text-[22px] lg:text-[26px] text-[#16A34A] leading-none tracking-[-0.02em]">
               Your Next
             </span>
-            <span className="h-px w-14 sm:w-16 bg-[#16A34A]/35" />
+            <span className="mt-3 h-[2px] w-20 rounded-full bg-[#16A34A]/35" />
           </div>
         </div>
       </section>

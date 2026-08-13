@@ -75,8 +75,10 @@ const EVPage = () => (
     <Reveal><FAQ /></Reveal>
     <Reveal>
       <CTABanner
-        title="EV Completed Projects"
-        subtitle="View EV CPO Completed Projects. Solar, storage and EV charging designed for Shubh Power clients since 2010."
+        title="View EV Completed Projects"
+        titleClassName="font-semibold tracking-[-0.02em]"
+        showTitleUnderline
+        subtitle="Book a site visit for live EV charging installations and completed CPO projects from Shubh Power."
         ctaLabel="Book a site visit"
       />
     </Reveal>

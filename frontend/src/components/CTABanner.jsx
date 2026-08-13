@@ -7,6 +7,8 @@ const CTABanner = ({
   subtitle = "Solar, storage and EV charging designed for Shubh Power clients since 2010.",
   ctaLabel = "Contact Us",
   ctaTo = "/contact",
+  titleClassName = "",
+  showTitleUnderline = false,
 }) => (
   <section className="py-12 lg:py-16 bg-white">
     <div className="max-w-[1500px] mx-auto px-6 lg:px-10">
@@ -24,7 +26,10 @@ const CTABanner = ({
                 <Zap className="w-4 h-4 text-white" strokeWidth={2} />
               </span>
             </div>
-            <h2 className="h-display text-white text-[40px] md:text-[56px] lg:text-[68px] leading-[0.98]">{title}</h2>
+            <h2 className={`text-white text-[40px] md:text-[56px] lg:text-[68px] leading-[0.98] ${titleClassName}`}>
+              {title}
+            </h2>
+            {showTitleUnderline ? <div className="mt-4 h-[2px] w-24 rounded-full bg-white/30" /> : null}
             <p className="mt-6 text-white/70 max-w-lg text-[15px] md:text-[16px]">{subtitle}</p>
           </div>
 
