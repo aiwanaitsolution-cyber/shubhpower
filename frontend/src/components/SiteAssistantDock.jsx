@@ -236,10 +236,10 @@ const SiteAssistantDock = () => {
         type="button"
         onClick={() => setOpen((value) => !value)}
         aria-label="Open chat"
-        className="assistant-dock inline-flex items-center gap-2 rounded-full border border-white/12 bg-[#10241B] px-4 py-3 text-white shadow-[0_16px_42px_rgba(0,0,0,0.22)]"
+        className="assistant-dock inline-flex items-center gap-2 rounded-full border border-[#F58220]/28 bg-[#10241B] px-4 py-3 text-white shadow-[0_16px_42px_rgba(0,0,0,0.22)]"
       >
-        <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#7DE0C3]/20 bg-[#0F1F14]">
-          <MessageCircle className="h-4 w-4 text-[#7DE0C3]" />
+        <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#F58220]/28 bg-[#F58220]">
+          <MessageCircle className="h-4 w-4 text-white" />
         </span>
         <span className="text-[15px] font-medium">Chat</span>
       </button>

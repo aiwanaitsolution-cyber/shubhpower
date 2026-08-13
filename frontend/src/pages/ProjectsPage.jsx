@@ -30,7 +30,7 @@ const ProjectsPage = () => {
   ];
   const heroImages =
     category === "solar"
-      ? projectHeroImages.slice(0, 2)
+      ? projectHeroImages.slice(0, 1)
       : category === "ev"
         ? projectHeroImages.slice(2)
         : projectHeroImages;
@@ -72,7 +72,29 @@ const ProjectsPage = () => {
       <section className="py-16 lg:py-20 bg-white">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           {source.length === 0 ? (
-            <div className="py-20 text-center text-[#0F1F14]/60">No verified ongoing projects are listed on the live website.</div>
+            <div className="rounded-[32px] bg-[linear-gradient(180deg,#f7fbf8_0%,#edf8f1_100%)] border border-[#16A34A]/10 px-6 sm:px-10 lg:px-14 py-14 lg:py-16 text-center shadow-[0_16px_45px_rgba(15,31,20,0.05)]">
+              <div className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 border border-[#16A34A]/12">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#16A34A]" />
+                <span className="h-mono text-[11px] tracking-[0.18em] text-[#16A34A]">ONGOING PROJECTS</span>
+              </div>
+              <h2 className="mt-5 h-display text-[30px] sm:text-[38px] lg:text-[46px] text-[#0F1F14] leading-[1.02]">
+                More verified work is being prepared for listing.
+              </h2>
+              <p className="mt-4 mx-auto max-w-2xl text-[#0F1F14]/64 text-[15px] sm:text-[16px] leading-relaxed">
+                Shubh Power keeps the ongoing pipeline focused on quality, site readiness and clean documentation. Completed projects remain highlighted while new sites are added after verification.
+              </p>
+              <div className="mt-8 flex justify-center">
+                <Link
+                  to="/contact"
+                  className="pill-btn inline-flex items-center gap-3 pl-6 pr-2 py-2 rounded-full bg-[#0F1F14] text-white text-[15px] font-medium"
+                >
+                  Talk to our team
+                  <span className="w-10 h-10 rounded-full bg-[#16A34A] flex items-center justify-center">
+                    <ArrowUpRight className="w-4 h-4 text-white" />
+                  </span>
+                </Link>
+              </div>
+            </div>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
               {source.map((p, i) => (

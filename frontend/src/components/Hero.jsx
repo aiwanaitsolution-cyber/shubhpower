@@ -60,7 +60,7 @@ const Hero = () => {
           <h1 className="h-display text-white text-[34px] sm:text-[48px] md:text-[62px] lg:text-[74px] xl:text-[82px] drop-shadow-[0_8px_28px_rgba(0,0,0,0.35)]">
             Shubh Power Solutions
             <br />
-            For a Brighter Future
+            <span className="text-[0.985em]">For a Brighter Future</span>
           </h1>
         </div>
 

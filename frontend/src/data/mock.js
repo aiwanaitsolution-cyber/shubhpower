@@ -18,7 +18,7 @@ export const brand = {
   vision: "To lead the global shift toward clean energy through innovative technologies.",
   mission: "To contribute in achieving zero carbon footprint by providing affordable and sustainable power solutions making the energy landscape resilient.",
   values: "Integrity, Customer-Focus and Excellence are our cornerstones of business. We bring reliable and premium quality solutions with a commitment to efficiency and effectiveness.",
-  intro: "Shubh Power Solutions Pvt Ltd is incorporated with a clear vision - engineer India's transition to clean energy. Shubh Power Solutions started with Solar Energy Solutions and gradually progressed to include Turnkey Solutions in EV Charging Infrastructure.",
+  intro: "Shubh Power Solutions started with Solar Energy Solutions and gradually progressed to include Turnkey Solutions in EV Charging Infrastructure.",
   logo: "/logo.png",
 };
 
@@ -277,7 +277,7 @@ export const values = [
 ];
 
 export const timeline = [
-  { year: "2010", title: "Founded with solar vision", body: "Shubh Power Solutions Pvt Ltd is incorporated with a clear vision - engineer India's transition to clean energy." },
+  { year: "2010", title: "Founded with solar vision", body: "Shubh Power Solutions started with Solar Energy Solutions and gradually progressed to include Turnkey Solutions in EV Charging Infrastructure." },
   { year: "2014", title: "First 500 kW rooftop", body: "Delivered our first large-scale commercial rooftop for a cooperative society in Delhi-NCR." },
   { year: "2017", title: "1 MW milestone", body: "Commissioned our first megawatt-scale institutional plant in Bathinda, Punjab." },
   { year: "2020", title: "Utility-scale expansion", body: "Broke ground on multiple MW-scale ground-mount plants across Rajasthan and Haryana." },
