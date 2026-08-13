@@ -78,6 +78,7 @@ const EVPage = () => (
         title="View EV Completed Projects"
         titleClassName="font-semibold tracking-[-0.02em]"
         showTitleUnderline
+        compact
         subtitle="Book a site visit for live EV charging installations and completed CPO projects from Shubh Power."
         ctaLabel="Book a site visit"
       />
