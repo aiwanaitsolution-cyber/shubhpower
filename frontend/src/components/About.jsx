@@ -63,14 +63,14 @@ const About = () => (
 
         <div className="relative">
           <div className="grid grid-cols-2 gap-4">
-            <div className="relative rounded-[24px] overflow-hidden aspect-[4/5] bg-[#F5F3EC] mt-12">
+            <div className="relative rounded-[24px] overflow-hidden aspect-[4/5] bg-[#F5F3EC]">
               <img src="/images/hero/solarpr/1.png" alt="Shubh Power solar installation" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
             </div>
             <div className="relative rounded-[24px] overflow-hidden aspect-[4/5] bg-[#F5F3EC]">
               <img src="/images/hero/solarpr/2.png" alt="Shubh Power EV charging station" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
             </div>
           </div>
-          <div className="absolute left-4 right-4 bottom-4 sm:bottom-6 rounded-[20px] bg-[#0F3328] text-white px-6 py-5 shadow-2xl border border-white/20">
+          <div className="absolute left-3 right-3 sm:left-5 sm:right-5 bottom-4 sm:bottom-5 rounded-[20px] bg-[#0F3328] text-white px-6 py-5 shadow-2xl border border-white/20">
             <div className="h-mono text-[11px] tracking-[0.16em] text-[#7DE0C3]">LIVE SOLUTIONS</div>
             <div className="h-display mt-2 text-[22px] leading-tight">Solar - BESS - EV Charging</div>
           </div>
