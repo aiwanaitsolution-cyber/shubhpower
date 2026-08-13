@@ -73,12 +73,12 @@ const BlogsPage = () => {
                   <Link to={`/blogs/${lead.slug}`} className="group grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     <div className="relative overflow-hidden rounded-[22px] aspect-[16/11]">
                       <img src={lead.image} alt={lead.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.04]" />
-                      <span className="absolute top-4 left-4 h-mono text-[11px] tracking-wide bg-white/95 backdrop-blur text-[#0F1F14] px-3.5 py-1.5 rounded-full">{lead.category.toUpperCase()}</span>
+                      <span className="absolute top-4 left-4 h-mono text-[13px] tracking-wide bg-white/95 backdrop-blur text-[#0F1F14] px-3.5 py-1.5 rounded-full">{lead.category.toUpperCase()}</span>
                     </div>
                     <div>
                       <div className="flex items-center gap-2.5 mb-4">
                         <span className="w-8 h-[3px] rounded-full bg-[#16A34A]" />
-                        <span className="h-mono text-[11px] tracking-[0.15em] text-[#16A34A]">LATEST</span>
+                        <span className="h-mono text-[13px] tracking-[0.15em] text-[#16A34A]">LATEST</span>
                       </div>
                       <h2 className="h-display text-[30px] md:text-[44px] leading-[1.03] tracking-tight text-[#0F1F14] group-hover:text-[#16A34A] transition-colors">{lead.title}</h2>
                       <p className="mt-4 text-[16px] md:text-[17px] text-[#0F1F14]/60 leading-relaxed max-w-[56ch] line-clamp-3">{lead.excerpt}</p>
@@ -86,7 +86,7 @@ const BlogsPage = () => {
                         <span className="inline-flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5 text-[#16A34A]" />{lead.date}</span>
                         <span className="inline-flex items-center gap-1.5"><Clock className="w-3.5 h-3.5 text-[#16A34A]" />{readingTime(lead.body)} min read</span>
                       </div>
-                      <span className="mt-7 inline-flex items-center gap-2 h-mono text-[13px] tracking-wide text-[#0F1F14] font-medium">
+                      <span className="mt-7 inline-flex items-center gap-2 h-mono text-[14px] tracking-wide text-[#0F1F14] font-medium">
                         READ THE ARTICLE
                         <span className="w-9 h-9 rounded-full bg-[#16A34A] flex items-center justify-center group-hover:translate-x-1 transition-transform">
                           <ArrowUpRight className="w-4 h-4 text-white" />
@@ -104,10 +104,10 @@ const BlogsPage = () => {
                     <Link to={`/blogs/${p.slug}`} className="group block">
                       <div className="relative aspect-[16/11] rounded-[16px] overflow-hidden bg-[#F5F3EC]">
                         <img src={p.image} alt={p.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]" />
-                        <span className="absolute top-3 left-3 h-mono text-[10px] bg-white/95 backdrop-blur px-2.5 py-1 rounded-full text-[#0F1F14]">{p.category.toUpperCase()}</span>
+                        <span className="absolute top-3 left-3 h-mono text-[12px] bg-white/95 backdrop-blur px-2.5 py-1 rounded-full text-[#0F1F14]">{p.category.toUpperCase()}</span>
                       </div>
                       <div className="mt-5">
-                        <div className="flex items-center gap-2 text-[12px] text-[#0F1F14]/45 mb-2">
+                        <div className="flex items-center gap-2 text-[13px] text-[#0F1F14]/45 mb-2">
                           <span>{p.date}</span><span className="w-1 h-1 rounded-full bg-[#0F1F14]/25" /><span>{readingTime(p.body)} min read</span>
                         </div>
                         <h3 className="h-display text-[22px] md:text-[23px] text-[#0F1F14] leading-[1.12] tracking-tight group-hover:text-[#16A34A] transition-colors">{p.title}</h3>

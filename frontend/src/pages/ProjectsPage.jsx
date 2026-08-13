@@ -80,7 +80,7 @@ const ProjectsPage = () => {
                   <div className="relative rounded-[20px] overflow-hidden aspect-[16/13] bg-[#F5F3EC]">
                     <img src={p.image} alt={`${p.title} ${p.capacity}`} className="absolute inset-0 w-full h-full object-cover zoom-img" />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#04120C]/88 via-[#0F1F14]/24 to-transparent" />
-                    <span className={`absolute top-3 left-3 h-mono text-[11px] px-2.5 py-1 rounded-full ${status === "ongoing" ? "bg-[#F58220] text-white" : "bg-white/95 text-[#0F1F14]"}`}>
+                    <span className={`absolute top-3 left-3 h-mono text-[13px] px-2.5 py-1 rounded-full ${status === "ongoing" ? "bg-[#F58220] text-white" : "bg-white/95 text-[#0F1F14]"}`}>
                       {status === "ongoing" ? "IN PROGRESS" : p.tag}
                     </span>
                     <span className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/95 backdrop-blur flex items-center justify-center group-hover:bg-[#16A34A] group-hover:text-white transition-colors">
@@ -89,10 +89,10 @@ const ProjectsPage = () => {
                     <div className="absolute left-3 right-3 bottom-3 project-glass-panel-dark rounded-[18px] p-4 text-white">
                       <div className="flex items-baseline justify-between gap-3">
                         <h3 className="h-display text-[19px] md:text-[22px] text-white leading-tight">{p.title}</h3>
-                        {p.year ? <span className="text-[12px] text-white/75 shrink-0">{p.year}</span> : null}
+                        {p.year ? <span className="text-[13px] text-white/75 shrink-0">{p.year}</span> : null}
                       </div>
-                      <div className="text-white/72 mt-1 text-[12px]">{p.location}</div>
-                      <div className="text-[#7DE0C3] mt-1 text-[12px] font-medium">{p.capacity}</div>
+                      <div className="text-white/72 mt-1 text-[13px]">{p.location}</div>
+                      <div className="text-[#7DE0C3] mt-1 text-[13px] font-medium">{p.capacity}</div>
                     </div>
                   </div>
                 </Link>

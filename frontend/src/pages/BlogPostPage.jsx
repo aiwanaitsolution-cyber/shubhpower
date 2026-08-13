@@ -134,9 +134,9 @@ const MiniCard = ({ p }) => (
       <img src={p.image} alt={p.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
     </div>
     <div className="min-w-0">
-      <div className="h-mono text-[10px] tracking-wide text-[#16A34A] mb-1">{p.category.toUpperCase()}</div>
+      <div className="h-mono text-[12px] tracking-wide text-[#16A34A] mb-1">{p.category.toUpperCase()}</div>
       <h4 className="h-display text-[15px] leading-snug text-[#0F1F14] line-clamp-2 group-hover:text-[#16A34A] transition-colors">{p.title}</h4>
-      <div className="flex items-center gap-1.5 text-[11px] text-[#0F1F14]/45 mt-1.5"><Calendar className="w-3 h-3" />{p.date}</div>
+      <div className="flex items-center gap-1.5 text-[12px] text-[#0F1F14]/45 mt-1.5"><Calendar className="w-3 h-3" />{p.date}</div>
     </div>
   </Link>
 );
@@ -167,7 +167,7 @@ const BlogPostPage = () => {
             {/* Cover with category tag */}
             <div className="relative rounded-[20px] overflow-hidden aspect-[16/10] bg-[#F5F3EC]">
               <img src={post.image} alt={post.title} className="absolute inset-0 w-full h-full object-cover" />
-              <span className="absolute top-4 left-4 h-mono text-[11px] tracking-wide bg-white/95 backdrop-blur text-[#0F1F14] px-3.5 py-1.5 rounded-full">
+              <span className="absolute top-4 left-4 h-mono text-[13px] tracking-wide bg-white/95 backdrop-blur text-[#0F1F14] px-3.5 py-1.5 rounded-full">
                 {post.category.toUpperCase()}
               </span>
             </div>
@@ -184,8 +184,8 @@ const BlogPostPage = () => {
                   <span className="text-[13px] font-semibold text-[#0F1F14]">{AUTHOR.name}</span>
                 </div>
                 <span className="hidden sm:inline w-px h-4 bg-[#0F1F14]/15" />
-                <span className="inline-flex items-center gap-1.5 h-mono text-[12px] text-[#0F1F14]/55"><Calendar className="w-3.5 h-3.5 text-[#16A34A]" />{post.date}</span>
-                <span className="inline-flex items-center gap-1.5 h-mono text-[12px] text-[#0F1F14]/55"><Clock className="w-3.5 h-3.5 text-[#16A34A]" />{readingTime(post.body)} MIN READ</span>
+                <span className="inline-flex items-center gap-1.5 h-mono text-[13px] text-[#0F1F14]/55"><Calendar className="w-3.5 h-3.5 text-[#16A34A]" />{post.date}</span>
+                <span className="inline-flex items-center gap-1.5 h-mono text-[13px] text-[#0F1F14]/55"><Clock className="w-3.5 h-3.5 text-[#16A34A]" />{readingTime(post.body)} MIN READ</span>
               </div>
               <ShareRow title={post.title} />
             </div>

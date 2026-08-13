@@ -52,7 +52,7 @@ const EVCharging = () => {
                   <img src={c.image} alt={c.title} className="absolute inset-0 w-full h-full object-cover zoom-img" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/18 to-black/70" />
                   <div className="absolute top-4 left-4 right-4 flex items-start justify-between gap-3">
-                    <span className="inline-flex items-center rounded-full bg-white/18 backdrop-blur-md border border-white/22 px-3.5 py-1.5 h-mono text-[11px] text-white shadow-sm">
+                    <span className="inline-flex items-center rounded-full bg-white/18 backdrop-blur-md border border-white/22 px-3.5 py-1.5 h-mono text-[13px] text-white shadow-sm">
                       {c.tag}
                     </span>
                     <span className="w-12 h-12 rounded-full bg-[#16A34A] text-white shadow-[0_0_0_0_rgba(245,130,32,0)] flex items-center justify-center transition-all duration-300 group-hover:bg-[#F58220] group-hover:shadow-[0_0_0_14px_rgba(245,130,32,0.18)] group-hover:-translate-y-0.5 group-hover:rotate-45">
@@ -61,7 +61,7 @@ const EVCharging = () => {
                   </div>
                   <div className="absolute left-4 right-4 bottom-4 rounded-[22px] bg-white/14 backdrop-blur-xl border border-white/18 p-5 sm:p-6 text-white shadow-[0_20px_50px_rgba(0,0,0,0.18)]">
                     <h3 className="h-display text-[21px] md:text-[24px] leading-[0.98]">{c.title}</h3>
-                    <p className="mt-2 text-white/84 text-[13px] md:text-[14px] leading-relaxed">{c.subtitle}</p>
+                    <p className="mt-2 text-white/84 text-[14px] md:text-[15px] leading-relaxed">{c.subtitle}</p>
                   </div>
                 </div>
               </Link>

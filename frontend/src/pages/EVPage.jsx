@@ -17,14 +17,19 @@ const EVPage = () => (
       subtitle="Shubh Power Solutions delivers smart EV charging infrastructure for Fleet and Logistics, Residential Communities, Commercial Buildings, Public Infrastructure, and Retail and Hospitality."
       images={[
         {
-          src: "/images/hero/ev/a.png",
+          src: "/images/hero/evp/fleet_logistics.png",
           alt: "Shubh Power EV charging infrastructure for real sites",
           position: "object-[58%_50%]",
         },
         {
-          src: "/images/hero/ev/b.png",
+          src: "/images/hero/evp/residential_communities.jpeg",
           alt: "EV charging banner for Shubh Power CPO solutions",
           position: "object-[54%_50%]",
+        },
+        {
+          src: "/images/hero/evp/commercial_building.jpeg",
+          alt: "Shubh Power EV charging solutions for commercial buildings",
+          position: "object-[56%_50%]",
         },
       ]}
     />
@@ -41,7 +46,7 @@ const EVPage = () => (
                 </div>
               </div>
               <div className="lg:col-span-7">
-                <div className="h-mono text-[#16A34A] mb-3 font-bold">{c.tag}</div>
+                <div className="h-mono text-[13px] text-[#16A34A] mb-3 font-bold">{c.tag}</div>
                 <h2 className="h-display text-[40px] md:text-[56px] lg:text-[68px] leading-[0.98] text-[#0A0F1C]">
                   {c.title}
                 </h2>
