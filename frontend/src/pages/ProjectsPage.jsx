@@ -69,7 +69,7 @@ const ProjectsPage = () => {
               </>
             ) : category === "ev" && status === "completed" ? (
               <>
-                <span className="text-[#0F1F14] font-medium">100+</span> EV charging station installed
+                <span className="text-[#0F1F14] font-medium">100+ EV Chargers</span> installed
               </>
             ) : (
               <>
