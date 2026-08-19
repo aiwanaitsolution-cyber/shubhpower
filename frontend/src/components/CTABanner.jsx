@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Sun, Zap } from "lucide-react";
 
 const CTABanner = ({
-  title = "Ready for an electric future?",
+  title = "Ready for a sustainable future?",
   subtitle = "Solar, storage and EV charging designed for Shubh Power clients since 2010.",
   ctaLabel = "Contact Us",
   ctaTo = "/contact",

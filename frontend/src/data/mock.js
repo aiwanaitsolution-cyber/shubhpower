@@ -255,11 +255,11 @@ export const ongoingEvProjects = [];
 export const company = {
   name: "Shubh Power Solutions",
   short: "SPS",
-  since: 2010,
+  since: 2020,
   email: "info@shubhpower.com",
   phone: "7836992555",
   whatsapp: "7836992555",
-  address: "B-681, Shushant Lok Phase 1, Sector 43, Gurugram, 122001",
+  address: "B-681, Sushant Lok Phase 1, Sector 43, Gurugram, 122001",
   gstin: "06ABPCS4833A1ZE",
 };
 
