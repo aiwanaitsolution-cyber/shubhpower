@@ -23,9 +23,9 @@ const SolarPage = () => (
       title={<>Solar Power<br />Solutions</>}
       subtitle="In today's fast-paced world, more housing societies, commercial blocks, manufacturing plants and factories are looking for sustainable energy solutions."
       images={[
-        { src: "/images/hero/solar-page-1.png", alt: "Solar power plant" },
-        { src: "/images/hero/solar-page-2.png", alt: "Solar installation" },
-        { src: "/images/hero/solar-page-3.png", alt: "Solar energy project" },
+        { src: "/images/hero/solar1/ab.png", alt: "Solar power plant" },
+        { src: "/images/hero/solar1/bc.png", alt: "Solar installation" },
+        { src: "/images/hero/solar1/cd.png", alt: "Solar energy project" },
       ]}
       intervalMs={2000}
     />
