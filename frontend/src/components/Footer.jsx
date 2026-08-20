@@ -8,7 +8,7 @@ const Footer = () => (
     <div className="max-w-[1500px] mx-auto px-6 lg:px-10">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 pb-14 border-b border-[#0F1F14]/12">
         <div className="lg:col-span-5">
-          <img src="/logo.png" alt="Shubh Power" className="h-16 w-auto object-contain mb-5" />
+          <img src="/images/live/footer_logo.png" alt="Shubh Power" className="h-16 w-auto object-contain mb-5" />
           <p className="text-[#0F1F14]/68 text-[15px] max-w-sm leading-relaxed">
             Shubh Power Solutions Pvt Ltd is incorporated with a clear vision - engineer India's transition to clean energy.
           </p>

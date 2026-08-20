@@ -313,7 +313,7 @@ export const timeline = [
 ];
 
 export const leadership = [
-  { name: "Bhavy Aggarwal", role: "Founder & CEO", group: "partners", image: `${live}WhatsApp-Image-2024-06-27-at-14.55.57_5ea9c002-e1734601461367.jpg` },
+  { name: "Bhavy Aggarwal", role: "Founder & CEO", group: "partners", image: `${live}bhavya_ceo.png` },
   { name: "Subhash Chandra", role: "Co founder & COO", group: "partners", image: `${live}Copy-of-1.png` },
   { name: "Anchal Andrews", role: "Business Strategist", group: "partners", image: "/images/hero/anchal-andrews.jpeg" },
 ];
