@@ -3,38 +3,49 @@ import { ArrowRight, Plus, Minus, Zap, TrendingDown, Leaf } from "lucide-react";
 import { Link } from "react-router-dom";
 import { advantages, savingsTabs } from "../data/mock";
 
-const SmartSavings = () => {
+const SmartSavings = ({
+  eyebrow = "SMART SAVINGS",
+  titleTop = "Why Go Solar",
+  titleBottom = "With Shubh Power?",
+  image = "/images/live/Smart-savings-with-shubh-power-solutions-pvt-ltd-1.png",
+  imageEyebrow = "SMART SAVINGS",
+  imageTitle = "The smartest and best solution for renewable energy.",
+  accordionItems = advantages,
+  stats = savingsTabs,
+  ctaPrimary = { label: "Contact Us", to: "/contact", accent: "#F58220" },
+  ctaSecondary = { label: "Read to Reduce Your Costs", to: "/solar" },
+}) => {
   const [open, setOpen] = useState(0);
-  const [tab, setTab] = useState(savingsTabs[0].key);
-  const active = savingsTabs.find((s) => s.key === tab);
+  const [tab, setTab] = useState(stats[0]?.key || "");
+  const active = stats.find((s) => s.key === tab) || stats[0];
 
   return (
     <section className="py-10 lg:py-14 bg-white">
       <div className="max-w-[1500px] mx-auto px-6 lg:px-10">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="h-mono mb-4 text-[#F58220]">SMART SAVINGS</div>
+          <div className="h-mono mb-4 text-[#F58220]">{eyebrow}</div>
           <h2 className="h-display text-[#0F1F14] text-[38px] sm:text-[52px] lg:text-[66px] leading-[0.98] tracking-tight">
-            <span className="block whitespace-nowrap">Why Go Solar</span>
-            <span className="block text-[34px] sm:text-[48px] lg:text-[60px]">With Shubh Power?</span>
+            <span className="block whitespace-nowrap">{titleTop}</span>
+            <span className="block text-[34px] sm:text-[48px] lg:text-[60px]">{titleBottom}</span>
           </h2>
         </div>
 
         <div className="mt-6 lg:mt-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
           <div className="lg:col-span-5">
             <div className="rounded-[24px] overflow-hidden aspect-[4/5] lg:aspect-auto lg:h-full min-h-[440px] relative">
-              <img src="/images/live/Smart-savings-with-shubh-power-solutions-pvt-ltd-1.png" alt="Smart savings with Shubh Power Solutions Pvt Ltd" className="absolute inset-0 w-full h-full object-cover" />
+              <img src={image} alt={imageTitle} className="absolute inset-0 w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0F1F14]/60 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 text-white">
-                <div className="h-mono text-white/80 mb-2">SMART SAVINGS</div>
+                <div className="h-mono text-white/80 mb-2">{imageEyebrow}</div>
                 <div className="h-display text-[28px] md:text-[32px] leading-tight">
-                  The smartest and best solution for renewable energy.
+                  {imageTitle}
                 </div>
               </div>
             </div>
           </div>
           <div className="lg:col-span-7">
             <ul className="divide-y divide-[#0F1F14]/10 border-t border-b border-[#0F1F14]/10">
-              {advantages.map((a, i) => (
+              {accordionItems.map((a, i) => (
                 <li key={i}>
                   <button onClick={() => setOpen(open === i ? -1 : i)} className="w-full flex items-center justify-between py-6 text-left">
                     <span className="text-[18px] md:text-[22px] font-medium text-[#0F1F14]">{a.title}</span>
@@ -66,14 +77,14 @@ const SmartSavings = () => {
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-3">
-                  <Link to="/contact" className="pill-btn inline-flex items-center gap-3 pl-2 pr-6 py-2 rounded-full bg-white text-[#0F1F14] text-[15px] font-medium">
+                  <Link to={ctaPrimary.to} className="pill-btn inline-flex items-center gap-3 pl-2 pr-6 py-2 rounded-full bg-white text-[#0F1F14] text-[15px] font-medium">
                     <span className="w-10 h-10 rounded-full bg-[#F58220] flex items-center justify-center">
                       <ArrowRight className="pill-icon w-4 h-4 text-white" />
                     </span>
-                    Contact Us
+                    {ctaPrimary.label}
                   </Link>
-                  <Link to="/solar" className="pill-btn inline-flex items-center gap-3 pl-6 pr-2 py-2 rounded-full border border-white/40 bg-white/5 hover:bg-white/15 text-white text-[15px] font-medium">
-                    Read to Reduce Your Costs
+                  <Link to={ctaSecondary.to} className="pill-btn inline-flex items-center gap-3 pl-6 pr-2 py-2 rounded-full border border-white/40 bg-white/5 hover:bg-white/15 text-white text-[15px] font-medium">
+                    {ctaSecondary.label}
                     <span className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center">
                       <ArrowRight className="pill-icon w-4 h-4 text-white" />
                     </span>
@@ -111,7 +122,7 @@ const SmartSavings = () => {
                   </div>
 
                   <div className="mt-6 grid grid-cols-4 gap-1.5">
-                    {savingsTabs.map((s) => (
+                    {stats.map((s) => (
                       <button key={s.key} onClick={() => setTab(s.key)} className={`py-2 rounded-full text-[12px] transition-colors ${tab === s.key ? "bg-white text-[#16A34A] font-medium" : "bg-white/10 text-white hover:bg-white/20"}`}>
                         {s.label}
                       </button>

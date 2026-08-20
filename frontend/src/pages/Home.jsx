@@ -24,6 +24,7 @@ const Home = () => (
     <Reveal><Projects /></Reveal>
     <Reveal><Testimonials /></Reveal>
     <Reveal><Brands /></Reveal>
+    <Reveal><SmartSavings /></Reveal>
     <Reveal><CTABanner /></Reveal>
   </div>
 );
