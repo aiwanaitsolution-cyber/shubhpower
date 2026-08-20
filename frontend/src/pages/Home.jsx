@@ -19,6 +19,7 @@ const Home = () => (
     <Reveal><SolarSolutions /></Reveal>
     <Reveal><EVCharging /></Reveal>
     <Reveal><SmartBenefits /></Reveal>
+    <Reveal><SmartSavings /></Reveal>
     <Reveal>
       <SmartSavings
         eyebrow="EV CHARGING"
