@@ -281,38 +281,35 @@ export const timeline = [
     year: "2020",
     cards: [
       {
-        icon: "solar",
         title: "Founded with solar vision",
         body: "Started with Solar Energy Solutions and evolved into Turnkey Solutions including EV Charging Infrastructure.",
       },
       {
-        icon: "roof",
         title: "First 500 kW Rooftop",
         body: "Delivered our first large-scale commercial rooftop for a cooperative society in Delhi-NCR.",
       },
     ],
+    summary: "Started with Solar Energy Solutions and evolved into Turnkey Solutions including EV Charging Infrastructure. Delivered our first large-scale commercial rooftop for a cooperative society in Delhi-NCR.",
   },
-  { year: "2021", title: "1 MW Milestone", body: "Commissioned our first megawatt-scale institutional plant in Bathinda, Punjab.", icon: "plant" },
-  { year: "2022", title: "Utility-scale Expansion", body: "Broke ground on multiple MW-scale ground-mount plants across Rajasthan and Haryana.", icon: "growth" },
-  { year: "2023", title: "15 MW Hissar", body: "Commissioned our largest solar plant to date - 15 MW in Hissar, Haryana.", icon: "solar" },
-  { year: "2024", title: "First EV CPO charging station for residential society", body: "Launched our first EV charging station for a residential society.", icon: "charging" },
+  { year: "2021", title: "1 MW Milestone", body: "Commissioned our first megawatt-scale institutional plant in Bathinda, Punjab." },
+  { year: "2022", title: "Utility-scale Expansion", body: "Broke ground on multiple MW-scale ground-mount plants across Rajasthan and Haryana." },
+  { year: "2023", title: "15 MW Hissar", body: "Commissioned our largest solar plant to date - 15 MW in Hissar, Haryana." },
+  { year: "2024", title: "First EV CPO charging station for residential society", body: "Launched our first EV charging station for a residential society." },
   {
     year: "2025",
     title: "Scale to 40+ Charging Points Live",
     body: "40+ charging points live across DLF, Amrapali and Puri properties.",
     callout: "Shubh Power moved from license to execution with a fast sequence of EV milestones and early-scale deployments.",
-    icon: "ev",
   },
   {
     year: "2026-27",
     title: "Solar and EV Expansion Wave",
     body: "The next phase focuses on scale, repeatability and denser charging coverage across more sites.",
     summaryCards: [
-      { icon: "charging", title: "Scale up to 100+ EV chargers installed" },
-      { icon: "solar", title: "Scale up to 30 MW+ solar projects" },
+      { title: "Scale up to 100+ EV chargers installed" },
+      { title: "Scale up to 30 MW+ solar projects" },
     ],
     banner: "300+ EV chargers planned",
-    icon: "growth",
   },
 ];
 

@@ -1,21 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Eye, Target, Gem, Check, SunMedium, Home, Factory, BatteryCharging, TrendingUp, Zap } from "lucide-react";
+import { ArrowRight, Eye, Target, Gem, Check, TrendingUp } from "lucide-react";
 import PageHero from "../components/PageHero";
 import Reveal from "../components/Reveal";
 import CountUp from "../components/CountUp";
 import Testimonials from "../components/Testimonials";
 import CTABanner from "../components/CTABanner";
 import { brand, stats, values, promises, leadership, operationalTeam, timeline } from "../data/mock";
-
-const timelineIcons = {
-  solar: SunMedium,
-  roof: Home,
-  plant: Factory,
-  growth: TrendingUp,
-  charging: BatteryCharging,
-  ev: Zap,
-};
 
 const aboutHeroCopy = (
   <>
@@ -182,26 +173,17 @@ const AboutPage = () => (
           <div className="space-y-5">
             {timeline.map((t) => (
               <Reveal key={t.year} className="relative pl-14">
-                <div className="absolute left-0 top-3 w-9 h-9 rounded-full bg-white border-2 border-[#16A34A] shadow-md flex items-center justify-center">
-                  <span className="w-3 h-3 rounded-full bg-[#F58220]" />
-                </div>
                 <div className="rounded-[26px] bg-white/92 backdrop-blur-xl border border-[#0F1F14]/8 p-5 sm:p-6 shadow-[0_18px_50px_rgba(15,31,20,0.08)] hover:shadow-[0_24px_65px_rgba(15,31,20,0.12)] transition-shadow">
                   {t.cards ? (
                     <div className="space-y-5">
                       <div className="grid gap-4 md:grid-cols-2">
-                        {t.cards.map((card) => {
-                          const Icon = timelineIcons[card.icon] || SunMedium;
-                          return (
-                            <div key={card.title} className="rounded-[24px] border border-[#0F1F14]/10 bg-[#FBFDFC] p-5 sm:p-6 text-center shadow-sm">
-                              <div className="mx-auto w-14 h-14 rounded-full bg-[#ECF7EE] border border-[#16A34A]/12 flex items-center justify-center mb-4">
-                                <Icon className="w-7 h-7 text-[#0E7A38]" />
-                              </div>
-                              <h3 className="h-display text-[22px] sm:text-[24px] text-[#0F1F14] leading-tight uppercase">{card.title}</h3>
-                              <p className="mt-4 text-[#0F1F14]/68 text-[15px] leading-relaxed">{card.body}</p>
-                            </div>
-                          );
-                        })}
+                        {t.cards.map((card) => (
+                          <div key={card.title} className="rounded-[24px] border border-[#0F1F14]/10 bg-[#FBFDFC] p-5 sm:p-6 text-center shadow-sm">
+                            <h3 className="h-display text-[22px] sm:text-[24px] text-[#0F1F14] leading-tight uppercase">{card.title}</h3>
+                          </div>
+                        ))}
                       </div>
+                      <p className="text-[#0F1F14]/68 text-[15px] leading-relaxed text-center max-w-4xl mx-auto">{t.summary}</p>
                     </div>
                   ) : t.summaryCards ? (
                     <div className="space-y-5">
@@ -214,26 +196,15 @@ const AboutPage = () => (
                           <span className="h-px flex-1 bg-[#16A34A]/30" />
                         </div>
                         <div className="mt-5 grid gap-4 md:grid-cols-2">
-                          {t.summaryCards.map((card) => {
-                            const Icon = timelineIcons[card.icon] || TrendingUp;
-                            return (
-                              <div key={card.title} className="rounded-[20px] border border-[#16A34A]/20 bg-white p-4 sm:p-5 min-h-[130px] flex items-center gap-4">
-                                <span className="w-12 h-12 rounded-full bg-[#ECF7EE] border border-[#16A34A]/12 flex items-center justify-center shrink-0">
-                                  <Icon className="w-6 h-6 text-[#0E7A38]" />
-                                </span>
-                                <div>
-                                  <div className="h-display text-[20px] sm:text-[22px] text-[#0F1F14] leading-tight uppercase">{card.title}</div>
-                                </div>
-                              </div>
-                            );
-                          })}
+                          {t.summaryCards.map((card) => (
+                            <div key={card.title} className="rounded-[20px] border border-[#16A34A]/20 bg-white p-4 sm:p-5 min-h-[130px] flex items-center">
+                              <div className="h-display text-[20px] sm:text-[22px] text-[#0F1F14] leading-tight uppercase">{card.title}</div>
+                            </div>
+                          ))}
                         </div>
                         <p className="mt-4 text-[#0F1F14]/66 text-[15px] leading-relaxed">{t.body}</p>
                       </div>
                       <div className="rounded-[22px] bg-[linear-gradient(90deg,#0B5F2E_0%,#14753A_55%,#0E7A38_100%)] px-6 py-4 sm:px-8 sm:py-5 flex items-center justify-center gap-4 text-white shadow-[0_18px_40px_rgba(14,122,56,0.18)]">
-                        <span className="w-12 h-12 rounded-full bg-white/15 border border-white/20 flex items-center justify-center shrink-0">
-                          <TrendingUp className="w-6 h-6 text-white" />
-                        </span>
                         <div className="h-display text-[28px] sm:text-[34px] lg:text-[42px] tracking-tight uppercase text-center">{t.banner}</div>
                       </div>
                     </div>
@@ -244,16 +215,9 @@ const AboutPage = () => (
                           <div className="inline-flex rounded-full bg-[#16A34A]/10 border border-[#16A34A]/16 px-4 py-2 h-mono text-[11px] tracking-[0.15em] text-[#0E7A38]">{t.year}</div>
                         </div>
                         <div className="flex-1">
-                          <div className="flex items-start gap-3">
-                            {t.icon ? (
-                              <span className="w-10 h-10 rounded-full bg-[#ECF7EE] border border-[#16A34A]/12 flex items-center justify-center shrink-0 mt-0.5">
-                                {(timelineIcons[t.icon] ? React.createElement(timelineIcons[t.icon], { className: "w-5 h-5 text-[#0E7A38]" }) : null)}
-                              </span>
-                            ) : null}
-                            <div>
-                              <h3 className="h-display text-[22px] md:text-[26px] text-[#0F1F14] leading-tight">{t.title}</h3>
-                              <p className="mt-3 text-[#0F1F14]/66 text-[15px] leading-relaxed">{t.body}</p>
-                            </div>
+                          <div>
+                            <h3 className="h-display text-[22px] md:text-[26px] text-[#0F1F14] leading-tight">{t.title}</h3>
+                            <p className="mt-3 text-[#0F1F14]/66 text-[15px] leading-relaxed">{t.body}</p>
                           </div>
                         </div>
                       </div>
