@@ -12,6 +12,7 @@ const SmartSavings = ({
   imageTitle = "The smartest and best solution for renewable energy.",
   accordionItems = advantages,
   stats = savingsTabs,
+  showBanner = true,
   ctaPrimary = { label: "Contact Us", to: "/contact", accent: "#F58220" },
   ctaSecondary = { label: "Read to Reduce Your Costs", to: "/solar" },
 }) => {
@@ -62,6 +63,7 @@ const SmartSavings = ({
           </div>
         </div>
 
+        {showBanner ? (
         <div className="mt-10 lg:mt-14">
           <div className="rounded-[32px] bg-gradient-to-br from-[#0E7A38] via-[#16A34A] to-[#12923F] p-8 lg:p-14 overflow-hidden relative">
             <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-white/5 blur-2xl" />
@@ -133,6 +135,7 @@ const SmartSavings = ({
             </div>
           </div>
         </div>
+        ) : null}
       </div>
     </section>
   );

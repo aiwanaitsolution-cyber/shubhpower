@@ -19,7 +19,7 @@ const Home = () => (
     <Reveal><SolarSolutions /></Reveal>
     <Reveal><EVCharging /></Reveal>
     <Reveal><SmartBenefits /></Reveal>
-    <Reveal><SmartSavings /></Reveal>
+    <Reveal><SmartSavings showBanner={false} /></Reveal>
     <Reveal>
       <SmartSavings
         eyebrow="EV CHARGING"
@@ -54,6 +54,7 @@ const Home = () => (
         ]}
         ctaPrimary={{ label: "Contact Us", to: "/contact" }}
         ctaSecondary={{ label: "Explore EV Solutions", to: "/ev-charging" }}
+        showBanner
       />
     </Reveal>
     <Reveal><Promises /></Reveal>
