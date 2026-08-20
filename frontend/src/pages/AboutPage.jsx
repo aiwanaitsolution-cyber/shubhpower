@@ -1,12 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Eye, Target, Gem, Check } from "lucide-react";
+import { ArrowRight, Eye, Target, Gem, Check, SunMedium, Home, Factory, BatteryCharging, TrendingUp, Zap } from "lucide-react";
 import PageHero from "../components/PageHero";
 import Reveal from "../components/Reveal";
 import CountUp from "../components/CountUp";
 import Testimonials from "../components/Testimonials";
 import CTABanner from "../components/CTABanner";
 import { brand, stats, values, promises, leadership, operationalTeam, timeline } from "../data/mock";
+
+const timelineIcons = {
+  solar: SunMedium,
+  roof: Home,
+  plant: Factory,
+  growth: TrendingUp,
+  charging: BatteryCharging,
+  ev: Zap,
+};
 
 const aboutHeroCopy = (
   <>
@@ -177,29 +186,87 @@ const AboutPage = () => (
                   <span className="w-3 h-3 rounded-full bg-[#F58220]" />
                 </div>
                 <div className="rounded-[26px] bg-white/92 backdrop-blur-xl border border-[#0F1F14]/8 p-5 sm:p-6 shadow-[0_18px_50px_rgba(15,31,20,0.08)] hover:shadow-[0_24px_65px_rgba(15,31,20,0.12)] transition-shadow">
-                  <div className="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-5">
-                    <div className="min-w-[110px]">
-                      <div className="inline-flex rounded-full bg-[#16A34A]/10 border border-[#16A34A]/16 px-4 py-2 h-mono text-[11px] tracking-[0.15em] text-[#0E7A38]">{t.year}</div>
+                  {t.cards ? (
+                    <div className="space-y-5">
+                      <div className="grid gap-4 md:grid-cols-2">
+                        {t.cards.map((card) => {
+                          const Icon = timelineIcons[card.icon] || SunMedium;
+                          return (
+                            <div key={card.title} className="rounded-[24px] border border-[#0F1F14]/10 bg-[#FBFDFC] p-5 sm:p-6 text-center shadow-sm">
+                              <div className="mx-auto w-14 h-14 rounded-full bg-[#ECF7EE] border border-[#16A34A]/12 flex items-center justify-center mb-4">
+                                <Icon className="w-7 h-7 text-[#0E7A38]" />
+                              </div>
+                              <h3 className="h-display text-[22px] sm:text-[24px] text-[#0F1F14] leading-tight uppercase">{card.title}</h3>
+                              <p className="mt-4 text-[#0F1F14]/68 text-[15px] leading-relaxed">{card.body}</p>
+                            </div>
+                          );
+                        })}
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <h3 className="h-display text-[22px] md:text-[26px] text-[#0F1F14] leading-tight">{t.title}</h3>
-                      <p className="mt-3 text-[#0F1F14]/66 text-[15px] leading-relaxed">{t.body}</p>
-                    </div>
-                  </div>
-                  {t.milestones?.length ? (
-                    <div className="mt-5 grid sm:grid-cols-2 gap-3">
-                      {t.milestones.map((m) => (
-                        <div key={m.date} className="rounded-[18px] bg-[#F7FBF8] border border-[#0F1F14]/8 p-4">
-                          <div className="h-mono text-[10px] tracking-[0.16em] text-[#16A34A]">{m.date}</div>
-                          <div className="mt-2 text-[#0F1F14] text-[14px] leading-relaxed">{m.text}</div>
+                  ) : t.summaryCards ? (
+                    <div className="space-y-5">
+                      <div className="rounded-[26px] border border-[#0F1F14]/10 bg-[#FBFDFC] p-5 sm:p-6 lg:p-7">
+                        <div className="flex items-center gap-4">
+                          <span className="h-px flex-1 bg-[#16A34A]/30" />
+                          <h3 className="h-display text-[22px] sm:text-[24px] text-[#0F1F14] leading-tight uppercase text-center">
+                            {t.title}
+                          </h3>
+                          <span className="h-px flex-1 bg-[#16A34A]/30" />
                         </div>
-                      ))}
+                        <div className="mt-5 grid gap-4 md:grid-cols-2">
+                          {t.summaryCards.map((card) => {
+                            const Icon = timelineIcons[card.icon] || TrendingUp;
+                            return (
+                              <div key={card.title} className="rounded-[20px] border border-[#16A34A]/20 bg-white p-4 sm:p-5 min-h-[130px] flex items-center gap-4">
+                                <span className="w-12 h-12 rounded-full bg-[#ECF7EE] border border-[#16A34A]/12 flex items-center justify-center shrink-0">
+                                  <Icon className="w-6 h-6 text-[#0E7A38]" />
+                                </span>
+                                <div>
+                                  <div className="h-display text-[20px] sm:text-[22px] text-[#0F1F14] leading-tight uppercase">{card.title}</div>
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                        <p className="mt-4 text-[#0F1F14]/66 text-[15px] leading-relaxed">{t.body}</p>
+                      </div>
+                      <div className="rounded-[22px] bg-[linear-gradient(90deg,#0B5F2E_0%,#14753A_55%,#0E7A38_100%)] px-6 py-4 sm:px-8 sm:py-5 flex items-center justify-center gap-4 text-white shadow-[0_18px_40px_rgba(14,122,56,0.18)]">
+                        <span className="w-12 h-12 rounded-full bg-white/15 border border-white/20 flex items-center justify-center shrink-0">
+                          <TrendingUp className="w-6 h-6 text-white" />
+                        </span>
+                        <div className="h-display text-[28px] sm:text-[34px] lg:text-[42px] tracking-tight uppercase text-center">{t.banner}</div>
+                      </div>
                     </div>
-                  ) : null}
-                  {t.highlight && (
-                    <div className="mt-4 inline-flex rounded-full bg-[#16A34A]/10 border border-[#16A34A]/20 px-4 py-2 h-mono text-[11px] tracking-[0.14em] text-[#0E7A38]">
-                      {t.highlight}
-                    </div>
+                  ) : (
+                    <>
+                      <div className="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-5">
+                        <div className="min-w-[110px]">
+                          <div className="inline-flex rounded-full bg-[#16A34A]/10 border border-[#16A34A]/16 px-4 py-2 h-mono text-[11px] tracking-[0.15em] text-[#0E7A38]">{t.year}</div>
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex items-start gap-3">
+                            {t.icon ? (
+                              <span className="w-10 h-10 rounded-full bg-[#ECF7EE] border border-[#16A34A]/12 flex items-center justify-center shrink-0 mt-0.5">
+                                {(timelineIcons[t.icon] ? React.createElement(timelineIcons[t.icon], { className: "w-5 h-5 text-[#0E7A38]" }) : null)}
+                              </span>
+                            ) : null}
+                            <div>
+                              <h3 className="h-display text-[22px] md:text-[26px] text-[#0F1F14] leading-tight">{t.title}</h3>
+                              <p className="mt-3 text-[#0F1F14]/66 text-[15px] leading-relaxed">{t.body}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      {t.callout ? (
+                        <div className="mt-5 rounded-[22px] bg-[#F7FBF8] border border-[#16A34A]/14 p-4 sm:p-5 flex flex-col sm:flex-row items-center gap-4">
+                          <span className="w-14 h-14 rounded-full bg-white border border-[#16A34A]/16 flex items-center justify-center shrink-0">
+                            <TrendingUp className="w-6 h-6 text-[#16A34A]" />
+                          </span>
+                          <div className="hidden sm:block w-px self-stretch bg-[#0F1F14]/10" />
+                          <p className="text-[#0F1F14]/70 text-[15px] leading-relaxed">{t.callout}</p>
+                        </div>
+                      ) : null}
+                    </>
                   )}
                 </div>
               </Reveal>

@@ -277,33 +277,42 @@ export const values = [
 ];
 
 export const timeline = [
-  { year: "2020", title: "Founded with solar vision", body: "Shubh Power Solutions started with Solar Energy Solutions and gradually progressed to include Turnkey Solutions in EV Charging Infrastructure." },
-  { year: "2014", title: "First 500 kW rooftop", body: "Delivered our first large-scale commercial rooftop for a cooperative society in Delhi-NCR." },
-  { year: "2017", title: "1 MW milestone", body: "Commissioned our first megawatt-scale institutional plant in Bathinda, Punjab." },
-  { year: "2020", title: "Utility-scale expansion", body: "Broke ground on multiple MW-scale ground-mount plants across Rajasthan and Haryana." },
-  { year: "2022", title: "15 MW Hissar", body: "Commissioned our largest solar plant to date - 15 MW in Hissar, Haryana." },
-  { year: "2024", title: "EV CPO launch", body: "Launched our EV CPO vertical - 40+ charging points live across DLF, Amrapali and Puri properties." },
+  {
+    year: "2020",
+    cards: [
+      {
+        icon: "solar",
+        title: "Founded with solar vision",
+        body: "Started with Solar Energy Solutions and evolved into Turnkey Solutions including EV Charging Infrastructure.",
+      },
+      {
+        icon: "roof",
+        title: "First 500 kW Rooftop",
+        body: "Delivered our first large-scale commercial rooftop for a cooperative society in Delhi-NCR.",
+      },
+    ],
+  },
+  { year: "2021", title: "1 MW Milestone", body: "Commissioned our first megawatt-scale institutional plant in Bathinda, Punjab.", icon: "plant" },
+  { year: "2022", title: "Utility-scale Expansion", body: "Broke ground on multiple MW-scale ground-mount plants across Rajasthan and Haryana.", icon: "growth" },
+  { year: "2023", title: "15 MW Hissar", body: "Commissioned our largest solar plant to date - 15 MW in Hissar, Haryana.", icon: "solar" },
+  { year: "2024", title: "First EV CPO charging station for residential society", body: "Launched our first EV charging station for a residential society.", icon: "charging" },
   {
     year: "2025",
-    title: "EV CPO scale-up",
-    body: "Shubh Power moved from license to execution with a fast sequence of EV milestones and early-scale deployments.",
-    highlight: "100+ EV Chargers Installed",
-    milestones: [
-      { date: "March 2025", text: "Est. with Electric License" },
-      { date: "June 2025", text: "First CPO charging station for a residential society" },
-      { date: "July 2025", text: "Tie-up with OEM & Deploying Team" },
-      { date: "August 2025", text: "First EV charging installation with Solar+BESS" },
-    ],
+    title: "Scale to 40+ Charging Points Live",
+    body: "40+ charging points live across DLF, Amrapali and Puri properties.",
+    callout: "Shubh Power moved from license to execution with a fast sequence of EV milestones and early-scale deployments.",
+    icon: "ev",
   },
   {
     year: "2026-27",
-    title: "Next EV expansion wave",
+    title: "Solar and EV Expansion Wave",
     body: "The next phase focuses on scale, repeatability and denser charging coverage across more sites.",
-    highlight: "300+ EV Chargers Planned",
-    milestones: [
-      { date: "August 2026", text: "Total no. of EV charger installed are 100+" },
-      { date: "FY 2026-27", text: "Total no. of EV chargers expected to install originally are 300+" },
+    summaryCards: [
+      { icon: "charging", title: "Scale up to 100+ EV chargers installed" },
+      { icon: "solar", title: "Scale up to 30 MW+ solar projects" },
     ],
+    banner: "300+ EV chargers planned",
+    icon: "growth",
   },
 ];
 
