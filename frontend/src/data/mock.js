@@ -289,7 +289,7 @@ export const timeline = [
         body: "Delivered our first large-scale commercial rooftop for a cooperative society in Delhi-NCR.",
       },
     ],
-    summary: "Started with Solar Energy Solutions and evolved into Turnkey Solutions including EV Charging Infrastructure. Delivered our first large-scale commercial rooftop for a cooperative society in Delhi-NCR.",
+    summary: "Started with solar and expanded into EV charging; delivered our first large rooftop project in Delhi-NCR.",
   },
   { year: "2021", title: "1 MW Milestone", body: "Commissioned our first megawatt-scale institutional plant in Bathinda, Punjab." },
   { year: "2022", title: "Utility-scale Expansion", body: "Broke ground on multiple MW-scale ground-mount plants across Rajasthan and Haryana." },

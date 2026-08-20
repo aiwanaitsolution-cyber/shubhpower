@@ -181,7 +181,7 @@ const AboutPage = () => (
                       </div>
                       <div className="grid gap-4 md:grid-cols-2">
                         {t.cards.map((card) => (
-                          <div key={card.title} className="rounded-[24px] border border-[#0F1F14]/10 bg-[#FBFDFC] px-4 py-5 sm:px-5 sm:py-6 text-center shadow-sm">
+                          <div key={card.title} className="rounded-[24px] border border-[#0F1F14]/10 bg-[#F3FAF4] px-4 py-5 sm:px-5 sm:py-6 text-center shadow-sm">
                             <h3 className="h-display text-[18px] sm:text-[20px] text-[#0F1F14] leading-tight uppercase">{card.title}</h3>
                           </div>
                         ))}
@@ -193,7 +193,7 @@ const AboutPage = () => (
                       <div className="inline-flex rounded-full bg-[#16A34A]/10 border border-[#16A34A]/16 px-4 py-2 h-mono text-[11px] tracking-[0.15em] text-[#0E7A38]">
                         {t.year}
                       </div>
-                      <div className="rounded-[24px] border border-[#0F1F14]/10 bg-[#FBFDFC] p-4 sm:p-5 lg:p-6">
+                      <div className="rounded-[24px] border border-[#0F1F14]/10 bg-[#F7FBF8] p-4 sm:p-5 lg:p-6">
                         <div className="flex items-center gap-4">
                           <span className="h-px flex-1 bg-[#16A34A]/30" />
                           <h3 className="h-display text-[16px] sm:text-[18px] text-[#0F1F14] leading-tight uppercase text-center">
@@ -203,15 +203,15 @@ const AboutPage = () => (
                         </div>
                         <div className="mt-4 grid gap-3 md:grid-cols-2">
                           {t.summaryCards.map((card) => (
-                            <div key={card.title} className="rounded-[18px] border border-[#16A34A]/20 bg-white px-3 py-3 sm:px-4 sm:py-4 min-h-[86px] flex items-center">
+                            <div key={card.title} className="rounded-[18px] border border-[#16A34A]/20 bg-[#F3FAF4] px-3 py-3 sm:px-4 sm:py-4 min-h-[86px] flex items-center">
                               <div className="h-display text-[14px] sm:text-[16px] text-[#0F1F14] leading-tight uppercase">{card.title}</div>
                             </div>
                           ))}
                         </div>
                         <p className="mt-3 text-[#0F1F14]/66 text-[12px] sm:text-[13px] leading-relaxed">{t.body}</p>
                       </div>
-                      <div className="rounded-[20px] bg-[linear-gradient(90deg,#0B5F2E_0%,#14753A_55%,#0E7A38_100%)] px-4 py-3 sm:px-5 sm:py-3.5 flex items-center justify-center text-white shadow-[0_18px_40px_rgba(14,122,56,0.18)]">
-                        <div className="h-display text-[16px] sm:text-[20px] lg:text-[24px] tracking-tight uppercase text-center">{t.banner}</div>
+                      <div className="mx-auto w-full max-w-[620px] rounded-[18px] bg-[#EAF7ED] border border-[#16A34A]/14 px-4 py-2.5 sm:px-5 sm:py-3 flex items-center justify-center text-[#0E7A38] shadow-[0_10px_24px_rgba(14,122,56,0.10)]">
+                        <div className="h-display text-[14px] sm:text-[16px] lg:text-[18px] tracking-tight uppercase text-center">{t.banner}</div>
                       </div>
                     </div>
                   ) : (
