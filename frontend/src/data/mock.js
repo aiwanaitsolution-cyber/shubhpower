@@ -25,7 +25,7 @@ export const brand = {
 export const heroImage = `${live}Untitled-design-9-rknh6lx7k80ll3dvtw5gszwkp4fhgv6li3c86qt6ko.png`;
 
 export const stats = [
-  { value: "2010", label: "solar business established" },
+  { value: "2020", label: "solar business established" },
   { value: "146+", label: "happy customers" },
   { value: "30+ MW", label: "executed solar projects" },
   { value: "100+", label: "EV chargers installed" },
@@ -175,7 +175,7 @@ export const evCategories = [
     subtitle: "Cities, public spaces, streets, parking areas, and highways",
     description: "Shubh Power Solutions Pvt. Ltd. collaborates with municipalities and public authorities to develop accessible and reliable EV charging networks across cities and public spaces.",
     bg: "#E6F4E9",
-    image: "/images/hero/evp/public_infra.jpeg",
+    image: "/images/hero/evp/public_infra.png",
     features: ["High-Speed Public Charging Stations", "Public Transit Charging Integration", "EV Charging Network Expansion", "Support for Grants & Incentive Programs"],
   },
   {
@@ -277,7 +277,7 @@ export const values = [
 ];
 
 export const timeline = [
-  { year: "2010", title: "Founded with solar vision", body: "Shubh Power Solutions started with Solar Energy Solutions and gradually progressed to include Turnkey Solutions in EV Charging Infrastructure." },
+  { year: "2020", title: "Founded with solar vision", body: "Shubh Power Solutions started with Solar Energy Solutions and gradually progressed to include Turnkey Solutions in EV Charging Infrastructure." },
   { year: "2014", title: "First 500 kW rooftop", body: "Delivered our first large-scale commercial rooftop for a cooperative society in Delhi-NCR." },
   { year: "2017", title: "1 MW milestone", body: "Commissioned our first megawatt-scale institutional plant in Bathinda, Punjab." },
   { year: "2020", title: "Utility-scale expansion", body: "Broke ground on multiple MW-scale ground-mount plants across Rajasthan and Haryana." },
@@ -329,10 +329,10 @@ export const processSteps = [
 ];
 
 export const faqs = [
-  { q: "Why choose solar energy?", a: "Solar energy is a renewable and environmentally friendly energy source that produces no harmful pollutants." },
-  { q: "How do solar panels work?", a: "When sunlight hits PV modules, it is converted into Direct Current electricity, then an inverter converts it into Alternating Current electricity." },
-  { q: "Does solar disconnect me from my utility provider?", a: "Switching to solar does not mean disconnecting from your current utility provider. The solar system complements your existing connection." },
-  { q: "How does solar reduce costs?", a: "The solar system generates a significant portion of the facility's energy needs, reducing electricity drawn from the grid." },
-  { q: "What EV sectors does Shubh Power serve?", a: "Fleet and Logistics, Residential Communities, Commercial Buildings, Public Infrastructure, and Retail and Hospitality." },
+  { q: "Why choose solar energy?", a: "Solar energy is clean, renewable, and helps reduce electricity costs and dependence on grid power." },
+  { q: "How does a solar system save electricity costs?", a: "Solar panels generate power from sunlight, reducing the amount of electricity you need to purchase from the grid." },
+  { q: "What is an EV Charge Point Operator (CPO)?", a: "A CPO installs, operates, and manages EV charging stations to provide reliable charging services." },
+  { q: "Where can EV charging stations be installed?", a: "EV chargers can be installed at homes, offices, commercial buildings, fleets, hotels, retail spaces, and public locations." },
+  { q: "What solutions does Shubh Power provide?", a: "Shubh Power provides solar energy solutions and EV charging infrastructure for residential, commercial, and business needs." },
   { q: "How can I contact Shubh Power?", a: "Use phone number 7836992555 or email info@shubhpower.com." },
 ];

@@ -91,13 +91,13 @@ const Hero = () => {
           </div>
 
           <div className="md:hidden h-mono text-white/70 text-[11px] tracking-wide pt-1">
-            SINCE 2010 - GURUGRAM - SOLAR - BESS - EV
+            SINCE 2020 - GURUGRAM - SOLAR - BESS - EV
           </div>
         </div>
 
         <div className="hidden md:flex absolute left-6 lg:left-10 bottom-6 items-center gap-2 text-white/80">
           <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-          <span className="h-mono">SINCE 2010 - GURUGRAM, INDIA</span>
+          <span className="h-mono">SINCE 2020 - GURUGRAM, INDIA</span>
         </div>
         <div className="hidden md:block absolute right-6 lg:right-10 bottom-6 text-white/80 h-mono">
           SOLAR - BESS - EV CHARGING

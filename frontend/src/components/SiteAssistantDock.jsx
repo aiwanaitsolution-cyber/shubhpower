@@ -27,7 +27,7 @@ const replyFor = (input) => {
     return {
       title: "About Shubh Power",
       body: `${brand.full} is based in Gurugram and works across solar EPC, battery storage and EV charging.`,
-      bullets: ["Founded in 2010", "Office: Gurugram, Haryana", "End-to-end EPC and O&M"],
+      bullets: ["Founded in 2020", "Office: Gurugram, Haryana", "End-to-end EPC and O&M"],
       cta: { label: "Open About page", href: "/about" },
     };
   }

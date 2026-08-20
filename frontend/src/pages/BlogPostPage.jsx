@@ -201,7 +201,7 @@ const BlogPostPage = () => {
               <div>
                 <div className="h-display text-[18px] text-[#0F1F14]">{AUTHOR.name}</div>
                 <div className="text-[13px] text-[#0F1F14]/50 mb-2">{AUTHOR.role}</div>
-                <p className="text-[15px] text-[#0F1F14]/70 leading-relaxed">Since 2010 we've engineered solar and EV charging across Delhi-NCR and pan-India. We write to make clean energy simple to choose.</p>
+                <p className="text-[15px] text-[#0F1F14]/70 leading-relaxed">Since 2020 we've engineered solar and EV charging across Delhi-NCR and pan-India. We write to make clean energy simple to choose.</p>
                 <Link to="/contact" className="inline-flex items-center gap-1.5 mt-3 text-[#16A34A] text-[14px] font-medium">Get a free consultation <ArrowUpRight className="w-4 h-4" /></Link>
               </div>
             </div>

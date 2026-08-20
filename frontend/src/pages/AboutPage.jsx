@@ -79,7 +79,7 @@ const AboutPage = () => (
           </Link>
           <div className="mt-8 grid grid-cols-3 gap-3 max-w-xl">
             {[
-              ["2010", "Solar business established"],
+              ["2020", "Solar business established"],
               ["146+", "Customers"],
               ["30+ MW", "Solar power project executed"],
             ].map(([n, l]) => (

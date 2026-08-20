@@ -4,7 +4,7 @@ import { ArrowRight, Sun, Zap } from "lucide-react";
 
 const CTABanner = ({
   title = "Ready for a sustainable future?",
-  subtitle = "Solar, storage and EV charging designed for Shubh Power clients since 2010.",
+  subtitle = "Solar, storage and EV charging designed for Shubh Power clients since 2020.",
   ctaLabel = "Contact Us",
   ctaTo = "/contact",
   titleClassName = "",
