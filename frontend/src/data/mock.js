@@ -276,6 +276,41 @@ export const values = [
   { title: "Efficiency", body: "Shubh Power brings reliable and premium quality solutions with a commitment to efficiency and effectiveness.", bg: "#F0E7D8" },
 ];
 
+export const timeline = [
+  {
+    year: "2020",
+    cards: [
+      {
+        title: "Founded with solar vision",
+        body: "Started with Solar Energy Solutions and evolved into Turnkey Solutions including EV Charging Infrastructure.",
+      },
+      {
+        title: "First 500 kW Rooftop",
+        body: "Delivered our first large-scale commercial rooftop for a cooperative society in Delhi-NCR.",
+      },
+    ],
+    summary: "Started with solar and expanded into EV charging; delivered our first large rooftop project in Delhi-NCR.",
+  },
+  { year: "2021", title: "1 MW Milestone", body: "Commissioned our first megawatt-scale institutional plant in Bathinda, Punjab." },
+  { year: "2022", title: "Utility-scale Expansion", body: "Broke ground on multiple MW-scale ground-mount plants across Rajasthan and Haryana." },
+  { year: "2023", title: "15 MW Hissar", body: "Commissioned our largest solar plant to date - 15 MW in Hissar, Haryana." },
+  { year: "2024", title: "First EV CPO charging station for residential society", body: "Launched our first EV charging station for a residential society." },
+  {
+    year: "2025",
+    title: "Scale to 40+ Charging Points Live",
+    body: "40+ charging points live across DLF, Amrapali and Puri properties.",
+  },
+  {
+    year: "2026-27",
+    title: "Solar and EV Expansion Wave",
+    body: "The next phase focuses on scale, repeatability and denser charging coverage across more sites.",
+    summaryCards: [
+      { title: "Scale up to 100+ EV chargers installed" },
+      { title: "Scale up to 30 MW+ solar projects" },
+    ],
+  },
+];
+
 export const leadership = [
   { name: "Bhavy Aggarwal", role: "Founder & CEO", group: "partners", image: `${live}bhavya_ceo.png` },
   { name: "Subhash Chandra", role: "Co founder & COO", group: "partners", image: `${live}Copy-of-1.png` },
