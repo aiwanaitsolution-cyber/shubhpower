@@ -176,36 +176,42 @@ const AboutPage = () => (
                 <div className="rounded-[26px] bg-white/92 backdrop-blur-xl border border-[#0F1F14]/8 p-5 sm:p-6 shadow-[0_18px_50px_rgba(15,31,20,0.08)] hover:shadow-[0_24px_65px_rgba(15,31,20,0.12)] transition-shadow">
                   {t.cards ? (
                     <div className="space-y-5">
+                      <div className="inline-flex rounded-full bg-[#16A34A]/10 border border-[#16A34A]/16 px-4 py-2 h-mono text-[11px] tracking-[0.15em] text-[#0E7A38]">
+                        {t.year}
+                      </div>
                       <div className="grid gap-4 md:grid-cols-2">
                         {t.cards.map((card) => (
                           <div key={card.title} className="rounded-[24px] border border-[#0F1F14]/10 bg-[#FBFDFC] p-5 sm:p-6 text-center shadow-sm">
-                            <h3 className="h-display text-[22px] sm:text-[24px] text-[#0F1F14] leading-tight uppercase">{card.title}</h3>
+                            <h3 className="h-display text-[20px] sm:text-[22px] text-[#0F1F14] leading-tight uppercase">{card.title}</h3>
                           </div>
                         ))}
                       </div>
-                      <p className="text-[#0F1F14]/68 text-[15px] leading-relaxed text-center max-w-4xl mx-auto">{t.summary}</p>
+                      <p className="text-[#0F1F14]/68 text-[14px] sm:text-[15px] leading-relaxed text-center max-w-4xl mx-auto">{t.summary}</p>
                     </div>
                   ) : t.summaryCards ? (
-                    <div className="space-y-5">
-                      <div className="rounded-[26px] border border-[#0F1F14]/10 bg-[#FBFDFC] p-5 sm:p-6 lg:p-7">
+                    <div className="space-y-4 sm:space-y-5">
+                      <div className="inline-flex rounded-full bg-[#16A34A]/10 border border-[#16A34A]/16 px-4 py-2 h-mono text-[11px] tracking-[0.15em] text-[#0E7A38]">
+                        {t.year}
+                      </div>
+                      <div className="rounded-[24px] border border-[#0F1F14]/10 bg-[#FBFDFC] p-4 sm:p-5 lg:p-6">
                         <div className="flex items-center gap-4">
                           <span className="h-px flex-1 bg-[#16A34A]/30" />
-                          <h3 className="h-display text-[22px] sm:text-[24px] text-[#0F1F14] leading-tight uppercase text-center">
+                          <h3 className="h-display text-[18px] sm:text-[20px] text-[#0F1F14] leading-tight uppercase text-center">
                             {t.title}
                           </h3>
                           <span className="h-px flex-1 bg-[#16A34A]/30" />
                         </div>
-                        <div className="mt-5 grid gap-4 md:grid-cols-2">
+                        <div className="mt-4 grid gap-3 md:grid-cols-2">
                           {t.summaryCards.map((card) => (
-                            <div key={card.title} className="rounded-[20px] border border-[#16A34A]/20 bg-white p-4 sm:p-5 min-h-[130px] flex items-center">
-                              <div className="h-display text-[20px] sm:text-[22px] text-[#0F1F14] leading-tight uppercase">{card.title}</div>
+                            <div key={card.title} className="rounded-[18px] border border-[#16A34A]/20 bg-white p-3 sm:p-4 min-h-[98px] flex items-center">
+                              <div className="h-display text-[16px] sm:text-[18px] text-[#0F1F14] leading-tight uppercase">{card.title}</div>
                             </div>
                           ))}
                         </div>
-                        <p className="mt-4 text-[#0F1F14]/66 text-[15px] leading-relaxed">{t.body}</p>
+                        <p className="mt-3 text-[#0F1F14]/66 text-[13px] sm:text-[14px] leading-relaxed">{t.body}</p>
                       </div>
-                      <div className="rounded-[22px] bg-[linear-gradient(90deg,#0B5F2E_0%,#14753A_55%,#0E7A38_100%)] px-6 py-4 sm:px-8 sm:py-5 flex items-center justify-center gap-4 text-white shadow-[0_18px_40px_rgba(14,122,56,0.18)]">
-                        <div className="h-display text-[28px] sm:text-[34px] lg:text-[42px] tracking-tight uppercase text-center">{t.banner}</div>
+                      <div className="rounded-[20px] bg-[linear-gradient(90deg,#0B5F2E_0%,#14753A_55%,#0E7A38_100%)] px-5 py-3 sm:px-6 sm:py-4 flex items-center justify-center text-white shadow-[0_18px_40px_rgba(14,122,56,0.18)]">
+                        <div className="h-display text-[20px] sm:text-[24px] lg:text-[30px] tracking-tight uppercase text-center">{t.banner}</div>
                       </div>
                     </div>
                   ) : (

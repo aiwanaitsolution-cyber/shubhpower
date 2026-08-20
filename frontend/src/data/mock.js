@@ -299,7 +299,6 @@ export const timeline = [
     year: "2025",
     title: "Scale to 40+ Charging Points Live",
     body: "40+ charging points live across DLF, Amrapali and Puri properties.",
-    callout: "Shubh Power moved from license to execution with a fast sequence of EV milestones and early-scale deployments.",
   },
   {
     year: "2026-27",
