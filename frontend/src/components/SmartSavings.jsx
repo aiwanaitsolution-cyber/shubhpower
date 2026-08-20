@@ -123,7 +123,7 @@ const SmartSavings = ({
                     <span className="text-white/80 text-[16px]">{active.unit}</span>
                   </div>
 
-                  <div className="mt-6 grid grid-cols-4 gap-1.5">
+                  <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-1.5">
                     {stats.map((s) => (
                       <button key={s.key} onClick={() => setTab(s.key)} className={`py-2 rounded-full text-[12px] transition-colors ${tab === s.key ? "bg-white text-[#16A34A] font-medium" : "bg-white/10 text-white hover:bg-white/20"}`}>
                         {s.label}

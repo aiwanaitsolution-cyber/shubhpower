@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Eye, Target, Gem, Check, TrendingUp } from "lucide-react";
+import { ArrowRight, Eye, Target, Gem, Check } from "lucide-react";
 import PageHero from "../components/PageHero";
 import Reveal from "../components/Reveal";
 import CountUp from "../components/CountUp";
 import Testimonials from "../components/Testimonials";
 import CTABanner from "../components/CTABanner";
-import { brand, stats, values, promises, leadership, operationalTeam, timeline } from "../data/mock";
+import { brand, stats, values, promises, leadership, operationalTeam } from "../data/mock";
 
 const aboutHeroCopy = (
   <>
@@ -77,7 +77,7 @@ const AboutPage = () => (
               <ArrowRight className="w-4 h-4 text-white" />
             </span>
           </Link>
-          <div className="mt-8 grid grid-cols-3 gap-3 max-w-xl">
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-xl">
             {[
               ["2020", "Solar business established"],
               ["146+", "Customers"],
@@ -92,7 +92,7 @@ const AboutPage = () => (
         </Reveal>
         <Reveal delay={0.1} className="relative">
           <div className="rounded-[32px] bg-white/88 backdrop-blur-xl border border-[#0F1F14]/8 p-4 sm:p-5 shadow-[0_18px_60px_rgba(15,31,20,0.08)]">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="rounded-[24px] overflow-hidden aspect-[4/5] bg-[#F5F3EC] shadow-lg float-soft">
               <img src="/images/hero/solarpr/1.png" alt="Shubh Power solar project" loading="lazy" className="w-full h-full object-cover" />
             </div>
@@ -151,89 +151,6 @@ const AboutPage = () => (
             </div>
           ))}
         </Reveal>
-      </div>
-    </section>
-
-    <section className="py-16 lg:py-24 bg-[linear-gradient(180deg,#ffffff_0%,#f8fbf9_100%)] text-[#0F1F14]">
-      <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-10 grid lg:grid-cols-[0.72fr_1.28fr] gap-12 lg:gap-16 items-start">
-        <Reveal className="lg:sticky lg:top-28">
-          <div className="inline-flex items-center gap-2.5 mb-5 rounded-full bg-white border border-[#16A34A]/16 px-4 py-2 shadow-sm">
-            <span className="w-8 h-[3px] rounded-full bg-[#16A34A]" />
-            <span className="h-mono text-[12px] tracking-[0.2em] text-[#16A34A]">OUR JOURNEY</span>
-          </div>
-          <h2 className="h-display text-[36px] md:text-[52px] tracking-tight text-[#0F1F14]">
-            Over Decades, milestone by milestone.
-          </h2>
-          <p className="mt-5 text-[#0F1F14]/62 text-[16px] leading-relaxed max-w-sm">
-            A connected path from Gurugram incorporation to solar projects and EV CPO rollout.
-          </p>
-        </Reveal>
-        <div className="relative">
-          <div className="absolute left-[17px] top-3 bottom-3 w-[3px] rounded-full bg-gradient-to-b from-[#16A34A] via-[#7DE0C3] to-[#F58220]" />
-          <div className="space-y-5">
-            {timeline.map((t) => (
-              <Reveal key={t.year} className="relative pl-14">
-                <div className="rounded-[26px] bg-white/92 backdrop-blur-xl border border-[#0F1F14]/8 p-5 sm:p-6 shadow-[0_18px_50px_rgba(15,31,20,0.08)] hover:shadow-[0_24px_65px_rgba(15,31,20,0.12)] transition-shadow">
-                  {t.cards ? (
-                    <div className="space-y-4">
-                      <div className="inline-flex rounded-full bg-[#16A34A]/10 border border-[#16A34A]/16 px-4 py-2 h-mono text-[11px] tracking-[0.15em] text-[#0E7A38]">
-                        {t.year}
-                      </div>
-                      <div className="grid gap-4 md:grid-cols-2">
-                        {t.cards.map((card) => (
-                          <div key={card.title} className="rounded-[24px] border border-[#0F1F14]/10 bg-[#F3FAF4] px-4 py-5 sm:px-5 sm:py-6 text-center shadow-sm">
-                            <h3 className="h-display text-[18px] sm:text-[20px] text-[#0F1F14] leading-tight uppercase">{card.title}</h3>
-                          </div>
-                        ))}
-                      </div>
-                      <p className="text-[#0F1F14]/68 text-[13px] sm:text-[14px] leading-relaxed text-center max-w-4xl mx-auto">{t.summary}</p>
-                    </div>
-                  ) : t.summaryCards ? (
-                    <div className="space-y-4 sm:space-y-5">
-                      <div className="inline-flex rounded-full bg-[#16A34A]/10 border border-[#16A34A]/16 px-4 py-2 h-mono text-[11px] tracking-[0.15em] text-[#0E7A38]">
-                        {t.year}
-                      </div>
-                      <div className="rounded-[24px] border border-[#0F1F14]/10 bg-[#F7FBF8] p-4 sm:p-5 lg:p-6">
-                        <div className="flex items-center gap-4">
-                          <span className="h-px flex-1 bg-[#16A34A]/30" />
-                          <h3 className="h-display text-[16px] sm:text-[18px] text-[#0F1F14] leading-tight uppercase text-center">
-                            {t.title}
-                          </h3>
-                          <span className="h-px flex-1 bg-[#16A34A]/30" />
-                        </div>
-                        <div className="mt-4 grid gap-3 md:grid-cols-2">
-                          {t.summaryCards.map((card) => (
-                            <div key={card.title} className="rounded-[18px] border border-[#16A34A]/20 bg-[#F3FAF4] px-3 py-3 sm:px-4 sm:py-4 min-h-[86px] flex items-center">
-                              <div className="h-display text-[14px] sm:text-[16px] text-[#0F1F14] leading-tight uppercase">{card.title}</div>
-                            </div>
-                          ))}
-                        </div>
-                        <p className="mt-3 text-[#0F1F14]/66 text-[12px] sm:text-[13px] leading-relaxed">{t.body}</p>
-                      </div>
-                      <div className="mx-auto w-full max-w-[620px] rounded-[18px] bg-[#EAF7ED] border border-[#16A34A]/14 px-4 py-2.5 sm:px-5 sm:py-3 flex items-center justify-center text-[#0E7A38] shadow-[0_10px_24px_rgba(14,122,56,0.10)]">
-                        <div className="h-display text-[14px] sm:text-[16px] lg:text-[18px] tracking-tight uppercase text-center">{t.banner}</div>
-                      </div>
-                    </div>
-                  ) : (
-                    <>
-                      <div className="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-5">
-                        <div className="min-w-[110px]">
-                          <div className="inline-flex rounded-full bg-[#16A34A]/10 border border-[#16A34A]/16 px-4 py-2 h-mono text-[11px] tracking-[0.15em] text-[#0E7A38]">{t.year}</div>
-                        </div>
-                        <div className="flex-1">
-                          <div>
-                            <h3 className="h-display text-[20px] md:text-[24px] text-[#0F1F14] leading-tight">{t.title}</h3>
-                            <p className="mt-3 text-[#0F1F14]/66 text-[14px] leading-relaxed max-w-2xl">{t.body}</p>
-                          </div>
-                        </div>
-                      </div>
-                    </>
-                  )}
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
 
