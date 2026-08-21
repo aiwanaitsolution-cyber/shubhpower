@@ -45,7 +45,7 @@ const AboutPage = () => (
   <div className="site-preview-type about-preview-type">
     <PageHero
       eyebrow="ABOUT COMPANY"
-      title={<>Over Decades of<br />engineering India's<br />clean-energy backbone.</>}
+      title={<>Engineering India's<br />clean-energy backbone.</>}
       subtitle={aboutHeroCopy}
       image="/images/hero/about.png"
       imageAlt="Shubh Power about us hero"
@@ -162,7 +162,7 @@ const AboutPage = () => (
             <span className="h-mono text-[12px] tracking-[0.2em] text-[#16A34A]">OUR JOURNEY</span>
           </div>
           <h2 className="h-display text-[36px] md:text-[52px] tracking-tight text-[#0F1F14]">
-            Over Decades, milestone by milestone.
+            From Vision to Scale, milestone by milestone.
           </h2>
           <p className="mt-5 text-[#0F1F14]/62 text-[16px] leading-relaxed max-w-sm">
             A connected path from Gurugram incorporation to solar projects and EV CPO rollout.
