@@ -313,7 +313,7 @@ export const timeline = [
 
 export const leadership = [
   { name: "Bhavy Aggarwal", role: "Co founder & CEO", group: "partners", image: `${live}bhavya_ceo.png` },
-  { name: "Subhash Chandra", role: "Co founder & COO", group: "partners", image: `${live}Copy-of-1.png` },
+  { name: "Subhash Chandra", role: "Co founder & COO", group: "partners", image: `${live}subhsh.PNG` },
   { name: "Anchal Andrews", role: "Business Strategist", group: "partners", image: "/images/hero/anchal-andrews.jpeg" },
 ];
 
